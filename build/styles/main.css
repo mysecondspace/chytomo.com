@@ -773,14 +773,10 @@ textarea {
     margin-bottom: 75px; }
   #article .block--small .row {
     margin-bottom: 30px; }
-  @media only screen and (min-width: 768px) {
-    #article .block .row {
-      height: 350px; } }
-  @media only screen and (min-width: 1440px) {
-    #article .block .row {
-      height: 450px; } }
-  #article .block .row:last-of-type {
-    margin-bottom: 0; }
+  #article .block .row {
+    height: 350px; }
+    #article .block .row:last-of-type {
+      margin-bottom: 0; }
   #article .block .btn {
     margin: 100px auto 0;
     display: block; }
@@ -952,7 +948,7 @@ textarea {
     #article .block .narrow:focus .viewed:before, #article .block .narrow:hover .viewed:before {
       width: 15px;
       height: 15px;
-      background-image: url(../images/eye.png);
+      background-image: url(/../images/eye.png);
       display: inline-block;
       vertical-align: middle;
       *vertical-align: auto;
@@ -963,7 +959,7 @@ textarea {
       @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
         #article .block .narrow:focus .viewed:before, #article .block .narrow:hover .viewed:before {
           background-size: 15px 15px;
-          background-image: url(../images/eye-2x.png); } }
+          background-image: url(/../images/eye-2x.png); } }
   #article .block .narrow:focus .grad__valign.grad--black, #article .block .narrow:focus .grad__valign.grad--orange, #article .block .narrow:hover .grad__valign.grad--black, #article .block .narrow:hover .grad__valign.grad--orange {
     opacity: .75; }
   #article .block .narrow:focus .grad__valign.grad--clear, #article .block .narrow:hover .grad__valign.grad--clear {
@@ -1067,19 +1063,19 @@ textarea {
   .logo .image--black, #footer .top .left-block .image--black {
     width: 175px;
     height: 52px;
-    background-image: url(../images/logo-black.png); }
+    background-image: url(/../images/logo-black.png); }
     @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
       .logo .image--black, #footer .top .left-block .image--black {
         background-size: 175px 51.5px;
-        background-image: url(../images/logo-black-2x.png); } }
+        background-image: url(/../images/logo-black-2x.png); } }
   .logo .image--white, #footer .top .left-block .image--white {
     width: 175px;
     height: 52px;
-    background-image: url(../images/logo-white.png); }
+    background-image: url(/../images/logo-white.png); }
     @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
       .logo .image--white, #footer .top .left-block .image--white {
         background-size: 175px 51.5px;
-        background-image: url(../images/logo-white-2x.png); } }
+        background-image: url(/../images/logo-white-2x.png); } }
   .logo .slogan, #footer .top .left-block .slogan {
     font-size: 0.875em;
     line-height: 26px; }
@@ -1102,12 +1098,12 @@ textarea {
     *display: inline;
     width: 6px;
     height: 10px;
-    background-image: url(../images/arrow.png);
+    background-image: url(/../images/arrow.png);
     background-repeat: no-repeat; }
     @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
       .breadcrumbs .icon {
         background-size: 5.5px 10px;
-        background-image: url(../images/arrow-2x.png); } }
+        background-image: url(/../images/arrow-2x.png); } }
   .breadcrumbs .main, .breadcrumbs .current {
     font-size: 0.6875em;
     color: #d1d1d1;
