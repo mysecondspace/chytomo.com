@@ -1,4 +1,5 @@
 .DS_Store
+.gitignore
 bower_components
 node_modules
 package.json
