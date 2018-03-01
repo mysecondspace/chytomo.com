@@ -937,11 +937,11 @@ textarea {
       opacity: 0; }
   #article .block .narrow__small a {
     height: 50%; }
-  #article .block .narrow__small:hover .liner--blue + .caption {
+  #article .block .narrow__small--option:hover .liner--blue + .caption, #article .block .narrow__small:hover .liner--blue + .caption {
     color: #4f81ff; }
-  #article .block .narrow__small:hover .liner--gray + .caption {
+  #article .block .narrow__small--option:hover .liner--gray + .caption, #article .block .narrow__small:hover .liner--gray + .caption {
     color: #919191; }
-  #article .block .narrow__small:hover .liner--gold + .caption {
+  #article .block .narrow__small--option:hover .liner--gold + .caption, #article .block .narrow__small:hover .liner--gold + .caption {
     color: #ffdd00; }
   #article .block .narrow__small--option a:first-of-type {
     height: 55%; }
