@@ -678,6 +678,8 @@ textarea {
         background-color: #ff6648; }
       #menu.menu ul li.gold a:before {
         background-color: #ffdd00; }
+      #menu.menu ul li.green a:before {
+        background-color: #3affb0; }
       #menu.menu ul li.gray a:before {
         background-color: #d1d1d1; }
       #menu.menu ul li.active a:before {
@@ -775,11 +777,11 @@ textarea {
     margin-bottom: 75px;
     height: 350px; }
   #article .block--medium .row {
-    height: 390px;
+    height: 400px;
     margin-bottom: 40px; }
   #article .block--small .row {
     margin-bottom: 30px;
-    height: 350px; }
+    height: 390px; }
   #article .block .row:last-of-type {
     margin-bottom: 0; }
   #article .block .btn {
@@ -827,6 +829,8 @@ textarea {
           color: #4f81ff; }
         #article .block .info .name .liner--gold {
           color: #ffdd00; }
+        #article .block .info .name .liner--green {
+          color: #3affb0; }
         #article .block .info .name .liner--gray {
           color: #919191; }
         #article .block .info .name .liner--light {
@@ -943,6 +947,8 @@ textarea {
     color: #919191; }
   #article .block .narrow__small--option:hover .liner--gold + .caption, #article .block .narrow__small:hover .liner--gold + .caption {
     color: #ffdd00; }
+  #article .block .narrow__small--option:hover .liner--green + .caption, #article .block .narrow__small:hover .liner--green + .caption {
+    color: #3affb0; }
   #article .block .narrow__small--option a:first-of-type {
     height: 55%; }
   #article .block .narrow__small--option a:last-of-type {
@@ -1169,12 +1175,16 @@ textarea {
         display: none; } }
     .heading .line--gold {
       background-color: #ffdd00; }
+    .heading .line--green {
+      background-color: #3affb0; }
     .heading .line--blue {
       background-color: #4f81ff; }
     .heading .line--orange {
       background-color: #ff6648; }
   .heading .filter--gold div span.active, .heading .filter--gold div span:focus, .heading .filter--gold div span:hover {
     color: #ffdd00; }
+  .heading .filter--green div span.active, .heading .filter--green div span:focus, .heading .filter--green div span:hover {
+    color: #3affb0; }
   .heading .filter--blue div span.active, .heading .filter--blue div span:focus, .heading .filter--blue div span:hover {
     color: #4f81ff; }
   .heading .filter--orange div span.active, .heading .filter--orange div span:focus, .heading .filter--orange div span:hover {
