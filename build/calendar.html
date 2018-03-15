@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Читомо — Знайомитися</title>
+        <title>Читомо — Календар подій</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -56,16 +56,16 @@
                             <div class="image"></div>
                         </a>
                     </div>
-                    
+
                     <!-- search -->
                     <div class="search">
                         <a href="#">
                             <div class="image"></div>
                         </a>
                     </div>
-                    
+
                     <!-- calendar -->
-                    <div class="calendar">
+                    <div class="calendar active">
                         <a href="https://mysecondspace.github.io/chytomo.com/build/calendar.html">
                             <div class="image"></div>
                         </a>
@@ -82,10 +82,10 @@
                         <li class="orange">
                             <a href="https://mysecondspace.github.io/chytomo.com/build/watch.html">Дивитися</a>
                         </li>
-                        <li class="gold active">
+                        <li class="gold">
                             <a href="https://mysecondspace.github.io/chytomo.com/build/acquainted.html">Знайомитися</a>
                         </li>
-                        <li>
+                        <li class="green">
                             <a href="https://mysecondspace.github.io/chytomo.com/build/study.html">Вчитися</a>
                         </li>
                         <li>
@@ -109,149 +109,183 @@
                     <div class="breadcrumbs valign">
                         <a href="/" class="main">Головна</a>
                         <span class="icon"></span>
-                        <span class="current">Знайомитися</span>
+                        <span class="current">Календар подій</span>
                     </div>
                 
                     <!-- heading -->
-                    <div class="heading">
+                    <div id="heading" class="heading">
 
                         <!-- line -->
-                        <div class="line line--gold"></div>
                         <div class="row">
                             <div class="x-4">
                                 
                                 <!-- title -->
-                                <h1 class="title title__padding title--black">Знайомитися</h1>
+                                <h1 class="title title--black">Календар подій</h1>
                             </div>
 
                             <!-- filter -->
-                            <div class="filter filter--gold valign x-8">
-                                <div>
-                                    <span>Місця</span>
-                                    <span>Люди</span>
-                                    <span>Події</span>
-                                    <span class="active">Усі</span>
-                                </div>
+                            <div class="filter valign x-8">
+                              
                             </div>
                         </div>
                     </div>
                 
                     <!-- block -->
-                    <div class="block block--medium">
-                        <div class="row">
+                    <div class="block block--large">
+                        <div id="top" class="inside row">
                                     
                             <!-- narrow block -->
-                            <div class="narrow narrow__small--acquainted x-4">
-                                <a href="#">
-
-                                    <!-- gradient -->
-                                    <div class="grad grad__valign grad--clear"></div>
-                                    <img src="images/image-30.jpg" alt="image-30">
-                                    <p class="viewed valign">520</p>
-                                </a>
-                                <a href="#">
+                            <div class="narrow narrow__small--calendar x-3" data-name="l">
+                                <a href="#inside">
 
                                     <!-- information -->
-                                    <div class="info info__small info__small--option valign">
-                                        <div class="name name--light">
-                                            <p class="liner liner--gold">Люди</p>
-                                            <p class="caption caption--black">Засновники Litosvita: Криза академічної сфери сприяє неформальній освіті</p>
-                                            <span>13.02.2017 - <span>Аліна Штефан</span></span>
+                                    <p class="date">13<sub>/11</sub></p>
+                                    <div class="info info__small info__small--calendar valign">
+                                        <div class="name name--gray">
+                                            <p class="liner liner--orange">Вінниця</p>
+                                            <p class="caption caption--black">Олег Андрішко презентує книжку «Пісня цапів»</p>
+                                            <span>18:00<span> - Книгарня «Є»</span></span>
+                                            <p class="liner liner--dark">Лекція</p>
                                         </div>
                                     </div>
                                 </a>
                             </div>
 
                             <!-- narrow block -->
-                            <div class="narrow narrow__small--acquainted x-4">
-                                <a href="#">
-
-                                    <!-- gradient -->
-                                    <div class="grad grad__valign grad--clear"></div>
-                                    <img src="images/image-31.jpg" alt="image-31">
-                                    <p class="viewed valign">2 320</p>
-                                </a>
-                                <a href="#">
+                            <div class="narrow narrow__small--calendar x-3" data-name="lc">
+                                <a href="#inside">
 
                                     <!-- information -->
-                                    <div class="info info__small info__small--option valign">
-                                        <div class="name name--light">
-                                            <p class="liner liner--gold">Люди</p>
-                                            <p class="caption caption--black">Ілюстраторка Лєра Схемка: «Я вірю в стиль, коли він спонтанний»</p>
-                                            <span>13.02.2017 - <span>Аліна Штефан</span></span>
+                                    <p class="date">13<sub>/11</sub></p>
+                                    <div class="info info__small info__small--calendar valign">
+                                        <div class="name name--gray">
+                                            <p class="liner liner--blue">Київ</p>
+                                            <p class="caption caption--black">Любко Дереш проведе творчу зустріч</p>
+                                            <span>19:00 <span> - Остання Барикада</span></span>
+                                            <p class="liner liner--dark">Лекція</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- narrow block -->
+                            <div class="narrow narrow__small--calendar x-3" data-name="rc">
+                                <a href="#inside">
+
+                                    <!-- information -->
+                                    <p class="date">15<sub>/11</sub></p>
+                                    <div class="info info__small info__small--calendar valign">
+                                        <div class="name name--gray">
+                                            <p class="liner liner--gold">Івано-Франківськ</p>
+                                            <p class="caption caption--black">Зустріч «Суспільне мовлення в Україні: місія і стандарти»</p>
+                                            <span>18:00 <span> - Міська Рада</span></span>
+                                            <p class="liner liner--dark">Лекція</p>
                                         </div>
                                     </div>
                                 </a>
                             </div>
 
                             <!-- banner -->
-                            <div class="banner valign x-4">
+                            <div class="banner valign x-3">
                                 <p>наскрізний банер</p>
                             </div>
                         </div>
+
+                        <!-- block calendar -->
+                        <div id="inside" class="block--calendar row">
+
+                            <!-- narrow block -->
+                            <div class="narrow narrow__small--calendar inside x-3">
+                                <div>
+
+                                    <!-- information -->
+                                    <p class="date">13<sub>/11</sub></p>
+                                    <div class="info info__small info__small--calendar valign">
+                                        <div class="name name--gray">
+                                            <p class="liner liner--orange">Вінниця</p>
+                                            <p class="caption caption">Олег Андрішко презентує книжку «Пісня цапів»</p>
+                                            <span>18:00 <span> - Книгарня «Є»</span></span>
+                                            <p class="liner liner--dark">Лекція</p>
+                                            <div class="social">
+                                                <a href="https://www.facebook.com/chytomo/" target="_blank"></a>
+                                                <a href="https://twitter.com/chytomo" target="_blank"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="x-os-1 x-8">
+                                <p class="description description--big">Держкомтелерадіо оголошує прийом заявок для участі в конкурсі на здобуття щорічної премії Президента України «Українська книжка року».</p>
+                                <p class="text">Заявка на участь в конкурсі, відповідно до Положення про щорічну премію Президента України «Українська книжка року», затвердженого Указом Президента України від 16 грудня 2009 року № 1058, подається Держкомтелерадіо до 15 листопада 2017 року разом із виданням і повинна містити інформацію про видання,що висувається на здобуття премії, автора (співавторів) виданого твору,видавництво або видавничу організацію, рік видання, тираж, обґрунтування висунення видання на здобуття премії, анотацію на видання.</p>
+                                <p class="description description--small">Премія присуджується в таких номінаціях:</p>
+                            </div>
+                            <a href="#heading" class="close"></a>
+                        </div>
                         <div class="row">
                                     
                             <!-- narrow block -->
-                            <div class="narrow narrow__small--acquainted x-4">
-                                <a href="#">
-
-                                    <!-- gradient -->
-                                    <div class="grad grad__valign grad--clear"></div>
-                                    <img src="images/image-33.jpg" alt="image-33">
-                                    <p class="viewed valign">985</p>
-                                </a>
+                            <div class="narrow narrow__small--calendar x-3" data-name="l">
                                 <a href="#">
 
                                     <!-- information -->
-                                    <div class="info info__small info__small--option valign">
-                                        <div class="name name--light">
-                                            <p class="liner liner--gold">Люди</p>
-                                            <p class="caption caption--black">Київський Фестиваль Коміксів: справжня ґіківська тусівка</p>
-                                            <span>13.02.2017 - <span>Аліна Штефан</span></span>
+                                    <p class="date">16<sub>/11</sub></p>
+                                    <div class="info info__small info__small--calendar valign">
+                                        <div class="name name--gray">
+                                            <p class="liner liner--orange">Вінниця</p>
+                                            <p class="caption caption--black">Олег Андрішко презентує книжку «Пісня цапів»</p>
+                                            <span>18:00 <span> - Книгарня «Є»</span></span>
+                                            <p class="liner liner--dark">Презентація</p>
                                         </div>
                                     </div>
                                 </a>
                             </div>
 
                             <!-- narrow block -->
-                            <div class="narrow narrow__small--acquainted x-4">
-                                <a href="#">
-
-                                    <!-- gradient -->
-                                    <div class="grad grad__valign grad--clear"></div>
-                                    <img src="images/image-34.jpg" alt="image-34">
-                                    <p class="viewed valign">610</p>
-                                </a>
+                            <div class="narrow narrow__small--calendar x-3"  data-name="lc">
                                 <a href="#">
 
                                     <!-- information -->
-                                    <div class="info info__small info__small--option valign">
-                                        <div class="name name--light">
-                                            <p class="liner liner--gold">Люди</p>
-                                            <p class="caption caption--black">Kyiv Comic Con – простір для таких же божевільних, як і ти</p>
-                                            <span>13.02.2017 - <span>Аліна Штефан</span></span>
+                                    <p class="date">17<sub>/11</sub></p>
+                                    <div class="info info__small info__small--calendar valign">
+                                        <div class="name name--gray">
+                                            <p class="liner liner--blue">Київ</p>
+                                            <p class="caption caption--black">Конкурс на українську книжку року приймає заявки</p>
+                                            <span>19:00 <span> - Остання Барикада</span></span>
+                                            <p class="liner liner--dark">Конкурс</p>
                                         </div>
                                     </div>
                                 </a>
                             </div>
 
                             <!-- narrow block -->
-                            <div class="narrow narrow__small--acquainted x-4">
-                                <a href="#">
-
-                                    <!-- gradient -->
-                                    <div class="grad grad__valign grad--clear"></div>
-                                    <img src="images/image-35.jpg" alt="image-35">
-                                    <p class="viewed valign">8 230</p>
-                                </a>
+                            <div class="narrow narrow__small--calendar x-3" data-name="rc">
                                 <a href="#">
 
                                     <!-- information -->
-                                    <div class="info info__small info__small--option valign">
-                                        <div class="name name--light">
-                                            <p class="liner liner--gold">Люди</p>
-                                            <p class="caption caption--black">Майстерні в IZONE: прийди і зроби</p>
-                                            <span>13.02.2017 - <span>Аліна Штефан</span></span>
+                                    <p class="date">19<sub>/11</sub></p>
+                                    <div class="info info__small info__small--calendar valign">
+                                        <div class="name name--gray">
+                                            <p class="liner liner--gold">Київ</p>
+                                            <p class="caption caption--black">Конкурс на українську книжку року приймає заявки</p>
+                                            <span>19:00 <span> - Остання Барикада</span></span>
+                                            <p class="liner liner--dark">Зустріч</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- narrow block -->
+                            <div class="narrow narrow__small--calendar x-3" data-name="r">
+                                <a href="#">
+
+                                    <!-- information -->
+                                    <p class="date">16<sub>/11</sub></p>
+                                    <div class="info info__small info__small--calendar valign">
+                                        <div class="name name--gray">
+                                            <p class="liner liner--green">Київ</p>
+                                            <p class="caption caption--black">Конкурс на українську книжку року приймає заявки</p>
+                                            <span>19:00 <span> - Остання Барикада</span></span>
+                                            <p class="liner liner--dark">Лекція</p>
                                         </div>
                                     </div>
                                 </a>
@@ -260,142 +294,77 @@
                         <div class="row">
                                     
                             <!-- narrow block -->
-                            <div class="narrow narrow__small--acquainted x-4">
-                                <a href="#">
-
-                                    <!-- gradient -->
-                                    <div class="grad grad__valign grad--clear"></div>
-                                    <img src="images/image-36.jpg" alt="image-36">
-                                    <p class="viewed valign">985</p>
-                                </a>
+                            <div class="narrow narrow__small--calendar x-3" data-name="l">
                                 <a href="#">
 
                                     <!-- information -->
-                                    <div class="info info__small info__small--option valign">
-                                        <div class="name name--light">
-                                            <p class="liner liner--gold">Люди</p>
-                                            <p class="caption caption--black">«bOtaN»: оренда нон-фікшину й корпоративні бібліотеки</p>
-                                            <span>13.02.2017 - <span>Аліна Штефан</span></span>
+                                    <p class="date">17<sub>/11</sub></p>
+                                    <div class="info info__small info__small--calendar valign">
+                                        <div class="name name--gray">
+                                            <p class="liner liner--orange">Вінниця</p>
+                                            <p class="caption caption--black">Олег Андрішко презентує книжку «Пісня цапів»</p>
+                                            <span>18:00 <span> - Книгарня «Є»</span></span>
+                                            <p class="liner liner--dark">Лекція</p>
                                         </div>
                                     </div>
                                 </a>
                             </div>
 
                             <!-- narrow block -->
-                            <div class="narrow narrow__small--acquainted x-4">
-                                <a href="#">
-
-                                    <!-- gradient -->
-                                    <div class="grad grad__valign grad--clear"></div>
-                                    <img src="images/image-30.jpg" alt="image-30">
-                                    <p class="viewed valign">520</p>
-                                </a>
+                            <div class="narrow narrow__small--calendar x-3" data-name="lc">
                                 <a href="#">
 
                                     <!-- information -->
-                                    <div class="info info__small info__small--option valign">
-                                        <div class="name name--light">
-                                            <p class="liner liner--gold">Люди</p>
-                                            <p class="caption caption--black">Засновники Litosvita: Криза академічної сфери сприяє неформальній освіті</p>
-                                            <span>13.02.2017 - <span>Аліна Штефан</span></span>
+                                    <p class="date">19<sub>/11</sub></p>
+                                    <div class="info info__small info__small--calendar valign">
+                                        <div class="name name--gray">
+                                            <p class="liner liner--blue">Київ</p>
+                                            <p class="caption caption--black">Любко Дереш проведе творчу зустріч</p>
+                                            <span>19:00 <span> - Остання Барикада</span></span>
+                                            <p class="liner liner--dark">Лекція</p>
                                         </div>
                                     </div>
                                 </a>
                             </div>
 
                             <!-- narrow block -->
-                            <div class="narrow narrow__small--acquainted x-4">
-                                <a href="#">
-
-                                    <!-- gradient -->
-                                    <div class="grad grad__valign grad--clear"></div>
-                                    <img src="images/image-31.jpg" alt="image-31">
-                                    <p class="viewed valign">2 320</p>
-                                </a>
+                            <div class="narrow narrow__small--calendar x-3" data-name="rc">
                                 <a href="#">
 
                                     <!-- information -->
-                                    <div class="info info__small info__small--option valign">
-                                        <div class="name name--light">
-                                            <p class="liner liner--gold">Люди</p>
-                                            <p class="caption caption--black">Ілюстраторка Лєра Схемка: «Я вірю в стиль, коли він спонтанний»</p>
-                                            <span>13.02.2017 - <span>Аліна Штефан</span></span>
+                                    <p class="date">23<sub>/11</sub></p>
+                                    <div class="info info__small info__small--calendar valign">
+                                        <div class="name name--gray">
+                                            <p class="liner liner--gold">Івано-Франківськ</p>
+                                            <p class="caption caption--black">Зустріч «Суспільне мовлення в Україні: місія і стандарти»</p>
+                                            <span>18:00 <span> - Міська Рада</span></span>
+                                            <p class="liner liner--dark">Лекція</p>
                                         </div>
                                     </div>
                                 </a>
+                            </div>
+
+                            <!-- narrow block -->
+                            <div class="narrow narrow__small--calendar x-3" data-name="r">
+                                <a href="#">
+
+                                    <!-- information -->
+                                    <p class="date">26<sub>/11</sub></p>
+                                    <div class="info info__small info__small--calendar valign">
+                                        <div class="name name--gray">
+                                            <p class="liner liner--green">Тернопіль</p>
+                                            <p class="caption caption--black">Книжку-комікс «Віра і воля» презентують Леонід Бицюра та Віктор Уніята</p>
+                                            <span>18:00 <span> - Міська Рада</span></span>
+                                            <p class="liner liner--dark">Презентація</p>
+                                        </div>
+                                    </div>
+                                </a href="#">
                             </div>
                         </div>
-                        <div class="row">
-
-                            <!-- narrow block -->
-                            <div class="narrow narrow__small--acquainted x-4">
-                                <a href="#">
-
-                                    <!-- gradient -->
-                                    <div class="grad grad__valign grad--clear"></div>
-                                    <img src="images/image-32.jpg" alt="image-32">
-                                    <p class="viewed valign">4 515</p>
-                                </a>
-                                <a href="#">
-
-                                    <!-- information -->
-                                    <div class="info info__small info__small--option valign">
-                                        <div class="name name--light">
-                                            <p class="liner liner--gold">Люди</p>
-                                            <p class="caption caption--black">Памела Дракерман: Єдиний шлях зробити історію справжньою – ділитися своїм досвідом</p>
-                                            <span>13.02.2017 - <span>Аліна Штефан</span></span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                                    
-                            <!-- narrow block -->
-                            <div class="narrow narrow__small--acquainted x-4">
-                                <a href="#">
-
-                                    <!-- gradient -->
-                                    <div class="grad grad__valign grad--clear"></div>
-                                    <img src="images/image-33.jpg" alt="image-33">
-                                    <p class="viewed valign">985</p>
-                                </a>
-                                <a href="#">
-
-                                    <!-- information -->
-                                    <div class="info info__small info__small--option valign">
-                                        <div class="name name--light">
-                                            <p class="liner liner--gold">Люди</p>
-                                            <p class="caption caption--black">Київський Фестиваль Коміксів: справжня ґіківська тусівка</p>
-                                            <span>13.02.2017 - <span>Аліна Штефан</span></span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <!-- narrow block -->
-                            <div class="narrow narrow__small--acquainted x-4">
-                                <a href="#">
-
-                                    <!-- gradient -->
-                                    <div class="grad grad__valign grad--clear"></div>
-                                    <img src="images/image-34.jpg" alt="image-34">
-                                    <p class="viewed valign">610</p>
-                                </a>
-                                <a href="#">
-
-                                    <!-- information -->
-                                    <div class="info info__small info__small--option valign">
-                                        <div class="name name--light">
-                                            <p class="liner liner--gold">Люди</p>
-                                            <p class="caption caption--black">Kyiv Comic Con – простір для таких же божевільних, як і ти</p>
-                                            <span>13.02.2017 - <span>Аліна Штефан</span></span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+                
 
                         <!-- button -->
-                        <button class="btn btn--black">Дивитися ще</button>
+                        <button class="btn btn--black">Ще подій</button>
                     </div>
                 </div>
 
