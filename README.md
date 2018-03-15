@@ -8,3 +8,4 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- Тренди<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- [Спецпроекти](https://mysecondspace.github.io/chytomo.com/build/special.html)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- Вітрина<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- [Календар](https://mysecondspace.github.io/chytomo.com/build/calendar.html)<br>
