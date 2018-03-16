@@ -695,6 +695,8 @@ textarea {
       #menu.menu ul li.green a:before {
         background-color: #3affb0; }
       #menu.menu ul li.gray a:before {
+        background-color: #919191; }
+      #menu.menu ul li.light a:before {
         background-color: #d1d1d1; }
       #menu.menu ul li.active a:before {
         left: 0; }
@@ -1379,6 +1381,8 @@ textarea {
       background-color: #ff6648; }
     .heading .line--black {
       background-color: #000; }
+    .heading .line--gray {
+      background-color: #919191; }
   .heading .filter--gold div span.active, .heading .filter--gold div span:focus, .heading .filter--gold div span:hover {
     color: #ffdd00; }
   .heading .filter--green div span.active, .heading .filter--green div span:focus, .heading .filter--green div span:hover {
@@ -1387,6 +1391,8 @@ textarea {
     color: #4f81ff; }
   .heading .filter--orange div span.active, .heading .filter--orange div span:focus, .heading .filter--orange div span:hover {
     color: #ff6648; }
+  .heading .filter--gray div span.active, .heading .filter--gray div span:focus, .heading .filter--gray div span:hover {
+    color: #919191; }
   .heading .filter select {
     background-color: #fff;
     border-color: #000;
