@@ -693,7 +693,7 @@ textarea {
       #menu.menu ul li.gold a:before {
         background-color: #ffdd00; }
       #menu.menu ul li.green a:before {
-        background-color: #3affb0; }
+        background-color: #15d277; }
       #menu.menu ul li.gray a:before {
         background-color: #919191; }
       #menu.menu ul li.light a:before {
@@ -727,6 +727,9 @@ textarea {
 #footer {
   background-color: #000;
   padding: 70px 0 20px; }
+  @media only screen and (max-width: 767px) {
+    #footer {
+      padding: 20px 0; } }
   #footer .top {
     display: -ms-flexbox;
     display: flex; }
@@ -778,6 +781,8 @@ textarea {
 
 #article .block {
   margin: 50px 0 150px; }
+  #article .block__main {
+    margin-bottom: 0; }
   #article .block a {
     width: 100%;
     height: 100%;
@@ -943,7 +948,7 @@ textarea {
         #article .block .info .name .liner--gold {
           color: #ffdd00; }
         #article .block .info .name .liner--green {
-          color: #3affb0; }
+          color: #15d277; }
         #article .block .info .name .liner--gray {
           color: #919191; }
         #article .block .info .name .liner--light {
@@ -1085,7 +1090,7 @@ textarea {
   #article .block .narrow__small--acquainted:hover .liner--gold + .caption, #article .block .narrow__small--calendar.inside .liner--gold + .caption, #article .block .narrow__small--calendar.select .liner--gold + .caption, #article .block .narrow__small--calendar:hover .liner--gold + .caption, #article .block .narrow__small:hover .liner--gold + .caption {
     color: #ffdd00; }
   #article .block .narrow__small--acquainted:hover .liner--green + .caption, #article .block .narrow__small--calendar.inside .liner--green + .caption, #article .block .narrow__small--calendar.select .liner--green + .caption, #article .block .narrow__small--calendar:hover .liner--green + .caption, #article .block .narrow__small:hover .liner--green + .caption {
-    color: #3affb0; }
+    color: #15d277; }
   #article .block .narrow__small--acquainted a:first-of-type {
     height: 55%; }
   #article .block .narrow__small--acquainted a:last-of-type {
@@ -1194,7 +1199,7 @@ textarea {
     bottom: 0;
     right: 0; }
   #article .black .title span {
-    color: #3affb0; }
+    color: #15d277; }
   #article .black .text {
     color: #fff;
     padding: 60px 0;
@@ -1318,6 +1323,30 @@ textarea {
             background-image: url('../images/partners-2x.png');
             background-size: 200px 285px;
             background-position: 0 0; } }
+#article .news {
+  margin: 50px 0 150px; }
+  #article .news div:first-of-type {
+    padding-left: 0; }
+  #article .news div:last-of-type {
+    padding-right: 0; }
+  #article .news div a {
+    display: block; }
+    #article .news div a:focus p:first-of-type, #article .news div a:focus p:last-of-type, #article .news div a:hover p:first-of-type, #article .news div a:hover p:last-of-type {
+      color: #4f81ff; }
+    #article .news div a p {
+      transition: all 0.3s; }
+      #article .news div a p:first-of-type {
+        color: #919191;
+        font-size: 0.875em;
+        letter-spacing: 2px;
+        font-family: "museo medium";
+        margin-bottom: 25px;
+        display: block; }
+      #article .news div a p:last-of-type {
+        line-height: 24px;
+        font-family: "museo light";
+        font-size: 0.8125em;
+        color: #000; }
 
 .ads__normal .banner {
   height: 200px; }
@@ -1343,22 +1372,28 @@ textarea {
 
 .logo, #footer .top .left-block {
   float: left; }
-  .logo .image--black, #footer .top .left-block .image--black {
-    width: 175px;
-    height: 52px;
-    background-image: url(../images/logo-black.png); }
-    @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-      .logo .image--black, #footer .top .left-block .image--black {
-        background-size: 175px 51.5px;
-        background-image: url(../images/logo-black-2x.png); } }
-  .logo .image--white, #footer .top .left-block .image--white {
-    width: 175px;
-    height: 52px;
-    background-image: url(../images/logo-white.png); }
-    @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-      .logo .image--white, #footer .top .left-block .image--white {
-        background-size: 175px 51.5px;
-        background-image: url(../images/logo-white-2x.png); } }
+  .logo a, #footer .top .left-block a {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline; }
+    .logo a .image--black, #footer .top .left-block a .image--black {
+      width: 175px;
+      height: 52px;
+      background-image: url(../images/logo-black.png); }
+      @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+        .logo a .image--black, #footer .top .left-block a .image--black {
+          background-size: 175px 51.5px;
+          background-image: url(../images/logo-black-2x.png); } }
+    .logo a .image--white, #footer .top .left-block a .image--white {
+      width: 175px;
+      height: 52px;
+      background-image: url(../images/logo-white.png); }
+      @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+        .logo a .image--white, #footer .top .left-block a .image--white {
+          background-size: 175px 51.5px;
+          background-image: url(../images/logo-white-2x.png); } }
   .logo .slogan, #footer .top .left-block .slogan {
     font-size: 0.875em;
     line-height: 26px; }
@@ -1440,7 +1475,7 @@ textarea {
     .heading .line--gold {
       background-color: #ffdd00; }
     .heading .line--green {
-      background-color: #3affb0; }
+      background-color: #15d277; }
     .heading .line--blue {
       background-color: #4f81ff; }
     .heading .line--orange {
@@ -1452,7 +1487,7 @@ textarea {
   .heading .filter--gold div span.active, .heading .filter--gold div span:focus, .heading .filter--gold div span:hover {
     color: #ffdd00; }
   .heading .filter--green div span.active, .heading .filter--green div span:focus, .heading .filter--green div span:hover {
-    color: #3affb0; }
+    color: #15d277; }
   .heading .filter--blue div span.active, .heading .filter--blue div span:focus, .heading .filter--blue div span:hover {
     color: #4f81ff; }
   .heading .filter--orange div span.active, .heading .filter--orange div span:focus, .heading .filter--orange div span:hover {
