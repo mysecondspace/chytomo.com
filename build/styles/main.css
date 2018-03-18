@@ -1181,40 +1181,84 @@ textarea {
     opacity: .75; }
   #article .block .narrow:focus .grad__valign.grad--clear, #article .block .narrow:hover .grad__valign.grad--clear {
     opacity: .4; }
-#article .banner {
-  background-color: #d1d1d1;
-  text-align: center;
-  margin: 0 15px;
-  padding: 0; }
-  #article .banner p {
-    margin: 0 auto; }
-  #article .banner img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    height: 100%;
-    width: 100%; }
-#article .donate {
+#article .black {
   background-color: #000;
   margin-bottom: 100px;
   padding-top: 60px;
   display: -ms-flexbox;
   display: flex;
   width: 100%; }
-  #article .donate img {
+  #article .black img {
     position: absolute;
+    max-width: 100%;
     bottom: 0;
     right: 0; }
-  #article .donate .text {
+  #article .black .title span {
+    color: #3affb0; }
+  #article .black .text {
     color: #fff;
     padding: 60px 0;
     padding-top: 45px;
     font-family: "museo thin";
     line-height: 27px;
     font-size: 1.0625em; }
-    #article .donate .text span {
+    #article .black .text span {
       color: #4f81ff; }
-#article .ads .row {
-  height: 200px; }
+  #article .black__calendar {
+    padding: 0; }
+    #article .black__calendar .filter select {
+      background-color: #000;
+      border-color: #fff;
+      color: #fff; }
+    #article .black__calendar .narrow > a {
+      border-color: #fff; }
+      #article .black__calendar .narrow > a .date {
+        color: #fff; }
+  #article .black__social img {
+    top: -85px;
+    bottom: inherit; }
+  #article .black__social .social {
+    margin: 50px 0 75px;
+    float: inherit; }
+    #article .black__social .social a {
+      margin-right: 75px;
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      *zoom: 1;
+      *display: inline; }
+      #article .black__social .social a[href*="facebook"] {
+        background-image: url('../images/social-orange.png');
+        background-position: 0 0;
+        height: 20px;
+        width: 20px; }
+        @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+          #article .black__social .social a[href*="facebook"] {
+            background-image: url('../images/social-orange-2x.png');
+            background-size: 20px 60px;
+            background-position: 0 0; } }
+      #article .black__social .social a[href*="twitter"] {
+        background-image: url('../images/social-orange.png');
+        background-position: 0 -40px;
+        height: 20px;
+        width: 20px; }
+        @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+          #article .black__social .social a[href*="twitter"] {
+            background-image: url('../images/social-orange-2x.png');
+            background-size: 20px 60px;
+            background-position: 0 -40px; } }
+      #article .black__social .social a[href*="feed"] {
+        background-image: url('../images/social-orange.png');
+        background-position: 0 -20px;
+        height: 20px;
+        width: 20px; }
+        @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+          #article .black__social .social a[href*="feed"] {
+            background-image: url('../images/social-orange-2x.png');
+            background-size: 20px 60px;
+            background-position: 0 -20px; } }
+      #article .black__social .social a:last-of-type {
+        margin-right: 0; }
 #article .partners {
   margin: 130px 0; }
   #article .partners div {
@@ -1274,6 +1318,28 @@ textarea {
             background-image: url('../images/partners-2x.png');
             background-size: 200px 285px;
             background-position: 0 0; } }
+
+.ads__normal .banner {
+  height: 200px; }
+.ads__wide .banner {
+  height: 220px;
+  width: 100%;
+  margin: 0; }
+.ads__wide--slim .banner {
+  height: 120px; }
+
+.banner {
+  background-color: #d1d1d1;
+  text-align: center;
+  margin: 0 15px;
+  padding: 0; }
+  .banner p {
+    margin: 0 auto; }
+  .banner img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+    width: 100%; }
 
 .logo, #footer .top .left-block {
   float: left; }
@@ -1455,6 +1521,12 @@ textarea {
       margin-right: 100px; }
     .button__donate .btn:nth-child(3) {
       color: #4f81ff; }
+    .button__donate--vacancy .btn:nth-child(1) {
+      border-right: 1px solid #fff;
+      cursor: pointer;
+      width: 200px; }
+      .button__donate--vacancy .btn:nth-child(1):hover {
+        color: #000; }
 
 .social {
   float: right; }
