@@ -829,8 +829,6 @@ textarea {
   @media only screen and (max-width: 767px) {
     #article .block {
       margin: 25px 0 50px; } }
-  #article .block__main {
-    margin-bottom: 0; }
   #article .block a {
     width: 100%;
     height: 100%;
@@ -866,6 +864,8 @@ textarea {
     padding: 100px 50px;
     position: relative;
     background: #000;
+    margin-right: 0;
+    margin-left: 0;
     z-index: 1; }
     #article .block--calendar:after {
       content: '';
@@ -904,7 +904,8 @@ textarea {
     #article .block--calendar[data-name="r"] .filling .r {
       display: block; }
     #article .block--calendar.row {
-      height: auto; }
+      height: auto;
+      margin-bottom: 0; }
     #article .block--calendar .narrow {
       animation: fade 2.7s;
       animation-fill-mode: forwards; }
@@ -957,6 +958,13 @@ textarea {
         #article .block--calendar .close {
           background-size: 20px 20px;
           background-image: url(../images/close-2x.png); } }
+  #article .block__main {
+    margin-bottom: 0; }
+  #article .block__calendar .row {
+    margin-top: 75px;
+    margin-bottom: 0; }
+    #article .block__calendar .row:first-of-type {
+      margin-top: 0; }
   #article .block .row:last-of-type {
     margin-bottom: 0; }
   #article .block .btn {
@@ -1616,11 +1624,68 @@ textarea {
     color: #ff6648; }
   .heading .filter--gray div span.active, .heading .filter--gray div span:focus, .heading .filter--gray div span:hover {
     color: #919191; }
-  .heading .filter select {
-    background-color: #fff;
-    border-color: #000;
+  .heading .filter .dd {
+    width: 150px;
+    color: #000;
+    outline: none;
+    cursor: pointer;
+    padding: 3px 8px;
+    border: 1px solid;
     font-size: 0.875em;
-    outline: none; }
+    border-right: none; }
+    .heading .filter .dd__format:first-of-type, .heading .filter .dd__place:first-of-type, .heading .filter .dd__date:first-of-type {
+      border-right: 1px solid; }
+    .heading .filter .dd__format:nth-of-type(2), .heading .filter .dd__place:nth-of-type(2), .heading .filter .dd__date:nth-of-type(2) {
+      right: 183px; }
+    .heading .filter .dd__format:nth-of-type(3), .heading .filter .dd__place:nth-of-type(3), .heading .filter .dd__date:nth-of-type(3) {
+      right: 350px; }
+    .heading .filter .dd__format:after, .heading .filter .dd__place:after, .heading .filter .dd__date:after {
+      top: 50%;
+      right: 8px;
+      content: "";
+      margin-top: -3px;
+      position: absolute;
+      border-style: solid;
+      border-width: 6px 6px 0 6px;
+      border-color: #000 transparent; }
+    .heading .filter .dd__format .dropdown, .heading .filter .dd__place .dropdown, .heading .filter .dd__date .dropdown {
+      top: 24px;
+      left: -1px;
+      right: -1px;
+      max-height: 0;
+      z-index: 10000;
+      border-top: none;
+      list-style: none;
+      overflow: hidden;
+      position: absolute;
+      background-color: #fff; }
+      .heading .filter .dd__format .dropdown li, .heading .filter .dd__place .dropdown li, .heading .filter .dd__date .dropdown li {
+        border: 1px solid;
+        padding: 3px 8px 0 8px;
+        border-bottom: none;
+        border-top: none; }
+        .heading .filter .dd__format .dropdown li a, .heading .filter .dd__place .dropdown li a, .heading .filter .dd__date .dropdown li a {
+          transition: 0.3s;
+          color: #000; }
+        .heading .filter .dd__format .dropdown li:last-child, .heading .filter .dd__place .dropdown li:last-child, .heading .filter .dd__date .dropdown li:last-child {
+          border-bottom: 1px solid;
+          padding: 3px 8px; }
+        .heading .filter .dd__format .dropdown li:hover a, .heading .filter .dd__place .dropdown li:hover a, .heading .filter .dd__date .dropdown li:hover a {
+          color: #4f81ff; }
+    .heading .filter .dd__format.active:after, .heading .filter .dd__place.active:after, .heading .filter .dd__date.active:after {
+      border-width: 0px 6px 6px 6px; }
+    .heading .filter .dd__format.active .dropdown, .heading .filter .dd__place.active .dropdown, .heading .filter .dd__date.active .dropdown {
+      min-height: -webkit-fit-content;
+      min-height: -moz-fit-content;
+      min-height: fit-content; }
+    .heading .filter .dd__format--black, .heading .filter .dd__place--black, .heading .filter .dd__date--black {
+      color: #fff; }
+      .heading .filter .dd__format--black:after, .heading .filter .dd__place--black:after, .heading .filter .dd__date--black:after {
+        border-color: #fff transparent; }
+      .heading .filter .dd__format--black .dropdown, .heading .filter .dd__place--black .dropdown, .heading .filter .dd__date--black .dropdown {
+        background-color: #000; }
+        .heading .filter .dd__format--black .dropdown li a, .heading .filter .dd__place--black .dropdown li a, .heading .filter .dd__date--black .dropdown li a {
+          color: #fff; }
   .heading .filter div {
     position: absolute;
     right: 15px; }

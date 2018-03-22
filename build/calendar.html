@@ -106,42 +106,75 @@
                 <div class="container">
 
                     <!-- breadcrumbs -->
-                    <div class="breadcrumbs valign">
+                    <div id="breadcrumbs" class="breadcrumbs valign">
                         <a href="https://mysecondspace.github.io/chytomo.com/build/index.html" class="main">Головна</a>
                         <span class="icon"></span>
                         <span class="current">Календар подій</span>
                     </div>
                 
                     <!-- heading -->
-                    <div id="heading" class="heading">
+                    <div class="heading">
 
                         <!-- line -->
                         <div class="row">
-                            <div class="s-4">
+                            <div class="x-12 s-4">
                                 
                                 <!-- title -->
                                 <h1 class="title title--black">Календар подій</h1>
                             </div>
 
                             <!-- filter -->
-                            <div class="filter valign s-8">
-                                <div>
-                                    <select>
-                                        <option>Місто</option>
-                                    </select>
-                                    <select>
-                                        <option>Формат</option>
-                                    </select>
-                                    <select>
-                                        <option>20 січня</option>
-                                    </select>
+                            <div class="filter valign x-h s-8">
+                                <div id="dd__format" class="dd dd__format">
+                                    <p>Формат</p>
+                                    <ul class="dropdown">
+                                        <li>
+                                            <a href="#">Лекція</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Презентація</a>
+                                        </li>
+                                    </ul>   
+                                </div>
+                                <div id="dd__date" class="dd dd__date">
+                                    <p>Дата</p>
+                                    <ul class="dropdown">
+                                        <li>
+                                            <a href="#">Березень</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Квітень</a>
+                                        </li>
+                                    </ul>   
+                                </div>
+                                <div id="dd__place" class="dd dd__place">
+                                    <p>Місто</p>
+                                    <ul class="dropdown">
+                                        <li>
+                                            <a href="#">Київ</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Львів</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Вінниця</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Тернопіль</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Івано-Франківськ</a>
+                                        </li>
+                                    </ul>   
                                 </div>
                             </div>
                         </div>
                     </div>
                 
                     <!-- block -->
-                    <div class="block block--large">
+                    <div class="block block__calendar block--large">
+
+                        <!-- tablet and higher  -->
                         <div class="inside row">
                                     
                             <!-- narrow block -->
@@ -200,8 +233,6 @@
                                 <p>наскрізний банер</p>
                             </div>
                         </div>
-
-                        <!-- block calendar -->
                         <div id="inside" class="block--calendar row">
 
                             <!-- narrow block -->
@@ -295,7 +326,7 @@
                                 	<p class="text">Правду можна надовго заховати, але не можна зовсім знищити. І вона повертається до нас у вигляді справжньої історії багатовікової боротьби за незалежність, у якій кожний наступний період успадковує досвід попередніх визвольних змагань. У цій книзі оповідається про останній бій УПА, що відбувався на Тернопільщіні в 1960-му році. Незаперечні факти спростовують наклепи, зведені Кремлем, та доводять, що єдиною метою та мрією українців завжди було здобуття незалежності України.</p>
                                 </div>
                             </div>
-                            <a href="#heading" class="close"></a>
+                            <a href="#breadcrumbs" class="close"></a>
                         </div>
                         <div class="row">
 
@@ -438,7 +469,7 @@
                                 </a>
                             </div>
                         </div>
-                
+                        <!-- end tablet and higher  -->
 
                         <!-- button -->
                         <button class="btn btn--black">Ще подій</button>
