@@ -25,22 +25,19 @@ html {
     height: 100%;
     min-width: 320px;
     overflow-x: hidden;
-    font-family: "museo light";
     background-color: #fff;
     animation: fade 1.2s;
     animation-fill-mode: forwards; }
+    html body ::-moz-selection {
+      color: #fff; }
+    html body ::selection {
+      color: #fff; }
     html body .wrapper {
       height: 100%;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-direction: column;
           flex-direction: column; }
-      html body .wrapper ::-moz-selection {
-        color: #fff;
-        background-color: #000; }
-      html body .wrapper ::selection {
-        color: #fff;
-        background-color: #000; }
       html body .wrapper nav ul li {
         display: inline-block;
         vertical-align: middle;
@@ -935,8 +932,8 @@ textarea {
           margin-top: 30px;
           font-size: 0.9375em;
           line-height: 28px;
-          font-family: "museo medium";
-          letter-spacing: .5px; }
+          letter-spacing: .5px;
+          font-family: "museo medium"; }
       #article .block--calendar .filling .text {
         color: #fff;
         font-size: 0.9375em;
@@ -1007,8 +1004,8 @@ textarea {
         font-size: 0.625em;
         margin-bottom: 15px;
         letter-spacing: 2px;
-        font-family: "museo medium";
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        font-family: "museo medium"; }
         #article .block .info .name .liner--orange {
           color: #ff6648; }
         #article .block .info .name .liner--black {
@@ -1311,9 +1308,9 @@ textarea {
     color: #fff;
     padding: 60px 0;
     padding-top: 45px;
-    font-family: "museo thin";
     line-height: 27px;
-    font-size: 1.0625em; }
+    font-size: 1.0625em;
+    font-family: "museo thin"; }
     @media only screen and (max-width: 767px) {
       #article .black .text {
         padding: 30px 0; } }
@@ -1785,9 +1782,6 @@ textarea {
   float: right; }
   .social__header {
     height: 100%; }
-    @media only screen and (max-width: 767px) {
-      .social__header.valign {
-        display: none; } }
   .social__footer {
     margin-top: 45px; }
     @media only screen and (max-width: 767px) {
@@ -1899,3 +1893,9 @@ textarea {
     top: 0; }
   100% {
     top: -60px; } }
+body {
+  font-family: "museo light"; }
+  body ::-moz-selection {
+    background-color: #000; }
+  body ::selection {
+    background-color: #000; }
