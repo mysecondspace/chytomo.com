@@ -599,248 +599,257 @@ textarea {
 
   .l-os-0 {
     margin-left: 0%; } }
-.title {
-  text-transform: uppercase;
-  font-family: "rubik bold"; }
-  .title--black {
-    color: #333;
-    display: inline-block;
-    vertical-align: middle;
-    *vertical-align: auto;
-    *zoom: 1;
-    *display: inline;
-    line-height: 65px;
-    font-size: 4.0625em;
-    margin-top: 30px; }
-  .title--green {
-    color: #a0c814;
-    margin: 55px 0 0 120px;
-    line-height: 90px;
-    font-size: 5.625em; }
-
-#header .top {
-  display: -ms-flexbox;
-  display: flex;
-  padding: 40px 0 20px; }
-  @media only screen and (max-width: 767px) {
-    #header .top {
-      padding: 25px 0; } }
-  #header .top .logo {
-    float: left; }
-    #header .top .logo a {
-      display: inline-block;
-      vertical-align: middle;
-      *vertical-align: auto;
-      *zoom: 1;
-      *display: inline; }
-      #header .top .logo a .image {
-        width: 175px;
-        height: 52px;
-        background-image: url(../images/logo-deutscher.png); }
-        @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-          #header .top .logo a .image {
-            background-size: 175px 51.5px;
-            background-image: url(../images/logo-deutscher-2x.png); } }
-  #header .top .social {
-    float: right;
-    height: 100%; }
-    #header .top .social a {
-      margin-right: 15px;
-      display: inline-block;
-      vertical-align: middle;
-      *vertical-align: auto;
-      *zoom: 1;
-      *display: inline; }
-      #header .top .social a[href*="facebook"] {
-        background-image: url('../images/social-deutscher.png');
-        background-position: 0 -20px;
-        height: 20px;
-        width: 20px; }
-        #header .top .social a[href*="facebook"]:hover {
-          background-position: 0 0; }
-        @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-          #header .top .social a[href*="facebook"] {
-            background-image: url('../images/social-deutscher-2x.png');
-            background-size: 20px 200px;
-            background-position: 0 -20px; } }
-      #header .top .social a[href*="twitter"] {
-        background-image: url('../images/social-deutscher.png');
-        background-position: 0 -180px;
-        height: 20px;
-        width: 20px; }
-        #header .top .social a[href*="twitter"]:hover {
-          background-position: 0 -160px; }
-        @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-          #header .top .social a[href*="twitter"] {
-            background-image: url('../images/social-deutscher-2x.png');
-            background-size: 20px 200px;
-            background-position: 0 -180px; } }
-      #header .top .social a[href*="feed"] {
-        background-image: url('../images/social-deutscher.png');
-        background-position: 0 -100px;
-        height: 20px;
-        width: 20px; }
-        #header .top .social a[href*="feed"]:hover {
-          background-position: 0 -80px; }
-        @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-          #header .top .social a[href*="feed"] {
-            background-image: url('../images/social-deutscher-2x.png');
-            background-size: 20px 200px;
-            background-position: 0 -100px; } }
-      #header .top .social a[href*="instagram"] {
-        background-image: url('../images/social-deutscher.png');
-        background-position: 0 -60px;
-        height: 20px;
-        width: 20px; }
-        #header .top .social a[href*="instagram"]:hover {
-          background-position: 0 -40px; }
-        @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-          #header .top .social a[href*="instagram"] {
-            background-image: url('../images/social-deutscher-2x.png');
-            background-size: 20px 200px;
-            background-position: 0 -60px; } }
-      #header .top .social a[href*="t.me"] {
-        background-image: url('../images/social-deutscher.png');
-        background-position: 0 -140px;
-        height: 20px;
-        width: 20px; }
-        #header .top .social a[href*="t.me"]:hover {
-          background-position: 0 -120px; }
-        @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-          #header .top .social a[href*="t.me"] {
-            background-image: url('../images/social-deutscher-2x.png');
-            background-size: 20px 200px;
-            background-position: 0 -140px; } }
-      #header .top .social a:last-of-type {
-        margin-right: 0; }
-#header .bottom .slogan {
-  width: 350px;
-  margin-top: 75px;
-  color: #333; }
-
-#article .news {
-  background: url("../images/deutscher-news.png") center 20% no-repeat;
-  padding-top: 200px; }
-  #article .news .block {
-    margin-bottom: 125px; }
-    #article .news .block:last-of-type {
-      margin-bottom: 0; }
-    #article .news .block .number {
-      line-height: 1;
-      font-size: 9.375em;
-      font-family: "rubik bold"; }
-      #article .news .block .number + p {
-        font-size: 1.875em;
-        font-family: "rubik bold"; }
-        #article .news .block .number + p + p {
-          margin: 25px 0; }
-    #article .news .block a {
-      color: #fff;
-      font-size: 0.9375em;
-      padding: 8px 40px;
-      transition: 0.3s;
-      display: inline-block;
-      vertical-align: middle;
-      *vertical-align: auto;
-      *zoom: 1;
-      *display: inline;
+.wrapper {
+  overflow-x: hidden; }
+  .wrapper .container {
+    position: relative; }
+    .wrapper .container .deutscher {
+      position: absolute; }
+      .wrapper .container .deutscher--header {
+        left: -100px;
+        top: 112px; }
+      .wrapper .container .deutscher--news {
+        transform: translate(-50%, 15%);
+        left: 50%; }
+      .wrapper .container .deutscher--trends {
+        left: -955px;
+        top: -65px; }
+    .wrapper .container .title {
       text-transform: uppercase;
-      background-color: #f7a71a;
-      border: 1px solid #f7a71a; }
-      #article .news .block a:focus, #article .news .block a:hover {
-        background-color: #fff;
-        color: #f7a71a; }
-    #article .news .block img {
-      width: 100%;
-      height: 100%;
-      -o-object-fit: cover;
-         object-fit: cover; }
-    #article .news .block--left {
-      text-align: left; }
-    #article .news .block--right {
-      text-align: right; }
-#article .trends {
-  background: url("../images/deutscher-trends.png") 78% top no-repeat;
-  background-size: cover;
-  padding: 150px 0; }
-  #article .trends .title--black {
-    margin-bottom: 60px;
-    line-height: 60px;
-    font-size: 3.75em; }
-  #article .trends .block {
-    margin-bottom: 90px; }
-    #article .trends .block:last-of-type {
-      margin-bottom: 0; }
-    #article .trends .block img {
-      width: 100%;
-      height: 100%;
-      -o-object-fit: cover;
-         object-fit: cover; }
-    #article .trends .block .color {
-      background-color: #a0c814; }
-      #article .trends .block .color div {
-        bottom: 0;
-        padding: 30px;
-        padding-left: 15px;
-        position: absolute; }
-        #article .trends .block .color div p {
+      font-family: "rubik bold"; }
+      .wrapper .container .title--black {
+        color: #333;
+        display: inline-block;
+        vertical-align: middle;
+        *vertical-align: auto;
+        *zoom: 1;
+        *display: inline;
+        line-height: 80px;
+        font-size: 5em;
+        margin-top: 30px; }
+      .wrapper .container .title--green {
+        color: #a0c814;
+        margin: 80px 0 0 120px;
+        line-height: 110px;
+        font-size: 6.875em; }
+  .wrapper #header .top {
+    display: -ms-flexbox;
+    display: flex;
+    padding: 40px 0 20px; }
+    @media only screen and (max-width: 767px) {
+      .wrapper #header .top {
+        padding: 25px 0; } }
+    .wrapper #header .top .logo {
+      float: left; }
+      .wrapper #header .top .logo a {
+        display: inline-block;
+        vertical-align: middle;
+        *vertical-align: auto;
+        *zoom: 1;
+        *display: inline; }
+        .wrapper #header .top .logo a .image {
+          width: 175px;
+          height: 52px;
+          background-image: url(../images/logo-deutscher.png); }
+          @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+            .wrapper #header .top .logo a .image {
+              background-size: 175px 51.5px;
+              background-image: url(../images/logo-deutscher-2x.png); } }
+    .wrapper #header .top .social {
+      float: right;
+      height: 100%; }
+      .wrapper #header .top .social a {
+        margin-right: 15px;
+        display: inline-block;
+        vertical-align: middle;
+        *vertical-align: auto;
+        *zoom: 1;
+        *display: inline; }
+        .wrapper #header .top .social a[href*="facebook"] {
+          background-image: url('../images/social-deutscher.png');
+          background-position: 0 -20px;
+          height: 20px;
+          width: 20px; }
+          .wrapper #header .top .social a[href*="facebook"]:hover {
+            background-position: 0 0; }
+          @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+            .wrapper #header .top .social a[href*="facebook"] {
+              background-image: url('../images/social-deutscher-2x.png');
+              background-size: 20px 200px;
+              background-position: 0 -20px; } }
+        .wrapper #header .top .social a[href*="twitter"] {
+          background-image: url('../images/social-deutscher.png');
+          background-position: 0 -180px;
+          height: 20px;
+          width: 20px; }
+          .wrapper #header .top .social a[href*="twitter"]:hover {
+            background-position: 0 -160px; }
+          @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+            .wrapper #header .top .social a[href*="twitter"] {
+              background-image: url('../images/social-deutscher-2x.png');
+              background-size: 20px 200px;
+              background-position: 0 -180px; } }
+        .wrapper #header .top .social a[href*="feed"] {
+          background-image: url('../images/social-deutscher.png');
+          background-position: 0 -100px;
+          height: 20px;
+          width: 20px; }
+          .wrapper #header .top .social a[href*="feed"]:hover {
+            background-position: 0 -80px; }
+          @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+            .wrapper #header .top .social a[href*="feed"] {
+              background-image: url('../images/social-deutscher-2x.png');
+              background-size: 20px 200px;
+              background-position: 0 -100px; } }
+        .wrapper #header .top .social a[href*="instagram"] {
+          background-image: url('../images/social-deutscher.png');
+          background-position: 0 -60px;
+          height: 20px;
+          width: 20px; }
+          .wrapper #header .top .social a[href*="instagram"]:hover {
+            background-position: 0 -40px; }
+          @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+            .wrapper #header .top .social a[href*="instagram"] {
+              background-image: url('../images/social-deutscher-2x.png');
+              background-size: 20px 200px;
+              background-position: 0 -60px; } }
+        .wrapper #header .top .social a[href*="t.me"] {
+          background-image: url('../images/social-deutscher.png');
+          background-position: 0 -140px;
+          height: 20px;
+          width: 20px; }
+          .wrapper #header .top .social a[href*="t.me"]:hover {
+            background-position: 0 -120px; }
+          @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+            .wrapper #header .top .social a[href*="t.me"] {
+              background-image: url('../images/social-deutscher-2x.png');
+              background-size: 20px 200px;
+              background-position: 0 -140px; } }
+        .wrapper #header .top .social a:last-of-type {
+          margin-right: 0; }
+  .wrapper #header .bottom .slogan {
+    width: 350px;
+    margin-top: 100px;
+    color: #333; }
+  .wrapper #article .news {
+    margin-top: 200px; }
+    .wrapper #article .news .block {
+      margin-bottom: 125px; }
+      .wrapper #article .news .block:last-of-type {
+        margin-bottom: 0; }
+      .wrapper #article .news .block .number {
+        line-height: 1;
+        font-size: 9.375em;
+        font-family: "rubik bold"; }
+        .wrapper #article .news .block .number + p {
           font-size: 1.875em;
           font-family: "rubik bold"; }
-          #article .trends .block .color div p + p {
-            font-family: "rubik regular";
-            font-size: 1em;
-            margin-top: 10px; }
-    #article .trends .block .image {
-      overflow: hidden;
-      padding: 0; }
-      #article .trends .block .image img {
-        transition: 0.3s; }
-        #article .trends .block .image img:focus, #article .trends .block .image img:hover {
-          transform: scale(1.05); }
-
-#footer {
-  background-color: #000;
-  padding: 100px 0; }
-  #footer p {
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    color: #fff; }
-  #footer ul li {
-    font-family: "rubik light";
-    font-size: 0.875em;
-    color: #fff; }
-  #footer .logo {
-    float: left; }
-    #footer .logo a {
-      display: inline-block;
-      vertical-align: middle;
-      *vertical-align: auto;
-      *zoom: 1;
-      *display: inline; }
-      #footer .logo a .image {
-        width: 175px;
-        height: 52px;
-        background-image: url(../images/logo-white.png); }
-        @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-          #footer .logo a .image {
-            background-size: 175px 51.5px;
-            background-image: url(../images/logo-white-2x.png); } }
-  #footer .goethe {
-    float: right; }
-    #footer .goethe a {
-      display: inline-block;
-      vertical-align: middle;
-      *vertical-align: auto;
-      *zoom: 1;
-      *display: inline; }
-      #footer .goethe a .image {
-        width: 160px;
-        height: 75px;
-        background-image: url(../images/logo-goethe.png); }
-        @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-          #footer .goethe a .image {
-            background-size: 160px 75px;
-            background-image: url(../images/logo-goethe-2x.png); } }
+          .wrapper #article .news .block .number + p + p {
+            margin: 25px 0; }
+      .wrapper #article .news .block a {
+        color: #fff;
+        font-size: 0.9375em;
+        padding: 8px 40px;
+        transition: 0.3s;
+        display: inline-block;
+        vertical-align: middle;
+        *vertical-align: auto;
+        *zoom: 1;
+        *display: inline;
+        text-transform: uppercase;
+        background-color: #f7a71a;
+        border: 1px solid #f7a71a; }
+        .wrapper #article .news .block a:focus, .wrapper #article .news .block a:hover {
+          background-color: #fff;
+          color: #f7a71a; }
+      .wrapper #article .news .block img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover; }
+      .wrapper #article .news .block--left {
+        text-align: left; }
+      .wrapper #article .news .block--right {
+        text-align: right; }
+  .wrapper #article .trends {
+    margin: 150px 0; }
+    .wrapper #article .trends .title--black {
+      margin-bottom: 60px;
+      line-height: 60px;
+      font-size: 3.75em; }
+    .wrapper #article .trends .block {
+      margin-bottom: 90px; }
+      .wrapper #article .trends .block:last-of-type {
+        margin-bottom: 0; }
+      .wrapper #article .trends .block img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover; }
+      .wrapper #article .trends .block .color {
+        background-color: #a0c814; }
+        .wrapper #article .trends .block .color div {
+          bottom: 0;
+          padding: 30px;
+          padding-left: 15px;
+          position: absolute; }
+          .wrapper #article .trends .block .color div p {
+            font-size: 1.875em;
+            font-family: "rubik bold"; }
+            .wrapper #article .trends .block .color div p + p {
+              font-family: "rubik regular";
+              font-size: 1em;
+              margin-top: 10px; }
+      .wrapper #article .trends .block .image {
+        overflow: hidden;
+        padding: 0; }
+        .wrapper #article .trends .block .image img {
+          transition: 0.3s; }
+          .wrapper #article .trends .block .image img:focus, .wrapper #article .trends .block .image img:hover {
+            transform: scale(1.05); }
+  .wrapper #footer {
+    background-color: #000;
+    padding: 100px 0; }
+    .wrapper #footer p {
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      color: #fff; }
+    .wrapper #footer ul li {
+      font-family: "rubik light";
+      font-size: 0.875em;
+      color: #fff; }
+    .wrapper #footer .logo {
+      float: left; }
+      .wrapper #footer .logo a {
+        display: inline-block;
+        vertical-align: middle;
+        *vertical-align: auto;
+        *zoom: 1;
+        *display: inline; }
+        .wrapper #footer .logo a .image {
+          width: 175px;
+          height: 52px;
+          background-image: url(../images/logo-white.png); }
+          @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+            .wrapper #footer .logo a .image {
+              background-size: 175px 51.5px;
+              background-image: url(../images/logo-white-2x.png); } }
+    .wrapper #footer .goethe {
+      float: right; }
+      .wrapper #footer .goethe a {
+        display: inline-block;
+        vertical-align: middle;
+        *vertical-align: auto;
+        *zoom: 1;
+        *display: inline; }
+        .wrapper #footer .goethe a .image {
+          width: 160px;
+          height: 75px;
+          background-image: url(../images/logo-goethe.png); }
+          @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+            .wrapper #footer .goethe a .image {
+              background-size: 160px 75px;
+              background-image: url(../images/logo-goethe-2x.png); } }
 
 @keyframes fade {
   0% {
@@ -858,10 +867,7 @@ textarea {
   100% {
     top: -60px; } }
 body {
-  background: url("../images/deutscher-header.png") no-repeat;
-  background-position: 80px 112px;
-  font-family: "rubik regular";
-  background-size: cover; }
+  font-family: "rubik regular"; }
   body ::-moz-selection {
     background-color: #a0c814; }
   body ::selection {
