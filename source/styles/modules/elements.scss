@@ -1,0 +1,514 @@
+// sprites
+@include add(social, "social/*.png", "social-2x/*.png");
+
+// ----- ads -----
+.ads {
+	&__normal {
+		.banner {
+			height: 200px;
+		}
+	}
+	&__wide {
+		.banner {
+			height: 220px;
+			width: 100%;
+			margin: 0;
+		}
+		&--slim {
+			.banner {
+				height: 120px;
+			}
+		}
+	}
+}
+
+// ----- banner -----
+.banner {
+	background-color: $light-gray;
+	text-align: center;
+
+	// ----- убрать перед запуском -----
+	margin: 0 15px;
+	padding: 0;
+	p {
+		margin: 0 auto;
+	}
+	// ----- убрать перед запуском -----
+
+	img {
+		object-fit: cover;
+		height: 100%;
+		width: 100%;
+	}
+}
+
+// ----- logo -----
+.logo {
+    float: left;
+    a {
+    	@include inline-block;
+		.image {
+	   		&--black {
+				@include image-retina("/../images/logo-black.png", "/../images/logo-black-2x.png");
+		   	}
+		   	&--white {
+				@include image-retina("/../images/logo-white.png", "/../images/logo-white-2x.png");
+		   	}
+	    }
+    }
+    .slogan {
+        font-size: em(14);
+        line-height: 26px;
+        @include media(phone) {
+        	font-size: em(12);
+        	line-height: 19px;
+        }
+        &__header {
+	        margin-left: 20px;
+	        color: $gray;
+        }
+        &__footer {
+        	margin-top: 45px;
+        	display: block;
+        	color: $gray;
+        	@include media(phone) {
+        		margin-left: 20px;
+        		margin-top: 0;
+        	}
+        }
+    }
+}
+
+// ----- breadcrumbs -----
+.breadcrumbs {
+	margin-top: 35px;
+	@include media(phone) {
+		margin-top: 25px;
+	}
+	.icon {
+		margin: 0 10px;
+		@include inline-block;
+		@include image-retina("/../images/arrow.png", "/../images/arrow-2x.png");
+		background-repeat: no-repeat;
+	}
+	.main, .current {
+		font-size: em(11);
+		color: $light-gray;
+		font-family: $museo-regular;
+		text-transform: uppercase;
+		letter-spacing: 1.77px;
+		padding: 5px 14px;
+		border: 1px solid;
+	}
+	.main {
+		@include transition($time);
+		&:hover {
+			color: $black;
+		}
+	}
+	.current {
+		cursor: default;
+	}
+}
+
+// ----- title -----
+.title {
+	font-size: em(24);
+	font-family: $museo-bold;
+	text-transform: uppercase;
+	letter-spacing: 7px;
+	&__padding {
+		margin-left: 47px;
+		@include media(large) {
+			margin-left: 0;
+		}
+	}
+	&--black {
+		color: $black;
+		span {
+			color: $white;
+		}
+	}
+	&--white {
+		color: $white;
+	}
+}
+
+// ----- heading -----
+.heading {
+	margin-top: 50px;
+	@include media(phone) {
+		margin-top: 25px;
+	}
+
+	// ----- line -----
+	.line {
+		left: 0;
+		height: 60px;
+		position: absolute;
+		@include media(phone) {
+            width: calc(5% + 95px);
+        }
+        @include media(tablet) {
+            width: calc(7.5% + 95px);
+        }
+        @include media(laptop) {
+            width: calc(10% + 95px);
+        }
+        @include media(large) {
+        	display: none;
+        }
+        &--gold {
+        	background-color: $gold;
+        }
+        &--green {
+        	background-color: $green;
+        }
+        &--blue {
+        	background-color: $blue;
+        }
+		&--orange {
+			background-color: $orange;
+		}
+		&--black {
+			background-color: $black;
+		}
+		&--gray {
+			background-color: $gray;
+		}
+	}
+
+	// ----- filter -----
+	.filter {
+		&--gold div span {
+			&.active,
+			&:focus,
+			&:hover {
+	        	color: $gold;
+			}
+		}
+		&--green div span {
+			&.active,
+			&:focus,
+			&:hover {
+	        	color: $green;
+			}
+		}
+		&--blue div span {
+			&.active,
+			&:focus,
+			&:hover {
+	        	color: $blue;
+			}
+		}
+		&--orange div span {
+			&.active,
+			&:focus,
+			&:hover {
+	        	color: $orange;
+			}
+		}
+		&--gray div span {
+			&.active,
+			&:focus,
+			&:hover {
+	        	color: $gray;
+			}
+		}
+		.dd {
+			width: 150px;
+			color: $black;
+			outline: none;
+			cursor: pointer;
+			padding: 3px 8px;
+			border: 1px solid;
+			font-size: em(14);
+			border-right: none;
+			&__format,
+			&__place,
+			&__date {
+				&:first-of-type {
+					border-right: 1px solid;
+				}
+				&:nth-of-type(2) {
+					right: 183px;
+				}
+				&:nth-of-type(3) {
+					right: 350px;
+				}
+				&:after {
+					top: 50%;
+					right: 8px;
+					content: "";
+					margin-top: -3px;
+					position: absolute;
+					border-style: solid;
+					border-width: 6px 6px 0 6px;
+					border-color: $black transparent;
+				}
+				.dropdown {
+					top: 24px;
+					left: -1px;
+					right: -1px;
+					max-height: 0;
+					z-index: 10000;
+					border-top: none;
+					list-style: none;
+					overflow: hidden;
+					position: absolute;
+					background-color: $white;
+					li {
+						border: 1px solid;
+						padding: 3px 8px 0 8px;
+						border-bottom: none;
+						border-top: none;
+						a {
+							transition: $time;
+							color: $black;
+						}
+						&:last-child {
+							border-bottom: 1px solid;
+							padding: 3px 8px;
+						}
+						&:hover a {
+							color: $blue;
+						}
+					}
+				}
+				&.active {
+					&:after {
+						border-width: 0px 6px 6px 6px;
+					}
+					.dropdown {
+						min-height: fit-content;
+					}
+				}
+				&--black {
+					color: $white;
+					&:after {
+						border-color: $white transparent;
+					}
+					.dropdown {
+						background-color: $black;
+						li a {
+							color: $white;
+						}
+					}
+				}
+			}
+		}
+		div {
+			position: absolute;
+			right: 15px;
+			span {
+				color: $black;
+				font-size: em(16);
+				font-family: $museo-light;
+				@include transition($time);
+				position: relative;
+				margin-right: 45px;
+				cursor: pointer;
+				&.active:after,
+				&:focus:after,
+				&:hover:after {
+					content: "";
+					border-bottom: 2px solid;
+					position: absolute;
+					bottom: -10px;
+					width: 100%;
+					left: 0;
+				}
+				&:last-of-type {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+
+// ----- button -----
+.button {
+	float: right;
+	display: flex;
+	&__header,
+	&__footer {
+		.btn {
+			border: 2px solid;
+		}
+	}
+	&__header {
+    	height: 100%;
+    	margin-left: 40px;
+    	&.valign {
+	    	@include media(phone) {
+		    	display: none;
+		    }
+	    }
+	}
+	&__donate {
+		float: left;
+		margin-bottom: 60px;
+		@include media(phone) {
+			margin-bottom: 30px;
+			@include inline-block;
+		} 
+		input[type=number]::-webkit-inner-spin-button, 
+		input[type=number]::-webkit-outer-spin-button { 
+			-webkit-appearance: none; 
+		}
+		.btn {
+			font-size: em(15);
+			&:nth-child(odd) {
+				@include transition($time);
+				border-right: none;
+				text-align: center;
+				padding: 8px;
+				cursor: auto;
+				width: 100px;
+				@include media(phone) {
+					border-right: 1px solid;
+					width: calc(50% - 23px);
+					margin-right: 10px;
+					float: left;
+				}
+				&:focus:-moz-placeholder {
+					color: transparent;
+				}
+				&:focus::-moz-placeholder {
+					color: transparent;
+				}
+				&:focus:-ms-input-placeholder {
+					color: transparent;
+				}
+				&:focus::-webkit-input-placeholder {
+					color: transparent;
+				}
+			}
+			&:nth-child(even) {
+				@include media(phone) {
+					width: calc(50% - 63px);
+					text-align: center;
+					float: right;
+				}
+			}
+			&:nth-child(1) {
+				color: $white;
+				@include media(phone) {
+					margin-bottom: 10px;
+				}
+			}
+			&:nth-child(2) {
+				margin-right: 100px;
+				@include media(phone) {
+					margin-bottom: 10px;
+					margin-right: 0;
+				}
+			}
+			&:nth-child(3) {
+				color: $blue;
+			}
+		}
+		&--vacancy {
+			.btn:nth-child(1) {
+				border-right: 1px solid $white;
+				cursor: pointer;
+				width: 200px;
+				&:hover {
+					color: $black;
+				}
+			}
+		}
+	}
+}
+
+// ----- social -----
+.social {
+    float: right;
+	&__header {
+	    height: 100%;
+	}
+	&__footer {
+    	margin-top: 45px;
+    	@include media(phone) {
+			margin: 25px auto;
+		    float: initial;
+    	}
+	}
+    a {
+        margin-right: 40px;
+        @include inline-block;
+        &[href*="facebook"] {
+        	@include sprite(facebook, social, hover);
+        }
+        &[href*="twitter"] {
+        	@include sprite(twitter, social, hover);
+        }
+        &[href*="feed"] {
+        	@include sprite(rss, social, hover);
+        }
+        &:last-of-type {
+        	margin-right: 0;
+        }
+    }
+}
+
+// ----- btn -----
+.btn {
+	z-index: 1;
+	font-size: em(16);
+	position: relative;
+	text-transform: uppercase;
+	background-color: transparent;
+	font-family: $museo-thin;
+	padding: 8px 28px;
+	border: 1px solid;
+	overflow: hidden;
+	cursor: pointer;
+	&:focus:before,
+	&:hover:before {
+		left: 0;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		transition: all $time ease;
+		z-index: -1;
+		height: 100%;
+		width: 100%;
+		left: -100%;
+		top: 0;
+	}
+	&--white {
+		color: $white;
+		&:focus, &:hover {
+			border-color: $white;
+			color: $black;
+		}
+		&:focus:before,
+		&:hover:before {
+			background-color: $white;
+		}
+	}
+	&--blue {
+		color: $blue;
+		&:focus, &:hover {
+			border-color: $blue;
+			color: $white;
+		}
+		&:focus:before,
+		&:hover:before {
+			background-color: $blue;
+		}
+	}
+	&--black {
+		color: $black;
+		&:focus, &:hover {
+			border-color: $black;
+			color: $white;
+		}
+		&:focus:before,
+		&:hover:before {
+			background-color: $black;
+		}
+	}
+}

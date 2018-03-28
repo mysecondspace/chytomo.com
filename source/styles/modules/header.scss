@@ -1,0 +1,12 @@
+// ----- header -----
+#header {
+
+    // ----- top -----
+    .top {
+        display: flex;
+        padding: 30px 0 40px;
+        @include media(phone) {
+        	padding: 25px 0;
+        }
+    }
+}

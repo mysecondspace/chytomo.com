@@ -1,0 +1,110 @@
+// ----- footer -----
+#footer {
+    background-color: $black;
+    padding: 70px 0 20px;
+    @include media(phone) {
+        margin-top: 15px;
+        padding: 20px 0;
+    }
+
+    // ----- top -----
+    .top {
+        display: flex;
+
+        // ----- left block -----
+        .left-block {
+            @extend .logo;
+            width: 25%;
+            @include media(phone) {
+                display: flex;
+                width: 100%;
+            }
+        }
+
+        // ----- center block -----
+        .center-block {
+            display: flex;
+            float: left;
+            width: 50%;
+            @include media(phone) {
+                display: none;
+            }
+            ul {
+                grid-auto-rows: 50px;
+                display: initial;
+                float: left;
+                width: 25%;
+                &:last-of-type li:last-of-type a {
+                    @include transition($time);
+                    color: $blue;
+                    &:hover {
+                        color: lighten($blue, 10%);
+                    }
+                }
+                li {
+                    width: -webkit-fill-available;
+                    margin-bottom: 30px;
+                    a {
+                        @include transition($time);
+                        font-size: em(14);
+                        color: $white;
+                        &:hover {
+                            color: $blue;
+                        }
+                    }
+                }
+            }
+        }
+
+        // ----- right block -----
+        .right-block {
+            float: right;
+            width: 25%;
+            @include media(phone) {
+                display: flex;
+                float: initial;
+                width: 100%;
+            }
+            .btn {
+                padding: 16px 28px;
+            }
+        }
+    }
+
+    // ----- bottom -----
+    .bottom {
+        display: flex;
+        margin-top: 70px;
+        @include media(phone) {
+            margin-top: 0;
+        }
+        p {
+            font-size: em(14);
+            color: $dark-gray;
+            @include media(phone) {
+                font-size: em(13);
+            } 
+        }
+        a {
+            color: $dark-gray;
+            @include transition($time);
+            &:focus, &:hover {
+                color: $blue;
+            }
+        }
+
+        // ----- copyright -----
+        .copyright {
+            float: left;
+        }
+        
+        // ----- made -----
+        .made {
+            float: right;
+            @include media(phone) {
+                padding-top: 5px;
+                float: left;
+            }
+        }
+    }
+}

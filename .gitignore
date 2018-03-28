@@ -5,7 +5,4 @@ node_modules
 package.json
 gulpfile.js
 bower.json
-bower.cmd
 config.rb
-gulp.cmd
-source

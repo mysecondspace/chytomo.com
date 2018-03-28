@@ -1,0 +1,107 @@
+// sprites
+@include add(nav, "nav/*.png", "nav-2x/*.png");
+
+// ----- menu -----
+#menu.menu {
+    border-bottom: 1px solid $border;
+    border-top: 1px solid $border;
+    text-align: center;
+    padding: 25px 0;
+    @include media(phone) {
+        padding: 10px 0;
+    }
+
+    // ----- burger -----
+    .burger {
+        float: left;
+        .image {
+            @include inline-block;
+            @include sprite(burger, nav, hover);
+        }
+    }
+
+    // ----- calendar -----
+    .calendar {
+        float: right;
+        .image {
+            @include inline-block;
+            @include sprite(calendar, nav, hover);
+        }
+        &.active {
+            .image {
+               @include image-retina("/../images/calendar-blue.png", "/../images/calendar-blue-2x.png");
+               background-position: initial;;
+            }
+        }
+    }
+
+    // ----- search -----
+    .search {
+        margin-left: 30px;
+        float: right;
+        .image {
+            @include inline-block;
+            @include sprite(search, nav, hover);
+        }
+    }
+
+    // ----- list -----
+    ul {
+        display: -webkit-inline-box;
+        @include media(phone) {
+            display: none;
+        }
+        li {
+            margin: 0 10px;
+            overflow: hidden;
+            &:first-of-type {
+                margin: 0 10px 0 0;
+            }
+            &:last-of-type {
+                margin: 0 0 0 10px;
+            }
+            &.blue a:before {
+                background-color: $blue;
+            }
+            &.orange a:before {
+               background-color: $orange;
+            }
+            &.gold a:before {
+                background-color: $gold;
+            }
+            &.green a:before {
+                background-color: $green;
+            }
+            &.gray a:before {
+               background-color: $gray;
+            }
+            &.light a:before {
+               background-color: $light-gray;
+            }
+            &.active a:before {
+                left: 0;
+            }
+            a {
+                color: $black;
+                padding: 0 10px;
+                font-size: em(14);
+                font-family: $museo-light;
+                @include transition($time);
+                position: relative;
+                &:hover:before {
+                    left: 0;
+                }
+                &:before {
+                    content: '';
+                    height: 12px;
+                    bottom: -4px;
+                    transition: all $time ease;
+                    position: absolute;
+                    z-index: -1;
+                    width: 100%;
+                    left: -100%;
+                }
+            }
+        }
+    }
+}

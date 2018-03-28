@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Читомо — Календар подій</title>
+        //= templates/head.html
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            
+            <!-- header -->
+            //= templates/header.html
+            
+            <!-- menu -->
+            <nav id="menu" class="menu">
+                <div class="container">
+                    
+                    <!-- elements -->
+                    <!-- burger -->
+                    <div class="burger">
+                        <a href="#">
+                            <div class="image"></div>
+                        </a>
+                    </div>
+
+                    <!-- search -->
+                    <div class="search">
+                        <a href="#">
+                            <div class="image"></div>
+                        </a>
+                    </div>
+
+                    <!-- calendar -->
+                    <div class="calendar active">
+                        <a href="https://mysecondspace.github.io/chytomo.com/build/calendar.html">
+                            <div class="image"></div>
+                        </a>
+                    </div>
+                    
+                    <!-- list -->
+                    <ul>
+                        <li class="light">
+                            <a href="https://mysecondspace.github.io/chytomo.com/build/news.html">Новини</a>
+                        </li>
+                        <li class="blue">
+                            <a href="https://mysecondspace.github.io/chytomo.com/build/read.html">Читати</a>
+                        </li>
+                        <li class="orange">
+                            <a href="https://mysecondspace.github.io/chytomo.com/build/watch.html">Дивитися</a>
+                        </li>
+                        <li class="gold">
+                            <a href="https://mysecondspace.github.io/chytomo.com/build/acquainted.html">Знайомитися</a>
+                        </li>
+                        <li class="green">
+                            <a href="https://mysecondspace.github.io/chytomo.com/build/study.html">Вчитися</a>
+                        </li>
+                        <li>
+                            <a href="https://mysecondspace.github.io/chytomo.com/build/trends.html">Тренди</a>
+                        </li>
+                        <li class="light">
+                            <a href="https://mysecondspace.github.io/chytomo.com/build/special.html">Спецпроекти</a>
+                        </li>
+                        <li>
+                            <a href="#">Вітрина</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- article -->
+            <article id="article">
+                <div class="container">
+
+                    <!-- breadcrumbs -->
+                    <div id="breadcrumbs" class="breadcrumbs valign">
+                        <a href="https://mysecondspace.github.io/chytomo.com/build/index.html" class="main">Головна</a>
+                        <span class="icon"></span>
+                        <span class="current">Календар подій</span>
+                    </div>
+                
+                    <!-- heading -->
+                    <div class="heading">
+
+                        <!-- line -->
+                        <div class="row">
+                            <div class="x-12 s-4">
+                                
+                                <!-- title -->
+                                <h1 class="title title--black">Календар подій</h1>
+                            </div>
+
+                            <!-- filter -->
+                            <div class="filter valign x-h s-8">
+                                <div id="dd__format" class="dd dd__format">
+                                    <p>Формат</p>
+                                    <ul class="dropdown">
+                                        <li>
+                                            <a href="#">Лекція</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Презентація</a>
+                                        </li>
+                                    </ul>   
+                                </div>
+                                <div id="dd__date" class="dd dd__date">
+                                    <p>Дата</p>
+                                    <ul class="dropdown">
+                                        <li>
+                                            <a href="#">Березень</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Квітень</a>
+                                        </li>
+                                    </ul>   
+                                </div>
+                                <div id="dd__place" class="dd dd__place">
+                                    <p>Місто</p>
+                                    <ul class="dropdown">
+                                        <li>
+                                            <a href="#">Київ</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Львів</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Вінниця</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Тернопіль</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Івано-Франківськ</a>
+                                        </li>
+                                    </ul>   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- block -->
+                    <div class="block block__calendar block--large">
+
+                        <!-- tablet and higher  -->
+                        <div class="inside row">
+                                    
+                            <!-- narrow block -->
+                            <div class="narrow narrow__small--calendar s-3" data-name="l">
+                                <a href="#inside">
+
+                                    <!-- information -->
+                                    <p class="date">13<sub>/11</sub></p>
+                                    <div class="info info__small info__small--calendar valign">
+                                        <div class="name name--gray">
+                                            <p class="liner liner--orange">Вінниця</p>
+                                            <p class="caption caption--black">Олег Андрішко презентує книжку «Пісня цапів»</p>
+                                            <span>18:00<span> - Книгарня «Є»</span></span>
+                                            <p class="liner liner--dark">Лекція</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- narrow block -->
+                            <div class="narrow narrow__small--calendar s-3" data-name="lc">
+                                <a href="#inside">
+
+                                    <!-- information -->
+                                    <p class="date">14<sub>/11</sub></p>
+                                    <div class="info info__small info__small--calendar valign">
+                                        <div class="name name--gray">
+                                            <p class="liner liner--blue">Київ</p>
+                                            <p class="caption caption--black">Любко Дереш проведе творчу зустріч</p>
+                                            <span>19:00 <span> - Остання Барикада</span></span>
+                                            <p class="liner liner--dark">Лекція</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- narrow block -->
+                            <div class="narrow narrow__small--calendar s-3" data-name="rc">
+                                <a href="#inside">
+
+                                    <!-- information -->
+                                    <p class="date">15<sub>/11</sub></p>
+                                    <div class="info info__small info__small--calendar valign">
+                                        <div class="name name--gray">
+                                            <p class="liner liner--gold">Івано-Франківськ</p>
+                                            <p class="caption caption--black">Зустріч «Суспільне мовлення в Україні: місія і стандарти»</p>
+                                            <span>18:00 <span> - Міська Рада</span></span>
+                                            <p class="liner liner--dark">Лекція</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- banner -->
+                            <div class="banner valign s-3">
+                                <p>наскрізний банер</p>
+                            </div>
+                        </div>
+                        <div id="inside" class="block--calendar row">
+
+                            <!-- narrow block -->
+                            <div class="narrow narrow__small--calendar inside s-3">
+                                //= templates/calendar/narrow.html
+                            </div>
+                            <div class="filling s-os-1 s-8">
+                                //= templates/calendar/filling.html
+                            </div>
+                            <a href="#breadcrumbs" class="close"></a>
+                        </div>
+                        <div class="row">
+
+                            <!-- narrow block -->
+                            <div class="narrow narrow__small--calendar s-3" data-name="r">
+                                <a href="#">
+
+                                    <!-- information -->
+                                    <p class="date">16<sub>/11</sub></p>
+                                    <div class="info info__small info__small--calendar valign">
+                                        <div class="name name--gray">
+                                            <p class="liner liner--green">Тернопіль</p>
+                                            <p class="caption caption--black">Книжку-комікс «Віра і воля» презентують Леонід Бицюра та Віктор Уніята</p>
+                                            <span>18:00 <span> - Міська Рада</span></span>
+                                            <p class="liner liner--dark">Презентація</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+
+                            <!-- narrow block -->
+                            <div class="narrow narrow__small--calendar s-3" data-name="rc">
+                                <a href="#">
+
+                                    <!-- information -->
+                                    <p class="date">15<sub>/11</sub></p>
+                                    <div class="info info__small info__small--calendar valign">
+                                        <div class="name name--gray">
+                                            <p class="liner liner--gold">Івано-Франківськ</p>
+                                            <p class="caption caption--black">Зустріч «Суспільне мовлення в Україні: місія і стандарти»</p>
+                                            <span>18:00 <span> - Міська Рада</span></span>
+                                            <p class="liner liner--dark">Лекція</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- narrow block -->
+                            <div class="narrow narrow__small--calendar s-3" data-name="lc">
+                                <a href="#">
+
+                                    <!-- information -->
+                                    <p class="date">14<sub>/11</sub></p>
+                                    <div class="info info__small info__small--calendar valign">
+                                        <div class="name name--gray">
+                                            <p class="liner liner--blue">Київ</p>
+                                            <p class="caption caption--black">Любко Дереш проведе творчу зустріч</p>
+                                            <span>19:00 <span> - Остання Барикада</span></span>
+                                            <p class="liner liner--dark">Лекція</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- narrow block -->
+                            <div class="narrow narrow__small--calendar s-3" data-name="l">
+                                <a href="#">
+
+                                    <!-- information -->
+                                    <p class="date">13<sub>/11</sub></p>
+                                    <div class="info info__small info__small--calendar valign">
+                                        <div class="name name--gray">
+                                            <p class="liner liner--orange">Вінниця</p>
+                                            <p class="caption caption--black">Олег Андрішко презентує книжку «Пісня цапів»</p>
+                                            <span>18:00 <span> - Книгарня «Є»</span></span>
+                                            <p class="liner liner--dark">Презентація</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                                    
+                            <!-- narrow block -->
+                            <div class="narrow narrow__small--calendar s-3" data-name="l">
+                                <a href="#">
+
+                                    <!-- information -->
+                                    <p class="date">13<sub>/11</sub></p>
+                                    <div class="info info__small info__small--calendar valign">
+                                        <div class="name name--gray">
+                                            <p class="liner liner--orange">Вінниця</p>
+                                            <p class="caption caption--black">Олег Андрішко презентує книжку «Пісня цапів»</p>
+                                            <span>18:00 <span> - Книгарня «Є»</span></span>
+                                            <p class="liner liner--dark">Лекція</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- narrow block -->
+                            <div class="narrow narrow__small--calendar s-3" data-name="lc">
+                                <a href="#">
+
+                                    <!-- information -->
+                                    <p class="date">14<sub>/11</sub></p>
+                                    <div class="info info__small info__small--calendar valign">
+                                        <div class="name name--gray">
+                                            <p class="liner liner--blue">Київ</p>
+                                            <p class="caption caption--black">Любко Дереш проведе творчу зустріч</p>
+                                            <span>19:00 <span> - Остання Барикада</span></span>
+                                            <p class="liner liner--dark">Лекція</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- narrow block -->
+                            <div class="narrow narrow__small--calendar s-3" data-name="rc">
+                                <a href="#">
+
+                                    <!-- information -->
+                                    <p class="date">15<sub>/11</sub></p>
+                                    <div class="info info__small info__small--calendar valign">
+                                        <div class="name name--gray">
+                                            <p class="liner liner--gold">Івано-Франківськ</p>
+                                            <p class="caption caption--black">Зустріч «Суспільне мовлення в Україні: місія і стандарти»</p>
+                                            <span>18:00 <span> - Міська Рада</span></span>
+                                            <p class="liner liner--dark">Лекція</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- narrow block -->
+                            <div class="narrow narrow__small--calendar s-3" data-name="r">
+                                <a href="#">
+
+                                    <!-- information -->
+                                    <p class="date">16<sub>/11</sub></p>
+                                    <div class="info info__small info__small--calendar valign">
+                                        <div class="name name--gray">
+                                            <p class="liner liner--green">Тернопіль</p>
+                                            <p class="caption caption--black">Книжку-комікс «Віра і воля» презентують Леонід Бицюра та Віктор Уніята</p>
+                                            <span>18:00 <span> - Міська Рада</span></span>
+                                            <p class="liner liner--dark">Презентація</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end tablet and higher  -->
+
+                        <!-- button -->
+                        <button class="btn btn--black">Ще подій</button>
+                    </div>
+                </div>
+
+                <!-- black -->
+                //= templates/black.html
+            </article>
+
+            <!-- footer -->
+            //= templates/footer.html
+        </div>
+
+        <!-- script -->
+        <script src="scripts/main.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,405 @@
+// sprites
+@include add(social, "social-deutscher/*.png", "social-deutscher-2x/*.png");
+
+// ----- wrapper -----
+.wrapper {
+	overflow-x: hidden;
+	.container {
+		position: relative;
+			
+		// ----- deutscher -----
+		.deutscher {
+			position: absolute;
+			z-index: -1;
+			&--header {
+				left: -100px;
+				top: 112px;
+				@include media(phone) {
+					left: -150px;
+					top: 75px;
+				}
+			}
+			&--news {
+				transform: translate(-50%, 15%);
+		    	left: 50%;
+			}
+			&--trends {
+				left: -955px;
+				top: -65px;
+				@include media(phone) {
+					left: -1100px;
+				}
+			}
+		}
+
+		// ----- title -----
+		.title {
+			text-transform: uppercase;
+			font-family: $rubik-bold;
+			&--black {
+				color: $deutscher-black;
+				@include inline-block;
+				line-height: 80px;
+				font-size: em(80);
+				margin-top: 30px;
+				@include media(phone) {
+					font-size: em(40);
+					line-height: 40px;
+				}
+			}
+			&--green {
+				color: $deutscher-green;
+				margin: 80px 0 0 120px;
+				line-height: 110px;
+				font-size: em(110);
+				@include media(phone) {
+					margin: 25px 0 0 0;
+					font-size: em(50);
+					line-height: 50px;
+				}
+				@include media(phone, landscape) {
+					margin: 25px 0 0 100px;
+				}
+			}
+		}
+	}
+
+	// ----- header -----
+	#header {
+
+	    // ----- top -----
+	    .top {
+	        display: flex;
+	        padding: 40px 0 20px;
+	        @include media(phone) {
+	        	padding: 25px 0;
+	        }
+
+	        // ----- logo -----
+			.logo {
+			    float: left;
+			    a {
+	    			@include inline-block;
+			   		.image {
+		     			@include image-retina("/../images/logo-deutscher.png", "/../images/logo-deutscher-2x.png");
+				    }
+			    }
+			}
+
+			// ----- social -----
+			.social {
+			    float: right;
+			    height: 100%;
+			    a {
+			        margin-right: 15px;
+			        @include inline-block;
+			        &[href*="facebook"] {
+			        	@include sprite(facebook, social, hover);
+			        }
+			        &[href*="twitter"] {
+			        	@include sprite(twitter, social, hover);
+			        }
+			        &[href*="feed"] {
+			        	@include sprite(rss, social, hover);
+			        }
+			        &[href*="instagram"] {
+			        	@include sprite(instagram, social, hover);
+			        }
+			        &[href*="t.me"] {
+			        	@include sprite(telegram, social, hover);
+			        }
+			        &:last-of-type {
+			        	margin-right: 0;
+			        }
+			    }
+			}
+	    }
+
+	    // ----- bottom -----
+	    .bottom {
+	    		
+			// ----- slogan -----
+			.slogan {
+				width: 350px;
+				margin-top: 100px;
+				color: $deutscher-black;
+				@include media(phone) {
+					margin-left: 65px;
+				    margin-top: 300px;
+					width: 75%;
+				}
+				@include media(phone, landscape) {
+					margin-left: 370px;
+				    margin-top: 45px;
+				    width: 40%;
+				}
+			}
+	    }
+	}
+
+	// ----- article -----
+	#article {
+		overflow: hidden;
+
+		// ----- news -----
+		.news {
+			margin-top: 200px;
+			@include media(phone) {
+				margin-top: 50px;
+			}
+
+			// ----- block -----
+			.block {
+				margin-bottom: 125px;
+				@include media(phone) {
+					margin-bottom: 50px;
+				}
+				@include media(phone, landscape) {
+					margin-bottom: 0;
+				}
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+				.mobile {
+					margin-top: 15px;
+					@include media(phone, landscape) {
+						display: none;
+					}
+				}
+				.number {
+					line-height: 1;
+					font-size: em(150);
+					font-family: $rubik-bold;
+					 & + p {
+						font-size: em(30);
+						font-family: $rubik-bold;
+						& + p {
+							margin: 25px 0;
+						}
+					}
+				}
+				a {
+					color: $white;
+					font-size: em(15);
+					padding: 8px 40px;
+					transition: $time;
+					@include inline-block;
+					text-transform: uppercase;
+					background-color: $deutscher-orange;
+					border: 1px solid $deutscher-orange;
+					&:focus,
+					&:hover {
+						background-color: $white;
+						color: $deutscher-orange;
+					}
+				}
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+				&--left {
+					text-align: left;
+				}
+				&--right {
+					text-align: right;
+				}
+			}
+		}
+
+		// ----- trends -----
+		.trends {
+			margin: 150px 0;
+			@include media(phone) {
+				margin: 50px 0;
+			}
+			
+			// ----- title -----
+		    .title--black {
+				font-size: em(60);
+				line-height: 60px;
+				margin-bottom: 60px;
+				@include media(phone) {
+					margin-bottom: 25px;
+				}
+			}
+
+			// ----- block -----
+			.block {
+				margin-bottom: 90px;
+				@include media(phone) {
+					margin-bottom: 50px;
+				}
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+				.color {
+					background-color: $deutscher-green;
+					div {
+						bottom: 0;
+						padding: 30px;
+						padding-left: 15px;
+						position: absolute;
+						@include media(phone) {
+							position: relative;
+							padding: 15px 0;
+						}
+						p {
+							font-size: em(30);
+							font-family: $rubik-bold;
+							& + p {
+								font-family: $rubik-regular;
+								font-size: em(16);
+								margin-top: 10px;
+							}
+						}
+					}
+				}
+				.image {
+					overflow: hidden;
+					padding: 0;
+					img {
+						transition: $time;
+						&:focus,
+						&:hover {
+							transform: scale(1.05);
+						}
+					}
+				}
+			}
+		}
+
+		// ----- page -----
+		.page {
+
+			// ----- head -----
+			.head {
+				margin-top: 80px;
+				@include media(phone) {
+					margin-top: 0;
+				}
+				.h1 {
+					font-size: em(45);
+					color: $deutscher-black;
+					font-family: $rubik-bold;
+					@include media(phone) {
+						font-size: em(30)
+					}
+				}
+				img {
+					float: right;
+					max-width: 100%;
+				}
+			}
+
+			// ----- content -----
+			.content {
+				margin: 100px 0 125px;
+				@include media(phone) {
+					margin: 40px 0;
+				}
+				
+				// ----- author -----
+				.author {
+					img {
+						width: 50%;
+						margin-bottom: 20px;
+					}
+					p {
+						line-height: 1.4;
+						&:nth-of-type(1) {
+							font-family: $rubik-bold;
+							color: $deutscher-black;
+						}
+						&:nth-of-type(2) {
+							font-family: $rubik-light;
+							width: 50%;
+						}
+						&:nth-of-type(3) {
+							font-family: $rubik-regular;
+							padding-top: 80px;
+						}
+					}
+				}
+
+				// ----- info -----
+				.info {
+					img {
+						max-width: 100%;
+						margin-bottom: 30px;
+					}
+					p {
+						font-size: em(16);
+						line-height: 32px;
+						strong {
+							font-family: $rubik-bold;
+						}
+					}
+					.h2 {
+						text-transform: uppercase;
+						color: $deutscher-orange;
+						font-family: $rubik-bold;
+						font-size: em(30);
+						margin: 40px 0;
+					}
+					
+				}
+			}
+		}
+	}
+
+	// ----- footer -----
+	#footer {
+		padding: 100px 0;
+		background-color: $black;
+		@include media(phone) {
+			padding: 25px 0;
+		}
+		p {
+			text-transform: uppercase;
+			margin-bottom: 10px;
+			color: $white;
+		}
+		ul li {
+			font-family: $rubik-light;
+			font-size: em(14);
+			color: $white;
+		}
+
+		// ----- logo -----
+		.logo {
+		    float: left;
+		    @include media(phone) {
+		    	margin-bottom: 25px;
+		    	text-align: center;
+		    	float: inherit;
+		    }
+		    a {
+				@include inline-block;
+		   		.image {
+	     			@include image-retina("/../images/logo-white.png", "/../images/logo-white-2x.png");
+			    }
+		    }
+		}
+
+		// ----- goethe -----
+		.goethe {
+		    float: right;
+		    @include media(phone) {
+		    	text-align: center;
+		    	float: inherit;
+		    }
+		    a {
+				@include inline-block;
+		   		.image {
+	     			@include image-retina("/../images/logo-goethe.png", "/../images/logo-goethe-2x.png");
+			    }
+		    }
+		}
+	}
+}

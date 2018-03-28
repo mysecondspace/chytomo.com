@@ -1,0 +1,40 @@
+// global variables
+$browser-context: 16;
+$time: .3s;
+
+// colors
+$white: #fff;
+$black: #000;
+$red: #920b1b;
+$blue: #4f81ff;
+$gray: #919191;
+$gold: #ffdd00;
+$green: #15d277;
+$orange: #ff6648;
+$border: #e6e6e6;
+$purple: #311024;
+$dark-blue: darken($blue, 55%);
+$dark-gray: darken($gray, 30%);
+$light-gray: lighten($gray, 25%);
+$deutscher-orange: #f7a71a;
+$deutscher-green: #a0c814;
+$deutscher-black: #333;
+
+// media queries
+$phone: 768px;
+$tablet: 1024px;
+$laptop: 1200px;
+$desktop: 1440px;
+$container: 100%;
+
+// font
+$museo-bold: 'museo bold';
+$museo-thin: 'museo thin';
+$museo-light: 'museo light';
+$museo-medium: 'museo medium';
+$museo-regular: 'museo regular';
+$playfair-bold: 'playfair bold';
+$playfair-black: 'playfair black';
+$rubik-regular: 'rubik regular';
+$rubik-light: 'rubik light';
+$rubik-bold: 'rubik bold';
