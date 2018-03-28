@@ -927,6 +927,7 @@ textarea {
     .wrapper #footer ul li {
       font-family: "rubik light";
       font-size: 0.875em;
+      line-height: 1.6;
       color: #fff; }
     .wrapper #footer .logo {
       float: left; }
