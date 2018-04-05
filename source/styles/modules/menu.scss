@@ -3,12 +3,28 @@
 
 // ----- menu -----
 #menu.menu {
+    z-index: 10;
+    padding: 25px 0;
+    transition: $time;
+    text-align: center;
     border-bottom: 1px solid $border;
     border-top: 1px solid $border;
-    text-align: center;
-    padding: 25px 0;
+    background-color: $white;
     @include media(phone) {
         padding: 10px 0;
+    }
+    
+    // ----- scroll -----
+    &.scroll {
+        border-color: $white;
+        position: fixed;
+        opacity: .75;
+        width: 100%;
+        left: 0;
+        top: 0;
+        &:hover {
+            opacity: 1;
+        }
     }
 
     // ----- burger -----
@@ -30,7 +46,7 @@
         &.active {
             .image {
                @include image-retina("/../images/calendar-blue.png", "/../images/calendar-blue-2x.png");
-               background-position: initial;;
+               background-position: initial;
             }
         }
     }
@@ -39,9 +55,27 @@
     .search {
         margin-left: 30px;
         float: right;
-        .image {
-            @include inline-block;
-            @include sprite(search, nav, hover);
+        a {
+            display: none;
+            .image {
+                @include inline-block;
+            }
+            &.opened {
+                display: block;
+            }
+            &.show {
+                .image {
+                    @include sprite(search, nav, hover);
+                }
+            }
+            &.hide {
+                .image {
+                    @include image-retina("/../images/close-black.png", "/../images/close-black-2x.png");
+                }
+                &:hover .image {
+                    @include image-retina("/../images/close-blue.png", "/../images/close-blue-2x.png");
+                }
+            }
         }
     }
 

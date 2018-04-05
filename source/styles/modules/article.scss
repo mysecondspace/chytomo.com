@@ -5,6 +5,12 @@
 
 // ----- article -----
 #article {
+	position: relative;
+
+	// ----- scroll -----
+    &.scroll {
+    	margin-top: 73px;
+    }
 
 	// ----- block -----
 	.block {
@@ -668,10 +674,9 @@
 		}
 		.text {
 			color: $white;
-			padding: 60px 0;
-			padding-top: 45px;
 			line-height: 27px;
 			font-size: em(17);
+			padding: 45px 0 60px;
 			font-family: $museo-thin;
 			@include media(phone) {
 				padding: 30px 0;

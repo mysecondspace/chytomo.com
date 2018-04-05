@@ -1,9 +1,57 @@
+// ----- preloader -----
+$(window).on('load', function() {
+    var $preloader = $('#preloader');
+        $preloader.fadeOut('slow');
+});
+
+// ----- menu -----
+$(window).scroll(function() {
+    if ($(".block").hasClass('block__main') && $(window).scrollTop() >= 242) {
+        $("#menu").addClass("scroll"),
+        $("#article").addClass("scroll")
+    } else {
+        $("#menu").removeClass("scroll"),
+        $("#article").removeClass("scroll")
+    }
+});
+
+// ----- search -----
+$(document).ready(function() {
+    searchHide();
+});
+$(document).mouseup(function(e) {
+    var container = $("#search");
+    
+    if (container.has(e.target).length === 0) {
+        container.fadeOut(300);
+    }
+});
+function searchShow() {
+    $("#search").fadeIn(300);
+    $(".search .show").removeClass("opened");
+    $(".search .hide").addClass("opened");
+    $("body").css("overflow", "hidden");
+}
+function searchHide() {
+    $("#search").fadeOut(300);
+    $(".search .hide").removeClass("opened");
+    $(".search .show").addClass("opened");
+    $("body").css("overflow", "auto");
+}
+
 // ----- anchors -----
-$(document).on('click', 'a[href^="#"]', function(event) {
+$(document).on('click', 'a[href^="#inside"]', function(event) {
     event.preventDefault();
 
     $('html, body').animate({
         scrollTop: $($.attr(this, 'href')).offset().top + 45
+    }, 900);
+});
+$(document).on('click', 'a[href^="#header"]', function(event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
     }, 900);
 });
 

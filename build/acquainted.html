@@ -10,6 +10,9 @@
     </head>
     <body>
         <div class="wrapper">
+
+            <!-- preloader -->
+            <div id="preloader"></div>
             
             <!-- header -->
             <header id="header">
@@ -56,7 +59,10 @@
                     
                     <!-- search -->
                     <div class="search">
-                        <a href="#">
+                        <a href="#header" class="show" onclick="javascript:searchShow()">
+                            <div class="image"></div>
+                        </a>
+                        <a href="#header" class="hide" onclick="javascript:searchHide()">
                             <div class="image"></div>
                         </a>
                     </div>
@@ -100,6 +106,16 @@
 
             <!-- article -->
             <article id="article">
+
+                <!-- search -->
+                <div id="search">
+                    <input class="form__content--input" type='text' name='name' value="Я хочу знайти..."
+                        onblur='if (this.value == "")
+                        this.value = "Я хочу знайти..."'
+                        onfocus='if (this.value == "Я хочу знайти...")
+                        this.value = ""'>
+                    <button class="btn btn--white" type="submit" value="submit">Шукати</button>
+                </div>
                 <div class="container">
 
                     <!-- breadcrumbs -->

@@ -5,8 +5,6 @@ html {
         min-width: 320px;
         overflow-x: hidden;
         background-color: $white;
-        animation: fade $time * 4;
-        animation-fill-mode: forwards;
         ::selection {
             color: $white;
         }
@@ -74,12 +72,7 @@ html {
                 bottom: 0;
                 z-index: 999;
                 position: fixed;
-                .spinner {
-                    left: 0;
-                    right: 0;
-                    margin: 0 auto;
-                    position: absolute;
-                }
+                background-color: $white;
             }
         }
     }
