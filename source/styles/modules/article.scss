@@ -14,7 +14,7 @@
 
 	// ----- block -----
 	.block {
-		margin: 50px 0 150px;
+		margin: 25px 0 100px;
 		@include media(phone) {
 			margin: 25px 0 50px;
 		}
@@ -70,14 +70,14 @@
 			    content: '';
 			    z-index: -1;
 			    position: absolute;
-			    border: 30px solid transparent;
-			    animation: arrow $time * 3 $time * 3;
-			    border-bottom: 30px solid $black;
+			    border: 25px solid transparent;
+			    animation: arrow $time * 2 $time * 3;
+			    border-bottom: 25px solid $black;
 			    animation-fill-mode: forwards;
 			}
 			&[data-name="l"] {
 				&:after {
-			    	left: calc(12.5% - 30px);
+			    	left: calc(12.5% - 25px);
 				}
 				.narrow {
 					.l {
@@ -92,7 +92,7 @@
 			}
 			&[data-name="lc"] {
 				&:after {
-			    	left: calc(37.5% - 30px);
+			    	left: calc(37.5% - 25px);
 				}
 				.narrow {
 					.lc {
@@ -107,7 +107,7 @@
 			}
 			&[data-name="rc"] {
 				&:after {
-			    	left: calc(62.5% - 30px);
+			    	left: calc(62.5% - 25px);
 				}
 				.narrow {
 					.rc {
@@ -122,7 +122,7 @@
 			}
 			&[data-name="r"] {
 				&:after {
-			    	left: calc(87.5% - 30px);
+			    	left: calc(87.5% - 25px);
 				}
 				.narrow {
 					.r {
@@ -167,13 +167,13 @@
 	            	margin-bottom: 30px;
 	                &--big {
 	                	font-size: em(19);
-		                line-height: 34px;
+		                line-height: 27px;
 		                font-family: $playfair-black;
 	                }
 	                &--small {
 	                	margin-top: 30px;
 	                	font-size: em(15);
-		                line-height: 28px;
+		                line-height: 27px;
 	                	letter-spacing: .5px;
 	        			font-family: $museo-medium;
 	                }
@@ -181,7 +181,7 @@
 				.text {
 	            	color: $white;
 	            	font-size: em(15);
-	            	line-height: 28px;
+	            	line-height: 27px;
 	            	font-family: $museo-thin;
 	            }
 			}
@@ -191,12 +191,20 @@
 				position: absolute;
 				@include inline-block;
 				@include image-retina("/../images/close.png", "/../images/close-2x.png");
+				&:focus,
+				&:hover {
+                    @include image-retina("/../images/close-blue.png", "/../images/close-blue-2x.png");
+				}
 			}
 		}
 		&__main {
 			margin-bottom: 0;
 		}
 		&__calendar {
+			margin: 50px 0 100px;
+			@include media(phone) {
+				margin: 50px 0;
+			}
 			.row {
 				margin-top: 75px;
 				margin-bottom: 0;
@@ -214,10 +222,7 @@
 		// ----- button -----
 		.btn {
 			display: block;
-			margin: 100px auto 0;
-			@include media(phone) {
-				margin: 50px auto 0;
-			}
+			margin: 50px auto 0;
 		}
 
 		// ----- gradient -----
@@ -273,7 +278,7 @@
 				// ----- liner -----
 				.liner {
 					font-size: em(10);
-					margin-bottom: 15px;
+					margin-bottom: 40px;
 					letter-spacing: 2px;
 					text-transform: uppercase;
 					font-family: $museo-medium;
@@ -311,15 +316,15 @@
 				}
 				.name {
 					.caption {
-						line-height: 28px;
 						font-size: em(20);
+						line-height: 27px;
 						@include media(phone) {
 							font-size: em(15);
-							line-height: 21px;
+							line-height: 22px;
 						}
 					}
 					& > span {
-						margin-top: 25px;
+						margin-top: 30px;
 					}
 				}
 				&--option {
@@ -329,6 +334,7 @@
 					.name {
 						.caption {
 							font-size: em(16);
+							line-height: 22px;
 						}
 					}
 				}
@@ -346,7 +352,7 @@
 						.caption {
 							font-family: $playfair-black;
 							font-size: em(18);
-							line-height: 33px;
+							line-height: 27px;
 							margin-top: 65px;
 						}
 					}
@@ -366,8 +372,8 @@
 				height: 100%;
 				.name {
 					.caption {
-						line-height: 42px;
 						font-size: em(25);
+						line-height: 32px;
 						@include media(phone) {
 							line-height: 34px;
 							font-size: em(20);
@@ -562,12 +568,7 @@
 				}
 				&--acquainted {
 					a {
-						&:first-of-type {
-							height: 55%;
-						}
-						&:last-of-type {
-							height: 45%;
-						}
+						height: 50%;
 					}
 				}
 				&--calendar {
@@ -653,8 +654,8 @@
 	// ----- black -----
 	.black {
 		background-color: $black;
-		margin-bottom: 100px;
-		padding-top: 60px;
+		margin-bottom: 50px;
+		padding-top: 40px;
 		display: flex;
 		width: 100%;
 		@include media(phone) {
@@ -668,6 +669,8 @@
 			right: 0;
 		}
 		.title {
+			line-height: 35px;
+			padding-bottom: 45px;
 			span {
 				color: $green;
 			}
@@ -676,7 +679,7 @@
 			color: $white;
 			line-height: 27px;
 			font-size: em(17);
-			padding: 45px 0 60px;
+			padding-bottom: 60px;
 			font-family: $museo-thin;
 			@include media(phone) {
 				padding: 30px 0;
@@ -711,6 +714,7 @@
 			}
 			.social {
 				margin: 50px 0 75px;
+				transform: initial;
 				float: inherit;
 			    a {
 			        margin-right: 75px;
@@ -734,7 +738,7 @@
 
 	// ----- partners -----
 	.partners {
-		margin: 130px 0;
+		margin: 65px 0;
 		div {
 			display: flex;
 		    align-items: center;
@@ -761,7 +765,7 @@
 
 	// ----- news -----
 	.news {
-		margin: 50px 0 150px;
+		margin: 25px 0 150px;
 		div {
 			&:first-of-type {
 				padding-left: 0;
@@ -781,15 +785,15 @@
 				p {
 					transition: all $time;
 					&:first-of-type {
-						color: $gray;
+						color: $light-gray;
 						font-size: em(14);
 						letter-spacing: 2px;
 						font-family: $museo-medium;
-						margin-bottom: 25px;
+						margin-bottom: 15px;
 						display: block;
 					}
 					&:last-of-type {
-						line-height: 24px;
+						line-height: 19px;
 						font-family: $museo-light;
 						font-size: em(13);
 						color: $black;

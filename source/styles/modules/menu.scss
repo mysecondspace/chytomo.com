@@ -4,7 +4,7 @@
 // ----- menu -----
 #menu.menu {
     z-index: 10;
-    padding: 25px 0;
+    padding: 20px 0;
     transition: $time;
     text-align: center;
     border-bottom: 1px solid $border;
@@ -30,9 +30,18 @@
     // ----- burger -----
     .burger {
         float: left;
+        span {
+            cursor: pointer;
+        }
         .image {
             @include inline-block;
             @include sprite(burger, nav, hover);
+        }
+        &.active {
+            .image {
+               @include image-retina("/../images/burger-blue.png", "/../images/burger-blue-2x.png");
+               background-position: initial;
+            }
         }
     }
 
@@ -55,26 +64,17 @@
     .search {
         margin-left: 30px;
         float: right;
-        a {
-            display: none;
+        span {
+            cursor: pointer;
+        }
+        .image {
+            @include inline-block;
+            @include sprite(search, nav, hover);
+        }
+        &.active {
             .image {
-                @include inline-block;
-            }
-            &.opened {
-                display: block;
-            }
-            &.show {
-                .image {
-                    @include sprite(search, nav, hover);
-                }
-            }
-            &.hide {
-                .image {
-                    @include image-retina("/../images/close-black.png", "/../images/close-black-2x.png");
-                }
-                &:hover .image {
-                    @include image-retina("/../images/close-blue.png", "/../images/close-blue-2x.png");
-                }
+               @include image-retina("/../images/search-blue.png", "/../images/search-blue-2x.png");
+               background-position: initial;
             }
         }
     }

@@ -52,17 +52,17 @@ html {
             }
             @include media(tablet) {
                 .container {
-                    width: calc(#{$container} - 15%);
+                    width: calc(#{$container} - 5%);
                 }
             }
             @include media(laptop) {
                 .container {
-                    width: calc(#{$container} - 20%);
+                    width: calc(#{$container} - 10%);
                 }
             }
             @include media(large) {
                 .container {
-                    width: calc(#{$container} - 25%);
+                    width: calc(#{$container} - 15%);
                 }
             }
             #preloader {

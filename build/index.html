@@ -11,13 +11,6 @@
     <body>
         <div class="wrapper">
 
-            <!-- ads -->
-            <div class="ads ads__wide ads__wide--slim">
-                <div class="banner valign">
-                    <p>наскрізний банер</p>
-                </div>
-            </div>
-
             <!-- preloader -->
             <div id="preloader"></div>
             
@@ -59,19 +52,16 @@
                     <!-- elements -->
                     <!-- burger -->
                     <div class="burger">
-                        <a href="#">
+                        <span>
                             <div class="image"></div>
-                        </a>
+                        </span>
                     </div>
                     
                     <!-- search -->
                     <div class="search">
-                        <a href="#header" class="show" onclick="javascript:searchShow()">
+                        <span onclick="searchShow()">
                             <div class="image"></div>
-                        </a>
-                        <a href="#header" class="hide" onclick="javascript:searchHide()">
-                            <div class="image"></div>
-                        </a>
+                        </span>
                     </div>
                     
                     <!-- calendar -->
@@ -122,6 +112,7 @@
                         onfocus='if (this.value == "Я хочу знайти...")
                         this.value = ""'>
                     <button class="btn btn--white" type="submit" value="submit">Шукати</button>
+                    <p>* ESC - закрити вікно пошуку</p>
                 </div>
                 <div class="container">
 
@@ -157,17 +148,6 @@
                     </div>
                 </div>
                 <div class="container">
-
-                    <!-- heading -->
-                    <div class="heading">
-                        <div class="row">
-                            <div class="s-4">
-                                
-                                <!-- title -->
-                                <h1 class="title title--black">Новини</h1>
-                            </div>
-                        </div>
-                    </div>
 
                     <!-- news -->
                     <div class="news row">
@@ -747,12 +727,6 @@
                                 
                                 <!-- title -->
                                 <p class="title title--white">Видавництво Pabulum шукає <span>ілюстраторів</span></p>
-                                <p class="text">Видавництво шукає ілюстраторів для найцікавіших дитячих книжок. Також потрібні навички створення інфографіки, що підкорює з першого погляду.</p>
-
-                                <!-- button -->
-                                <div class="button button__donate button__donate--vacancy">
-                                    <a href="#" class="btn btn--white">Дізнайтись більше</a>
-                                </div>
                             </div>
                             <div class="s-4">
                                 <img src="images/boy.png" alt=">Видавництво Pabulum шукає ілюстраторів">

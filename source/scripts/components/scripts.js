@@ -6,7 +6,7 @@ $(window).on('load', function() {
 
 // ----- menu -----
 $(window).scroll(function() {
-    if ($(".block").hasClass('block__main') && $(window).scrollTop() >= 242) {
+    if ($(".block").hasClass('block__main') && $(window).scrollTop() >= 92) {
         $("#menu").addClass("scroll"),
         $("#article").addClass("scroll")
     } else {
@@ -19,24 +19,20 @@ $(window).scroll(function() {
 $(document).ready(function() {
     searchHide();
 });
-$(document).mouseup(function(e) {
-    var container = $("#search");
+$(document).keyup(function(e) {
+    if (opened && e.keyCode == 27)
+        $("#search").fadeOut(400);
+        $(".search").removeClass("active");
+        $("body").css("overflow", "auto");
     
-    if (container.has(e.target).length === 0) {
-        container.fadeOut(300);
-    }
+    opened = !opened;
 });
 function searchShow() {
-    $("#search").fadeIn(300);
-    $(".search .show").removeClass("opened");
-    $(".search .hide").addClass("opened");
-    $("body").css("overflow", "hidden");
-}
-function searchHide() {
-    $("#search").fadeOut(300);
-    $(".search .hide").removeClass("opened");
-    $(".search .show").addClass("opened");
-    $("body").css("overflow", "auto");
+    if (!opened)
+        $("#search").fadeIn(400);
+        $(".search").addClass("active");
+        $("body").css("overflow", "hidden");
+    opened = !opened;
 }
 
 // ----- anchors -----
@@ -44,15 +40,15 @@ $(document).on('click', 'a[href^="#inside"]', function(event) {
     event.preventDefault();
 
     $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top + 45
-    }, 900);
+        scrollTop: $($.attr(this, 'href')).offset().top + 50
+    }, 1200);
 });
-$(document).on('click', 'a[href^="#header"]', function(event) {
+$(document).on('click', 'a[href^="#menu"]', function(event) {
     event.preventDefault();
 
     $('html, body').animate({
         scrollTop: $($.attr(this, 'href')).offset().top
-    }, 900);
+    }, 1200);
 });
 
 // ----- calendar -----
@@ -72,16 +68,16 @@ $('.inside .narrow__small--calendar, .close').click(function() {
         inside.attr('data-name', name),
         $('.filling').removeClass('unfade'),
         inside.stop(true, true).slideDown({
-        	duration: 450, queue: false
-        }, 900)
+        	duration: 600, queue: false
+        }, 1200)
     ) : (
         narrow.addClass('unfade'),
         narrow.css('z-index', '1'),
         narrow.removeClass('select'),
         $('.filling').addClass('unfade'),
         inside.stop(true, true).slideUp({
-        	duration: 450, queue: false
-        }, 900)
+        	duration: 600, queue: false
+        }, 1200)
     );
         
     opened = !opened;

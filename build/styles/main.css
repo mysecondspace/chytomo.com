@@ -74,13 +74,13 @@ html {
         max-width: 1440px; }
       @media only screen and (min-width: 768px) {
         html body .wrapper .container {
-          width: calc(100% - 15%); } }
+          width: calc(100% - 5%); } }
       @media only screen and (min-width: 1024px) {
         html body .wrapper .container {
-          width: calc(100% - 20%); } }
+          width: calc(100% - 10%); } }
       @media only screen and (min-width: 1440px) {
         html body .wrapper .container {
-          width: calc(100% - 25%); } }
+          width: calc(100% - 15%); } }
       html body .wrapper #preloader {
         top: 0;
         left: 0;
@@ -607,8 +607,8 @@ textarea {
     margin-left: 0%; } }
 #menu.menu {
   z-index: 10;
-  padding: 25px 0;
-  transition: 0.3s;
+  padding: 20px 0;
+  transition: 0.4s;
   text-align: center;
   border-bottom: 1px solid #e6e6e6;
   border-top: 1px solid #e6e6e6;
@@ -627,6 +627,8 @@ textarea {
       opacity: 1; }
   #menu.menu .burger {
     float: left; }
+    #menu.menu .burger span {
+      cursor: pointer; }
     #menu.menu .burger .image {
       display: inline-block;
       vertical-align: middle;
@@ -644,6 +646,15 @@ textarea {
           background-image: url('../images/nav-2x.png');
           background-size: 20px 108px;
           background-position: 0 -14px; } }
+    #menu.menu .burger.active .image {
+      width: 20px;
+      height: 14px;
+      background-image: url(../images/burger-blue.png);
+      background-position: initial; }
+      @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+        #menu.menu .burger.active .image {
+          background-size: 20px 14px;
+          background-image: url(../images/burger-blue-2x.png); } }
   #menu.menu .calendar {
     float: right; }
     #menu.menu .calendar .image {
@@ -675,44 +686,34 @@ textarea {
   #menu.menu .search {
     margin-left: 30px;
     float: right; }
-    #menu.menu .search a {
-      display: none; }
-      #menu.menu .search a .image {
-        display: inline-block;
-        vertical-align: middle;
-        *vertical-align: auto;
-        *zoom: 1;
-        *display: inline; }
-      #menu.menu .search a.opened {
-        display: block; }
-      #menu.menu .search a.show .image {
-        background-image: url('../images/nav.png');
-        background-position: 0 -88px;
-        height: 20px;
-        width: 20px; }
-        #menu.menu .search a.show .image:hover {
-          background-position: 0 -68px; }
-        @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-          #menu.menu .search a.show .image {
-            background-image: url('../images/nav-2x.png');
-            background-size: 20px 108px;
-            background-position: 0 -88px; } }
-      #menu.menu .search a.hide .image {
-        width: 20px;
-        height: 20px;
-        background-image: url(../images/close-black.png); }
-        @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-          #menu.menu .search a.hide .image {
-            background-size: 20px 20px;
-            background-image: url(../images/close-black-2x.png); } }
-      #menu.menu .search a.hide:hover .image {
-        width: 20px;
-        height: 20px;
-        background-image: url(../images/close-blue.png); }
-        @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-          #menu.menu .search a.hide:hover .image {
-            background-size: 20px 20px;
-            background-image: url(../images/close-blue-2x.png); } }
+    #menu.menu .search span {
+      cursor: pointer; }
+    #menu.menu .search .image {
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      *zoom: 1;
+      *display: inline;
+      background-image: url('../images/nav.png');
+      background-position: 0 -88px;
+      height: 20px;
+      width: 20px; }
+      #menu.menu .search .image:hover {
+        background-position: 0 -68px; }
+      @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+        #menu.menu .search .image {
+          background-image: url('../images/nav-2x.png');
+          background-size: 20px 108px;
+          background-position: 0 -88px; } }
+    #menu.menu .search.active .image {
+      width: 20px;
+      height: 20px;
+      background-image: url(../images/search-blue.png);
+      background-position: initial; }
+      @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+        #menu.menu .search.active .image {
+          background-size: 20px 20px;
+          background-image: url(../images/search-blue-2x.png); } }
   #menu.menu ul {
     display: -webkit-inline-box; }
     @media only screen and (max-width: 767px) {
@@ -744,7 +745,7 @@ textarea {
         padding: 0 10px;
         font-size: 0.875em;
         font-family: "museo light";
-        transition: 0.3s;
+        transition: 0.4s;
         position: relative; }
         #menu.menu ul li a:hover:before {
           left: 0; }
@@ -752,7 +753,7 @@ textarea {
           content: '';
           height: 12px;
           bottom: -4px;
-          transition: all 0.3s ease;
+          transition: all 0.4s ease;
           position: absolute;
           z-index: -1;
           width: 100%;
@@ -761,10 +762,7 @@ textarea {
 #header .top {
   display: -ms-flexbox;
   display: flex;
-  padding: 30px 0 40px; }
-  @media only screen and (max-width: 767px) {
-    #header .top {
-      padding: 25px 0; } }
+  padding: 20px 0; }
 
 #footer {
   background-color: #000;
@@ -797,15 +795,15 @@ textarea {
         float: left;
         width: 25%; }
         #footer .top .center-block ul:last-of-type li:last-of-type a {
-          transition: 0.3s;
+          transition: 0.4s;
           color: #4f81ff; }
           #footer .top .center-block ul:last-of-type li:last-of-type a:hover {
             color: #82a6ff; }
         #footer .top .center-block ul li {
           width: -webkit-fill-available;
-          margin-bottom: 30px; }
+          margin-bottom: 20px; }
           #footer .top .center-block ul li a {
-            transition: 0.3s;
+            transition: 0.4s;
             font-size: 0.875em;
             color: #fff; }
             #footer .top .center-block ul li a:hover {
@@ -836,7 +834,7 @@ textarea {
           font-size: 0.8125em; } }
     #footer .bottom a {
       color: #454545;
-      transition: 0.3s; }
+      transition: 0.4s; }
       #footer .bottom a:focus, #footer .bottom a:hover {
         color: #4f81ff; }
     #footer .bottom .copyright {
@@ -853,7 +851,7 @@ textarea {
   #article.scroll {
     margin-top: 73px; }
   #article .block {
-    margin: 50px 0 150px; }
+    margin: 25px 0 100px; }
     @media only screen and (max-width: 767px) {
       #article .block {
         margin: 25px 0 50px; } }
@@ -867,7 +865,7 @@ textarea {
         height: 100%;
         -o-object-fit: cover;
            object-fit: cover;
-        transition: 0.3s; }
+        transition: 0.4s; }
     #article .block--large .row {
       height: 350px;
       margin-bottom: 75px; }
@@ -899,33 +897,33 @@ textarea {
         content: '';
         z-index: -1;
         position: absolute;
-        border: 30px solid transparent;
-        animation: arrow 0.9s 0.9s;
-        border-bottom: 30px solid #000;
+        border: 25px solid transparent;
+        animation: arrow 0.8s 1.2s;
+        border-bottom: 25px solid #000;
         animation-fill-mode: forwards; }
       #article .block--calendar[data-name="l"]:after {
-        left: calc(12.5% - 30px); }
+        left: calc(12.5% - 25px); }
       #article .block--calendar[data-name="l"] .narrow .l {
         display: -ms-flexbox;
         display: flex; }
       #article .block--calendar[data-name="l"] .filling .l {
         display: block; }
       #article .block--calendar[data-name="lc"]:after {
-        left: calc(37.5% - 30px); }
+        left: calc(37.5% - 25px); }
       #article .block--calendar[data-name="lc"] .narrow .lc {
         display: -ms-flexbox;
         display: flex; }
       #article .block--calendar[data-name="lc"] .filling .lc {
         display: block; }
       #article .block--calendar[data-name="rc"]:after {
-        left: calc(62.5% - 30px); }
+        left: calc(62.5% - 25px); }
       #article .block--calendar[data-name="rc"] .narrow .rc {
         display: -ms-flexbox;
         display: flex; }
       #article .block--calendar[data-name="rc"] .filling .rc {
         display: block; }
       #article .block--calendar[data-name="r"]:after {
-        left: calc(87.5% - 30px); }
+        left: calc(87.5% - 25px); }
       #article .block--calendar[data-name="r"] .narrow .r {
         display: -ms-flexbox;
         display: flex; }
@@ -935,40 +933,40 @@ textarea {
         height: auto;
         margin-bottom: 0; }
       #article .block--calendar .narrow {
-        animation: fade 2.7s;
+        animation: fade 3.6s;
         animation-fill-mode: forwards; }
         #article .block--calendar .narrow > div {
           display: none; }
         #article .block--calendar .narrow.unfade {
-          animation: unfade 0.9s;
+          animation: unfade 1.2s;
           animation-fill-mode: forwards; }
       #article .block--calendar .filling {
-        animation: fade 2.7s;
+        animation: fade 3.6s;
         animation-fill-mode: forwards; }
         #article .block--calendar .filling > div {
           display: none; }
         #article .block--calendar .filling.unfade {
-          animation: unfade 0.9s;
+          animation: unfade 1.2s;
           animation-fill-mode: forwards; }
         #article .block--calendar .filling .description {
           color: #fff;
           font-size: 1.1875em;
-          transition: 0.3s;
+          transition: 0.4s;
           margin-bottom: 30px; }
           #article .block--calendar .filling .description--big {
             font-size: 1.1875em;
-            line-height: 34px;
+            line-height: 27px;
             font-family: "playfair black"; }
           #article .block--calendar .filling .description--small {
             margin-top: 30px;
             font-size: 0.9375em;
-            line-height: 28px;
+            line-height: 27px;
             letter-spacing: .5px;
             font-family: "museo medium"; }
         #article .block--calendar .filling .text {
           color: #fff;
           font-size: 0.9375em;
-          line-height: 28px;
+          line-height: 27px;
           font-family: "museo thin"; }
       #article .block--calendar .close {
         top: 20px;
@@ -986,23 +984,33 @@ textarea {
           #article .block--calendar .close {
             background-size: 20px 20px;
             background-image: url(../images/close-2x.png); } }
+        #article .block--calendar .close:focus, #article .block--calendar .close:hover {
+          width: 20px;
+          height: 20px;
+          background-image: url(../images/close-blue.png); }
+          @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+            #article .block--calendar .close:focus, #article .block--calendar .close:hover {
+              background-size: 20px 20px;
+              background-image: url(../images/close-blue-2x.png); } }
     #article .block__main {
       margin-bottom: 0; }
-    #article .block__calendar .row {
-      margin-top: 75px;
-      margin-bottom: 0; }
-      #article .block__calendar .row:first-of-type {
-        margin-top: 0; }
+    #article .block__calendar {
+      margin: 50px 0 100px; }
+      @media only screen and (max-width: 767px) {
+        #article .block__calendar {
+          margin: 50px 0; } }
+      #article .block__calendar .row {
+        margin-top: 75px;
+        margin-bottom: 0; }
+        #article .block__calendar .row:first-of-type {
+          margin-top: 0; }
     #article .block .row:last-of-type {
       margin-bottom: 0; }
     #article .block .btn {
       display: block;
-      margin: 100px auto 0; }
-      @media only screen and (max-width: 767px) {
-        #article .block .btn {
-          margin: 50px auto 0; } }
+      margin: 50px auto 0; }
     #article .block .grad {
-      transition: 0.3s;
+      transition: 0.4s;
       position: absolute;
       height: 100%;
       z-index: 1; }
@@ -1022,7 +1030,7 @@ textarea {
           letter-spacing: 1.5px;
           text-transform: uppercase; }
         #article .block .info .name .caption {
-          transition: 0.3s; }
+          transition: 0.4s; }
           #article .block .info .name .caption--black {
             color: #000; }
         #article .block .info .name--light span {
@@ -1033,7 +1041,7 @@ textarea {
           color: #454545; }
         #article .block .info .name .liner {
           font-size: 0.625em;
-          margin-bottom: 15px;
+          margin-bottom: 40px;
           letter-spacing: 2px;
           text-transform: uppercase;
           font-family: "museo medium"; }
@@ -1060,20 +1068,21 @@ textarea {
           #article .block .info__small {
             padding: 0 20px; } }
         #article .block .info__small .name .caption {
-          line-height: 28px;
-          font-size: 1.25em; }
+          font-size: 1.25em;
+          line-height: 27px; }
           @media only screen and (max-width: 767px) {
             #article .block .info__small .name .caption {
               font-size: 0.9375em;
-              line-height: 21px; } }
+              line-height: 22px; } }
         #article .block .info__small .name > span {
-          margin-top: 25px; }
+          margin-top: 30px; }
         #article .block .info__small--option {
           top: 27px;
           padding: 0;
           bottom: initial; }
           #article .block .info__small--option .name .caption {
-            font-size: 1em; }
+            font-size: 1em;
+            line-height: 22px; }
         #article .block .info__small--calendar {
           top: 0;
           height: 100%;
@@ -1087,7 +1096,7 @@ textarea {
             #article .block .info__small--calendar .name .caption {
               font-family: "playfair black";
               font-size: 1.125em;
-              line-height: 33px;
+              line-height: 27px;
               margin-top: 65px; }
           #article .block .info__small--calendar .liner {
             margin: 0;
@@ -1099,8 +1108,8 @@ textarea {
       #article .block .info__large {
         height: 100%; }
         #article .block .info__large .name .caption {
-          line-height: 42px;
-          font-size: 1.5625em; }
+          font-size: 1.5625em;
+          line-height: 32px; }
           @media only screen and (max-width: 767px) {
             #article .block .info__large .name .caption {
               line-height: 34px;
@@ -1245,16 +1254,14 @@ textarea {
       color: #ffdd00; }
     #article .block .narrow__small--acquainted:hover .liner--green + .caption, #article .block .narrow__small--calendar.inside .liner--green + .caption, #article .block .narrow__small--calendar.select .liner--green + .caption, #article .block .narrow__small--calendar:hover .liner--green + .caption, #article .block .narrow__small:hover .liner--green + .caption {
       color: #15d277; }
-    #article .block .narrow__small--acquainted a:first-of-type {
-      height: 55%; }
-    #article .block .narrow__small--acquainted a:last-of-type {
-      height: 45%; }
+    #article .block .narrow__small--acquainted a {
+      height: 50%; }
     #article .block .narrow__small--calendar {
       position: relative; }
       #article .block .narrow__small--calendar > a, #article .block .narrow__small--calendar > div {
         height: 100%;
         overflow: initial;
-        transition: 0.3s;
+        transition: 0.4s;
         border: 1px solid #000; }
         #article .block .narrow__small--calendar > a .date, #article .block .narrow__small--calendar > div .date {
           font-family: "playfair black";
@@ -1319,8 +1326,8 @@ textarea {
       opacity: .4; }
   #article .black {
     background-color: #000;
-    margin-bottom: 100px;
-    padding-top: 60px;
+    margin-bottom: 50px;
+    padding-top: 40px;
     display: -ms-flexbox;
     display: flex;
     width: 100%; }
@@ -1333,13 +1340,16 @@ textarea {
       max-width: 100%;
       bottom: 0;
       right: 0; }
-    #article .black .title span {
-      color: #15d277; }
+    #article .black .title {
+      line-height: 35px;
+      padding-bottom: 45px; }
+      #article .black .title span {
+        color: #15d277; }
     #article .black .text {
       color: #fff;
       line-height: 27px;
       font-size: 1.0625em;
-      padding: 45px 0 60px;
+      padding-bottom: 60px;
       font-family: "museo thin"; }
       @media only screen and (max-width: 767px) {
         #article .black .text {
@@ -1361,6 +1371,7 @@ textarea {
       bottom: inherit; }
     #article .black__social .social {
       margin: 50px 0 75px;
+      transform: initial;
       float: inherit; }
       #article .black__social .social a {
         margin-right: 75px;
@@ -1408,7 +1419,7 @@ textarea {
         #article .black__social .social a:last-of-type {
           margin-right: 0; }
   #article .partners {
-    margin: 130px 0; }
+    margin: 65px 0; }
     #article .partners div {
       display: -ms-flexbox;
       display: flex;
@@ -1467,7 +1478,7 @@ textarea {
               background-size: 200px 285px;
               background-position: 0 0; } }
   #article .news {
-    margin: 50px 0 150px; }
+    margin: 25px 0 150px; }
     #article .news div:first-of-type {
       padding-left: 0; }
     #article .news div:last-of-type {
@@ -1477,24 +1488,24 @@ textarea {
       #article .news div a:focus p:first-of-type, #article .news div a:focus p:last-of-type, #article .news div a:hover p:first-of-type, #article .news div a:hover p:last-of-type {
         color: #4f81ff; }
       #article .news div a p {
-        transition: all 0.3s; }
+        transition: all 0.4s; }
         #article .news div a p:first-of-type {
-          color: #919191;
+          color: #d1d1d1;
           font-size: 0.875em;
           letter-spacing: 2px;
           font-family: "museo medium";
-          margin-bottom: 25px;
+          margin-bottom: 15px;
           display: block; }
         #article .news div a p:last-of-type {
-          line-height: 24px;
+          line-height: 19px;
           font-family: "museo light";
           font-size: 0.8125em;
           color: #000; }
 
 #search {
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.95);
   text-align: center;
-  position: absolute;
+  position: fixed;
   display: none;
   padding: 0 20%;
   height: 100%;
@@ -1509,21 +1520,25 @@ textarea {
     background: none;
     font-size: 2em;
     line-height: 36px;
-    margin: 20vh 0 10vh;
+    margin: 30vh 0 10vh;
     border-bottom: 1px solid;
-    font-family: "museo bold";
+    font-family: "museo medium";
     letter-spacing: 10px;
     padding-bottom: 25px;
     text-align: center; }
+  #search p {
+    position: absolute;
+    font-size: 0.875em;
+    color: #fff;
+    bottom: 5%;
+    right: 5%; }
 
 .ads__normal .banner {
   height: 200px; }
 .ads__wide .banner {
-  height: 220px;
+  height: 200px;
   width: 100%;
   margin: 0; }
-.ads__wide--slim .banner {
-  height: 120px; }
 
 .banner {
   background-color: #d1d1d1;
@@ -1582,7 +1597,7 @@ textarea {
           margin-top: 0; } }
 
 .breadcrumbs {
-  margin-top: 35px; }
+  margin-top: 15px; }
   @media only screen and (max-width: 767px) {
     .breadcrumbs {
       margin-top: 25px; } }
@@ -1610,7 +1625,7 @@ textarea {
     padding: 5px 14px;
     border: 1px solid; }
   .breadcrumbs .main {
-    transition: 0.3s; }
+    transition: 0.4s; }
     .breadcrumbs .main:hover {
       color: #000; }
   .breadcrumbs .current {
@@ -1620,9 +1635,9 @@ textarea {
   font-size: 1.5em;
   font-family: "museo bold";
   text-transform: uppercase;
-  letter-spacing: 7px; }
+  letter-spacing: 5px; }
   .title__padding {
-    margin-left: 47px; }
+    margin-left: 53px; }
     @media only screen and (min-width: 1440px) {
       .title__padding {
         margin-left: 0; } }
@@ -1634,7 +1649,7 @@ textarea {
     color: #fff; }
 
 .heading {
-  margin-top: 50px; }
+  margin-top: 20px; }
   @media only screen and (max-width: 767px) {
     .heading {
       margin-top: 25px; } }
@@ -1717,7 +1732,7 @@ textarea {
         border-bottom: none;
         border-top: none; }
         .heading .filter .dd__format .dropdown li a, .heading .filter .dd__place .dropdown li a, .heading .filter .dd__date .dropdown li a {
-          transition: 0.3s;
+          transition: 0.4s;
           color: #000; }
         .heading .filter .dd__format .dropdown li:last-child, .heading .filter .dd__place .dropdown li:last-child, .heading .filter .dd__date .dropdown li:last-child {
           border-bottom: 1px solid;
@@ -1745,7 +1760,7 @@ textarea {
       color: #000;
       font-size: 1em;
       font-family: "museo light";
-      transition: 0.3s;
+      transition: 0.4s;
       position: relative;
       margin-right: 45px;
       cursor: pointer; }
@@ -1760,18 +1775,21 @@ textarea {
         margin-right: 0; }
 
 .label {
-  padding: 5px 30px;
   border: 1px solid;
+  padding: 5px 30px;
   font-size: 0.9375em;
-  margin-bottom: 60px;
+  letter-spacing: .5px;
   text-transform: uppercase;
   font-family: "museo light";
-  transition: 0.3s;
+  transition: 0.4s;
   display: -webkit-inline-box; }
   .label--green {
+    margin-bottom: 50px;
     color: #15d277; }
-  .label--black {
-    color: #000; }
+  .label--white {
+    position: absolute;
+    color: #fff;
+    top: 50px; }
 
 .button {
   float: right;
@@ -1802,7 +1820,7 @@ textarea {
     .button__donate .btn {
       font-size: 0.9375em; }
       .button__donate .btn:nth-child(odd) {
-        transition: 0.3s;
+        transition: 0.4s;
         border-right: none;
         text-align: center;
         padding: 8px;
@@ -1858,7 +1876,8 @@ textarea {
         margin: 25px auto;
         float: initial; } }
   .social a {
-    margin-right: 40px;
+    margin-right: 30px;
+    transform: scale(0.8);
     display: inline-block;
     vertical-align: middle;
     *vertical-align: auto;
@@ -1919,7 +1938,7 @@ textarea {
   .btn:before {
     content: '';
     position: absolute;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     z-index: -1;
     height: 100%;
     width: 100%;
@@ -1961,7 +1980,7 @@ textarea {
   0% {
     top: 0; }
   100% {
-    top: -60px; } }
+    top: -50px; } }
 body {
   font-family: "museo light"; }
   body ::-moz-selection {

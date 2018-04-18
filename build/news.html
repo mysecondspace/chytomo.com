@@ -52,19 +52,16 @@
                     <!-- elements -->
                     <!-- burger -->
                     <div class="burger">
-                        <a href="#">
+                        <span>
                             <div class="image"></div>
-                        </a>
+                        </span>
                     </div>
                     
                     <!-- search -->
                     <div class="search">
-                        <a href="#header" class="show" onclick="javascript:searchShow()">
+                        <span onclick="searchShow()">
                             <div class="image"></div>
-                        </a>
-                        <a href="#header" class="hide" onclick="javascript:searchHide()">
-                            <div class="image"></div>
-                        </a>
+                        </span>
                     </div>
                     
                     <!-- calendar -->
@@ -115,6 +112,7 @@
                         onfocus='if (this.value == "Я хочу знайти...")
                         this.value = ""'>
                     <button class="btn btn--white" type="submit" value="submit">Шукати</button>
+                    <p>* ESC - закрити вікно пошуку</p>
                 </div>
                 <div class="container">
 

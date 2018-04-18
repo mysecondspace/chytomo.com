@@ -62,13 +62,13 @@ html {
         max-width: 1440px; }
       @media only screen and (min-width: 768px) {
         html body .wrapper .container {
-          width: calc(100% - 15%); } }
+          width: calc(100% - 5%); } }
       @media only screen and (min-width: 1024px) {
         html body .wrapper .container {
-          width: calc(100% - 20%); } }
+          width: calc(100% - 10%); } }
       @media only screen and (min-width: 1440px) {
         html body .wrapper .container {
-          width: calc(100% - 25%); } }
+          width: calc(100% - 15%); } }
       html body .wrapper #preloader {
         top: 0;
         left: 0;
@@ -790,7 +790,7 @@ textarea {
           color: #fff;
           font-size: 0.9375em;
           padding: 8px 40px;
-          transition: 0.3s;
+          transition: 0.4s;
           display: inline-block;
           vertical-align: middle;
           *vertical-align: auto;
@@ -857,7 +857,7 @@ textarea {
           overflow: hidden;
           padding: 0; }
           .wrapper #article .trends .block .image img {
-            transition: 0.3s; }
+            transition: 0.4s; }
             .wrapper #article .trends .block .image img:focus, .wrapper #article .trends .block .image img:hover {
               transform: scale(1.05); }
     .wrapper #article .page .head {
@@ -979,7 +979,7 @@ textarea {
   0% {
     top: 0; }
   100% {
-    top: -60px; } }
+    top: -50px; } }
 body {
   font-family: "rubik regular"; }
   body ::-moz-selection {
