@@ -51,13 +51,13 @@ $(document).on('click', 'a[href^="#menu"]', function(event) {
     }, 1200);
 });
 
-// ----- calendar -----
-var narrow = $('.narrow__small--calendar'),
-    inside = $('.block--calendar'),
+// ----- calendar and shop -----
+var narrow = $('.narrow__small--calendar, .narrow__small--shop'),
+    inside = $('.block--calendar, .block--shop'),
     opened = false;
 
 inside.css('display', 'none');
-$('.inside .narrow__small--calendar, .close').click(function() {
+$('.inside .narrow__small--calendar, .inside .narrow__small--shop, .close').click(function() {
     var name = $(this).data('name');
 
     (!opened) ? (

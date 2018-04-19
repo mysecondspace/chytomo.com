@@ -12,6 +12,12 @@
     	margin-top: 73px;
     }
 
+    // ----- light -----
+    &.light {
+    	z-index: 0;
+    	background-color: $light-gray;
+    }
+
 	// ----- block -----
 	.block {
 		margin: 25px 0 100px;
@@ -59,6 +65,7 @@
 				}
 			}
 		}
+		&--shop,
 		&--calendar {
 			padding: 100px 50px;
 			position: relative;
@@ -68,7 +75,7 @@
 			z-index: 1;
 			&:after {
 			    content: '';
-			    z-index: -1;
+			    z-index: -2;
 			    position: absolute;
 			    border: 25px solid transparent;
 			    animation: arrow $time * 2 $time * 3;
@@ -79,11 +86,7 @@
 				&:after {
 			    	left: calc(12.5% - 25px);
 				}
-				.narrow {
-					.l {
-						display: flex;
-					}
-				}
+				.narrow,
 				.filling {
 					.l {
 						display: block;
@@ -94,11 +97,7 @@
 				&:after {
 			    	left: calc(37.5% - 25px);
 				}
-				.narrow {
-					.lc {
-						display: flex;
-					}
-				}
+				.narrow,
 				.filling {
 					.lc {
 						display: block;
@@ -109,11 +108,7 @@
 				&:after {
 			    	left: calc(62.5% - 25px);
 				}
-				.narrow {
-					.rc {
-						display: flex;
-					}
-				}
+				.narrow,
 				.filling {
 					.rc {
 						display: block;
@@ -124,11 +119,7 @@
 				&:after {
 			    	left: calc(87.5% - 25px);
 				}
-				.narrow {
-					.r {
-						display: flex;
-					}
-				}
+				.narrow,
 				.filling {
 					.r {
 						display: block;
@@ -197,9 +188,30 @@
 				}
 			}
 		}
+		&--shop {
+			.narrow {
+				.btn {
+				    left: 0;
+				    right: 0;
+				    bottom: -30%;
+				    text-align: center;
+				    position: absolute;
+				    height: auto;
+				    width: auto;
+				}
+			}
+			.filling {
+				.description {
+	                &--big {
+	                	color: $blue;
+	                }
+				}
+			}
+		}
 		&__main {
 			margin-bottom: 0;
 		}
+		&__shop,
 		&__calendar {
 			margin: 50px 0 100px;
 			@include media(phone) {
@@ -211,6 +223,12 @@
 				&:first-of-type {
 					margin-top: 0;
 				}
+			}
+		}
+		&__shop {
+			margin: 100px 0;
+			@include media(phone) {
+				margin: 100px 0;
 			}
 		}
 		.row {
@@ -240,6 +258,7 @@
 
 			// ----- name -----
 			.name {
+				width: 100%;
 				color: $white;
 				text-align: left;
 				font-family: $playfair-bold;
@@ -338,6 +357,7 @@
 						}
 					}
 				}
+				&--shop,
 				&--calendar {
 					top: 0;
 					height: 100%;
@@ -365,6 +385,65 @@
 					    &:last-of-type {
 					    	bottom: 0;
 					    }
+					}
+				}
+				&--shop {
+					height: 100%;
+					img {
+						position: absolute;
+						margin: -40% auto;
+						max-width: 130px;
+						height: auto;
+						right: 0;
+						left: 0;
+					}
+					.name {
+						text-align: center;
+						height: 50%;
+						& > span {
+							font-family: $playfair-bold;
+							margin-bottom: 5px;
+							font-size: em(12);
+							position: initial;
+							color: $black;
+							bottom: 0;
+						}
+						.caption {
+							margin-top: 95px;
+						}
+						.like {
+							background-color: $light-gray;
+							font-family: $museo-regular;
+							position: absolute;
+							font-size: em(14);
+						    cursor: pointer;
+						    margin: 0 auto;
+						    bottom: -10px;
+						    width: 65px;
+						    right: 0;
+						    left: 0;
+						    &:before {
+						    	content: "";
+					    		margin-right: 5px;
+	        					transform: scale(.8);
+						    	@include inline-block;
+								@include image-retina("/../images/like.png", "/../images/like-2x.png");
+						    }
+						    &--liked {
+						    	pointer-events: none;
+						    	&:before {
+									@include image-retina("/../images/like-white.png", "/../images/like-white-2x.png");
+						    	}
+						    }
+						}
+					}
+					.liner {
+					    position: initial;
+					    margin-bottom: 0;
+					}
+					&:focus img,
+					&:hover img {
+						box-shadow: 0 30px 40px rgba(0, 0, 0, 0.15);
 					}
 				}
 			}
@@ -571,14 +650,16 @@
 						height: 50%;
 					}
 				}
+				&--shop,
 				&--calendar {
 					position: relative;
 					& > a,
 					& > div {
 						height: 100%;
+						border: 1px solid;
 						overflow: initial;
 						transition: $time;
-						border: 1px solid $black;
+						border-color: $black;
 						.date {
 							font-family: $playfair-black;
 							position: absolute;
@@ -624,6 +705,68 @@
 						& > div {
 							box-shadow: 0 30px 40px rgba(0,0,0,.15);
 							border-color: $white;
+						}
+					}
+				}
+				&--shop {
+					& > a,
+					& > div {
+						border-color: $white;
+					}
+					&.inside {
+						height: 250px;
+						& > div {
+							img {
+							    margin: -30% auto;
+	    						max-width: 130px;
+							}
+							.name {
+								.caption {
+									font-family: $museo-regular;
+									margin-top: 115px;
+									font-size: em(20);
+								}
+								.like {
+									background-color: $black;
+									&:focus,
+									&:hover {
+										&:before {
+											@include image-retina("/../images/like-red.png", "/../images/like-red-2x.png");
+										}
+									}
+								}
+							}
+							.social {
+								margin: 0 auto;
+								bottom: -50%;
+								width: 54px;
+								right: 0;
+								left: 0;
+							}
+						}
+						&:focus,
+						&:hover {
+							img {
+								transform: scale(1);
+								box-shadow: none;
+							}
+						}
+					}
+					&.select {
+						& > a,
+						& > div {
+							box-shadow: none;
+							border-color: $blue;
+							.name {
+								.caption {
+									color: $blue;
+								}
+								.like {
+									&:before {
+										@include image-retina("/../images/like-red.png", "/../images/like-red-2x.png");
+									}
+								}
+							}
 						}
 					}
 				}
@@ -688,7 +831,6 @@
 				color: $blue;
 			}
 		}
-		
 		&__calendar {
 			padding: 0;
 			.filter {

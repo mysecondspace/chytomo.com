@@ -7,6 +7,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- [Вчитися](https://mysecondspace.github.io/chytomo.com/build/study.html)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- [Тренди](https://mysecondspace.github.io/chytomo.com/build/trends.html)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- [Спецпроекти](https://mysecondspace.github.io/chytomo.com/build/special.html)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- [Вітрина](https://mysecondspace.github.io/chytomo.com/build/shop.html)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- [Календар](https://mysecondspace.github.io/chytomo.com/build/calendar.html)<br>
 ### Спецпроекти
 [Deutscher Akzent](https://mysecondspace.github.io/chytomo.com/build/deutscher.html)<br>
