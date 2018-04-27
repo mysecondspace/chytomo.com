@@ -150,6 +150,25 @@
 	}
 }
 
+// ----- tags -----
+.tags {
+	@extend .breadcrumbs;
+	a {
+		font-size: em(11);
+		color: $light-gray;
+		@include transition($time);
+		font-family: $museo-regular;
+		text-transform: uppercase;
+		letter-spacing: 1.77px;
+		padding: 5px 14px;
+		border: 1px solid;
+		margin-right: 10px;
+		&:hover {
+			color: $black;
+		}
+	}
+}
+
 // ----- title -----
 .title {
 	font-size: em(24);
@@ -167,6 +186,9 @@
 		span {
 			color: $white;
 		}
+	}
+	&--blue {
+		color: $blue;
 	}
 	&--white {
 		color: $white;
@@ -322,7 +344,7 @@
 						border-bottom: none;
 						border-top: none;
 						a {
-							transition: $time;
+							@include transition($time);
 							color: $black;
 						}
 						&:last-child {

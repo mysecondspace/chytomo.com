@@ -854,28 +854,30 @@ textarea {
     z-index: 0;
     background-color: #d1d1d1; }
   #article .block {
-    margin: 25px 0 100px; }
+    margin: 25px 0 150px; }
     @media only screen and (max-width: 767px) {
       #article .block {
         margin: 25px 0 50px; } }
-    #article .block a {
+    #article .block a, #article .block .instead {
       width: 100%;
       height: 100%;
       display: block;
       overflow: hidden;
       position: relative; }
-      #article .block a img {
+      #article .block a img, #article .block .instead img {
         height: 100%;
         -o-object-fit: cover;
            object-fit: cover;
         transition: 0.4s; }
-    #article .block--large .row {
+    #article .block--large .row, #article .block--typical .row {
       height: 350px;
       margin-bottom: 75px; }
       @media only screen and (max-width: 767px) {
-        #article .block--large .row {
+        #article .block--large .row, #article .block--typical .row {
           margin-bottom: 15px;
           height: 250px; } }
+    #article .block--typical {
+      margin: 25px 0; }
     #article .block--medium .row {
       height: 400px;
       margin-bottom: 40px; }
@@ -897,7 +899,7 @@ textarea {
       margin-left: 0;
       z-index: 1; }
       #article .block--shop:after, #article .block--calendar:after {
-        content: '';
+        content: "";
         z-index: -2;
         position: absolute;
         border: 25px solid transparent;
@@ -1056,7 +1058,7 @@ textarea {
           color: #454545; }
         #article .block .info .name .liner {
           font-size: 0.625em;
-          margin-bottom: 40px;
+          margin-bottom: 30px;
           letter-spacing: 2px;
           text-transform: uppercase;
           font-family: "museo medium"; }
@@ -1096,8 +1098,7 @@ textarea {
           padding: 0;
           bottom: initial; }
           #article .block .info__small--option .name .caption {
-            font-size: 1em;
-            line-height: 22px; }
+            font-size: 1.125em; }
         #article .block .info__small--shop, #article .block .info__small--calendar {
           top: 0;
           height: 100%;
@@ -1224,6 +1225,15 @@ textarea {
           background-color: #311024; }
         #article .block .wide .grad__above.grad--blue {
           background-color: #000f36; }
+    #article .block .wide__typical img {
+      min-width: 100%; }
+    #article .block .wide__typical .grad {
+      width: 100%; }
+      #article .block .wide__typical .grad__under.grad--black {
+        opacity: .5;
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+        background-size: 100%;
+        background-image: linear-gradient(to left, rgba(0, 0, 0, 0), #000000); }
     #article .block .wide__full:focus .grad, #article .block .wide__full:hover .grad {
       width: 100%; }
     #article .block .wide__full .info {
@@ -1446,6 +1456,147 @@ textarea {
       opacity: .75; }
     #article .block .narrow:focus .grad__valign.grad--clear, #article .block .narrow:hover .grad__valign.grad--clear {
       opacity: .4; }
+  #article .content {
+    margin-bottom: 100px; }
+    #article .content .author {
+      text-align: center; }
+      #article .content .author img {
+        width: 80px;
+        height: 80px;
+        -o-object-fit: cover;
+           object-fit: cover;
+        margin-bottom: 10px;
+        border-radius: 50px; }
+      #article .content .author .name {
+        text-transform: uppercase;
+        font-family: "museo bold";
+        font-size: 0.75em; }
+    #article .content .share {
+      padding: 10px 0;
+      font-size: 0.875em;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: "museo medium";
+      letter-spacing: 2px;
+      color: #d1d1d1;
+      margin-top: 50px;
+      border: 1px solid;
+      border-bottom: none; }
+      #article .content .share--black {
+        float: left;
+        color: #000;
+        font-size: 1.125em;
+        border: 1px solid;
+        border-right: none;
+        width: calc(70% - 2px); }
+    #article .content .mistake {
+      padding: 10px;
+      text-align: left;
+      font-size: 0.6875em;
+      line-height: 18px;
+      border: 1px solid;
+      color: #d1d1d1;
+      font-family: "museo regular"; }
+    #article .content .social {
+      height: 36px;
+      position: relative;
+      margin-bottom: 25px;
+      width: calc(100% - 2px);
+      border: 1px solid #d1d1d1; }
+      #article .content .social:before {
+        top: 0;
+        right: 50%;
+        height: 100%;
+        position: absolute;
+        border-right: 1px solid #d1d1d1;
+        content: ""; }
+      #article .content .social a {
+        float: left;
+        margin: 0 auto;
+        transform: scale(1);
+        background-repeat: no-repeat; }
+      #article .content .social--black {
+        float: left;
+        height: 42px;
+        margin-top: 50px;
+        border-color: #000;
+        width: calc(30% - 2px); }
+        #article .content .social--black:before {
+          border-color: #000; }
+        #article .content .social--black a {
+          display: inline-block;
+          vertical-align: middle;
+          *vertical-align: auto;
+          *zoom: 1;
+          *display: inline; }
+          #article .content .social--black a[href*="facebook"] {
+            background-image: url('../images/social-black.png');
+            background-position: 0 0;
+            height: 20px;
+            width: 20px; }
+            @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+              #article .content .social--black a[href*="facebook"] {
+                background-image: url('../images/social-black-2x.png');
+                background-size: 20px 40px;
+                background-position: 0 0; } }
+          #article .content .social--black a[href*="twitter"] {
+            background-image: url('../images/social-black.png');
+            background-position: 0 -20px;
+            height: 20px;
+            width: 20px; }
+            @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+              #article .content .social--black a[href*="twitter"] {
+                background-image: url('../images/social-black-2x.png');
+                background-size: 20px 40px;
+                background-position: 0 -20px; } }
+    #article .content .text {
+      line-height: 32px;
+      margin-bottom: 75px; }
+      #article .content .text b, #article .content .text .bold {
+        font-size: 1.25em;
+        font-family: "museo bold"; }
+      #article .content .text img {
+        margin: 25px auto;
+        display: block; }
+      #article .content .text p {
+        line-height: 30px;
+        font-family: "museo light"; }
+        #article .content .text p b {
+          font-size: 1em; }
+      #article .content .text .title {
+        font-family: "museo bold";
+        padding: 50px 0 25px; }
+      #article .content .text .heading {
+        font-family: "playfair bold";
+        padding: 50px 0 25px;
+        font-size: 2.25em; }
+      #article .content .text .bolder {
+        font-family: "museo bold";
+        font-size: 1em; }
+      #article .content .text .quotes {
+        margin: 50px 0;
+        display: block;
+        font-size: 1.375em;
+        line-height: 36px;
+        margin-left: -75px;
+        padding: 50px 75px;
+        position: relative;
+        font-family: "museo thin";
+        box-shadow: 10px 0 35px rgba(0, 72, 255, 0.08);
+        width: calc(100% + 75px); }
+        #article .content .text .quotes:before, #article .content .text .quotes:after {
+          font-family: "museo bold";
+          position: absolute;
+          font-style: italic;
+          font-size: 5em;
+          content: '"';
+          color: #4f81ff; }
+        #article .content .text .quotes:before {
+          left: 10px;
+          top: 10px; }
+        #article .content .text .quotes:after {
+          bottom: -50px;
+          right: 50px; }
   #article .black {
     background-color: #000;
     margin-bottom: 50px;
@@ -1719,22 +1870,22 @@ textarea {
           margin-left: 20px;
           margin-top: 0; } }
 
-.breadcrumbs {
+.breadcrumbs, .tags {
   margin-top: 15px; }
   @media only screen and (max-width: 767px) {
-    .breadcrumbs {
+    .breadcrumbs, .tags {
       margin-top: 25px; } }
-  .breadcrumbs.white .icon {
+  .breadcrumbs.white .icon, .white.tags .icon {
     width: 6px;
     height: 10px;
     background-image: url(../images/arrow-white.png); }
     @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-      .breadcrumbs.white .icon {
+      .breadcrumbs.white .icon, .white.tags .icon {
         background-size: 5.5px 10px;
         background-image: url(../images/arrow-white-2x.png); } }
-  .breadcrumbs.white .main, .breadcrumbs.white .current {
+  .breadcrumbs.white .main, .white.tags .main, .breadcrumbs.white .current, .white.tags .current {
     color: #fff; }
-  .breadcrumbs .icon {
+  .breadcrumbs .icon, .tags .icon {
     margin: 0 10px;
     display: inline-block;
     vertical-align: middle;
@@ -1746,10 +1897,10 @@ textarea {
     background-image: url(../images/arrow.png);
     background-repeat: no-repeat; }
     @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-      .breadcrumbs .icon {
+      .breadcrumbs .icon, .tags .icon {
         background-size: 5.5px 10px;
         background-image: url(../images/arrow-2x.png); } }
-  .breadcrumbs .main, .breadcrumbs .current {
+  .breadcrumbs .main, .tags .main, .breadcrumbs .current, .tags .current {
     font-size: 0.6875em;
     color: #d1d1d1;
     font-family: "museo regular";
@@ -1757,12 +1908,25 @@ textarea {
     letter-spacing: 1.77px;
     padding: 5px 14px;
     border: 1px solid; }
-  .breadcrumbs .main {
+  .breadcrumbs .main, .tags .main {
     transition: 0.4s; }
-    .breadcrumbs .main:hover {
+    .breadcrumbs .main:hover, .tags .main:hover {
       color: #000; }
-  .breadcrumbs .current {
+  .breadcrumbs .current, .tags .current {
     cursor: default; }
+
+.tags a {
+  font-size: 0.6875em;
+  color: #d1d1d1;
+  transition: 0.4s;
+  font-family: "museo regular";
+  text-transform: uppercase;
+  letter-spacing: 1.77px;
+  padding: 5px 14px;
+  border: 1px solid;
+  margin-right: 10px; }
+  .tags a:hover {
+    color: #000; }
 
 .title {
   font-size: 1.5em;
@@ -1778,6 +1942,8 @@ textarea {
     color: #000; }
     .title--black span {
       color: #fff; }
+  .title--blue {
+    color: #4f81ff; }
   .title--white {
     color: #fff; }
 
