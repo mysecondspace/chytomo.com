@@ -148,9 +148,9 @@ b, strong { font-weight: bolder; }
 // Add the correct font style in Android 4.3-.
 dfn { font-style: italic; }
 
-// Correct the font size and margin on `h1` elements within `section` and
+// Correct the font size and margin on `h1` and `h2` elements within `section` and
 // `article` contexts in Chrome, Firefox, and Safari.
-h1 {
+h1, h2 {
     font-size: 2em;
     margin: 0.67em 0;
 }

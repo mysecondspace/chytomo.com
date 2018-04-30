@@ -14,12 +14,16 @@ html {
     min-width: 320px;
     overflow-x: hidden;
     background-color: #fff; }
+    html body ::-moz-selection {
+      color: #fff; }
     html body ::selection {
       color: #fff; }
     html body .wrapper {
       height: 100%;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column; }
+      -ms-flex-direction: column;
+          flex-direction: column; }
       html body .wrapper nav ul li {
         display: inline-block;
         vertical-align: middle;
@@ -29,11 +33,14 @@ html {
       html body .wrapper input, html body .wrapper button {
         outline: none; }
       html body .wrapper header {
-        flex: 0 0 auto; }
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto; }
       html body .wrapper footer {
-        flex: 0 0 auto; }
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto; }
       html body .wrapper article {
-        flex: 1 0 auto; }
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto; }
       html body .wrapper a {
         text-decoration: none; }
       html body .wrapper ul {
@@ -42,8 +49,10 @@ html {
         html body .wrapper ul li {
           list-style-type: none; }
       html body .wrapper .valign {
+        display: -ms-flexbox;
         display: flex;
-        align-items: center; }
+        -ms-flex-align: center;
+            align-items: center; }
       html body .wrapper .truncate {
         overflow: hidden;
         white-space: nowrap;
@@ -120,7 +129,7 @@ b, strong {
 dfn {
   font-style: italic; }
 
-h1 {
+h1, h2 {
   font-size: 2em;
   margin: 0.67em 0; }
 
@@ -236,6 +245,7 @@ textarea {
 .row {
   margin-right: -15px;
   margin-left: -15px;
+  display: -ms-flexbox;
   display: flex; }
 
 .x-1, .s-1, .m-1, .l-1,
@@ -637,6 +647,7 @@ textarea {
           .wrapper .container .title--green {
             margin: 25px 0 0 100px; } }
   .wrapper #header .top {
+    display: -ms-flexbox;
     display: flex;
     padding: 40px 0 20px; }
     @media only screen and (max-width: 767px) {
@@ -654,7 +665,7 @@ textarea {
           width: 175px;
           height: 52px;
           background-image: url(../images/logo-deutscher.png); }
-          @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+          @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
             .wrapper #header .top .logo a .image {
               background-size: 175px 51.5px;
               background-image: url(../images/logo-deutscher-2x.png); } }
@@ -675,12 +686,9 @@ textarea {
           width: 20px; }
           .wrapper #header .top .social a[href*="facebook"]:hover {
             background-position: 0 0; }
-          @media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+          @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
             .wrapper #header .top .social a[href*="facebook"] {
               background-image: url('../images/social-deutscher-2x.png');
-              -moz-background-size: 20px 200px;
-              -o-background-size: 20px 200px;
-              -webkit-background-size: 20px 200px;
               background-size: 20px 200px;
               background-position: 0 -20px; } }
         .wrapper #header .top .social a[href*="twitter"] {
@@ -690,12 +698,9 @@ textarea {
           width: 20px; }
           .wrapper #header .top .social a[href*="twitter"]:hover {
             background-position: 0 -160px; }
-          @media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+          @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
             .wrapper #header .top .social a[href*="twitter"] {
               background-image: url('../images/social-deutscher-2x.png');
-              -moz-background-size: 20px 200px;
-              -o-background-size: 20px 200px;
-              -webkit-background-size: 20px 200px;
               background-size: 20px 200px;
               background-position: 0 -180px; } }
         .wrapper #header .top .social a[href*="feed"] {
@@ -705,12 +710,9 @@ textarea {
           width: 20px; }
           .wrapper #header .top .social a[href*="feed"]:hover {
             background-position: 0 -80px; }
-          @media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+          @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
             .wrapper #header .top .social a[href*="feed"] {
               background-image: url('../images/social-deutscher-2x.png');
-              -moz-background-size: 20px 200px;
-              -o-background-size: 20px 200px;
-              -webkit-background-size: 20px 200px;
               background-size: 20px 200px;
               background-position: 0 -100px; } }
         .wrapper #header .top .social a[href*="instagram"] {
@@ -720,12 +722,9 @@ textarea {
           width: 20px; }
           .wrapper #header .top .social a[href*="instagram"]:hover {
             background-position: 0 -40px; }
-          @media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+          @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
             .wrapper #header .top .social a[href*="instagram"] {
               background-image: url('../images/social-deutscher-2x.png');
-              -moz-background-size: 20px 200px;
-              -o-background-size: 20px 200px;
-              -webkit-background-size: 20px 200px;
               background-size: 20px 200px;
               background-position: 0 -60px; } }
         .wrapper #header .top .social a[href*="t.me"] {
@@ -735,12 +734,9 @@ textarea {
           width: 20px; }
           .wrapper #header .top .social a[href*="t.me"]:hover {
             background-position: 0 -120px; }
-          @media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+          @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
             .wrapper #header .top .social a[href*="t.me"] {
               background-image: url('../images/social-deutscher-2x.png');
-              -moz-background-size: 20px 200px;
-              -o-background-size: 20px 200px;
-              -webkit-background-size: 20px 200px;
               background-size: 20px 200px;
               background-position: 0 -140px; } }
         .wrapper #header .top .social a:last-of-type {
@@ -809,7 +805,8 @@ textarea {
         .wrapper #article .news .block img {
           width: 100%;
           height: 100%;
-          object-fit: cover; }
+          -o-object-fit: cover;
+             object-fit: cover; }
         .wrapper #article .news .block--left {
           text-align: left; }
         .wrapper #article .news .block--right {
@@ -836,7 +833,8 @@ textarea {
         .wrapper #article .trends .block img {
           width: 100%;
           height: 100%;
-          object-fit: cover; }
+          -o-object-fit: cover;
+             object-fit: cover; }
         .wrapper #article .trends .block .color {
           background-color: #a0c814; }
           .wrapper #article .trends .block .color div {
@@ -942,7 +940,7 @@ textarea {
           width: 175px;
           height: 52px;
           background-image: url(../images/logo-white.png); }
-          @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+          @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
             .wrapper #footer .logo a .image {
               background-size: 175px 51.5px;
               background-image: url(../images/logo-white-2x.png); } }
@@ -962,7 +960,7 @@ textarea {
           width: 160px;
           height: 75px;
           background-image: url(../images/logo-goethe.png); }
-          @media (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+          @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
             .wrapper #footer .goethe a .image {
               background-size: 160px 75px;
               background-image: url(../images/logo-goethe-2x.png); } }
@@ -984,5 +982,7 @@ textarea {
     top: -50px; } }
 body {
   font-family: "rubik regular"; }
+  body ::-moz-selection {
+    background-color: #a0c814; }
   body ::selection {
     background-color: #a0c814; }

@@ -141,7 +141,7 @@ b, strong {
 dfn {
   font-style: italic; }
 
-h1 {
+h1, h2 {
   font-size: 2em;
   margin: 0.67em 0; }
 
@@ -605,7 +605,7 @@ textarea {
 
   .l-os-0 {
     margin-left: 0%; } }
-#menu.menu {
+#menu {
   z-index: 10;
   padding: 20px 0;
   transition: 0.4s;
@@ -614,22 +614,24 @@ textarea {
   border-top: 1px solid #e6e6e6;
   background-color: #fff; }
   @media only screen and (max-width: 767px) {
-    #menu.menu {
+    #menu {
       padding: 10px 0; } }
-  #menu.menu.scroll {
+  #menu.shop {
+    border-bottom-color: #d1d1d1; }
+  #menu.scroll {
     border-color: #fff;
     position: fixed;
     opacity: .75;
     width: 100%;
     left: 0;
     top: 0; }
-    #menu.menu.scroll:hover {
+    #menu.scroll:hover {
       opacity: 1; }
-  #menu.menu .burger {
+  #menu .burger {
     float: left; }
-    #menu.menu .burger span {
+    #menu .burger span {
       cursor: pointer; }
-    #menu.menu .burger .image {
+    #menu .burger .image {
       display: inline-block;
       vertical-align: middle;
       *vertical-align: auto;
@@ -639,25 +641,25 @@ textarea {
       background-position: 0 -14px;
       height: 14px;
       width: 20px; }
-      #menu.menu .burger .image:hover {
+      #menu .burger .image:hover {
         background-position: 0 0; }
       @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-        #menu.menu .burger .image {
+        #menu .burger .image {
           background-image: url('../images/nav-2x.png');
           background-size: 20px 108px;
           background-position: 0 -14px; } }
-    #menu.menu .burger.active .image {
+    #menu .burger.active .image {
       width: 20px;
       height: 14px;
       background-image: url(../images/burger-blue.png);
       background-position: initial; }
       @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-        #menu.menu .burger.active .image {
+        #menu .burger.active .image {
           background-size: 20px 14px;
           background-image: url(../images/burger-blue-2x.png); } }
-  #menu.menu .calendar {
+  #menu .calendar {
     float: right; }
-    #menu.menu .calendar .image {
+    #menu .calendar .image {
       display: inline-block;
       vertical-align: middle;
       *vertical-align: auto;
@@ -667,28 +669,28 @@ textarea {
       background-position: 0 -48px;
       height: 20px;
       width: 20px; }
-      #menu.menu .calendar .image:hover {
+      #menu .calendar .image:hover {
         background-position: 0 -28px; }
       @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-        #menu.menu .calendar .image {
+        #menu .calendar .image {
           background-image: url('../images/nav-2x.png');
           background-size: 20px 108px;
           background-position: 0 -48px; } }
-    #menu.menu .calendar.active .image {
+    #menu .calendar.active .image {
       width: 20px;
       height: 20px;
       background-image: url(../images/calendar-blue.png);
       background-position: initial; }
       @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-        #menu.menu .calendar.active .image {
+        #menu .calendar.active .image {
           background-size: 20px 20px;
           background-image: url(../images/calendar-blue-2x.png); } }
-  #menu.menu .search {
+  #menu .search {
     margin-left: 30px;
     float: right; }
-    #menu.menu .search span {
+    #menu .search span {
       cursor: pointer; }
-    #menu.menu .search .image {
+    #menu .search .image {
       display: inline-block;
       vertical-align: middle;
       *vertical-align: auto;
@@ -698,58 +700,58 @@ textarea {
       background-position: 0 -88px;
       height: 20px;
       width: 20px; }
-      #menu.menu .search .image:hover {
+      #menu .search .image:hover {
         background-position: 0 -68px; }
       @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-        #menu.menu .search .image {
+        #menu .search .image {
           background-image: url('../images/nav-2x.png');
           background-size: 20px 108px;
           background-position: 0 -88px; } }
-    #menu.menu .search.active .image {
+    #menu .search.active .image {
       width: 20px;
       height: 20px;
       background-image: url(../images/search-blue.png);
       background-position: initial; }
       @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-        #menu.menu .search.active .image {
+        #menu .search.active .image {
           background-size: 20px 20px;
           background-image: url(../images/search-blue-2x.png); } }
-  #menu.menu ul {
+  #menu ul {
     display: -webkit-inline-box; }
     @media only screen and (max-width: 767px) {
-      #menu.menu ul {
+      #menu ul {
         display: none; } }
-    #menu.menu ul li {
+    #menu ul li {
       margin: 0 10px;
       overflow: hidden; }
-      #menu.menu ul li:first-of-type {
+      #menu ul li:first-of-type {
         margin: 0 10px 0 0; }
-      #menu.menu ul li:last-of-type {
+      #menu ul li:last-of-type {
         margin: 0 0 0 10px; }
-      #menu.menu ul li.blue a:before {
+      #menu ul li.blue a:before {
         background-color: #4f81ff; }
-      #menu.menu ul li.orange a:before {
+      #menu ul li.orange a:before {
         background-color: #ff6648; }
-      #menu.menu ul li.gold a:before {
+      #menu ul li.gold a:before {
         background-color: #ffdd00; }
-      #menu.menu ul li.green a:before {
+      #menu ul li.green a:before {
         background-color: #15d277; }
-      #menu.menu ul li.gray a:before {
+      #menu ul li.gray a:before {
         background-color: #919191; }
-      #menu.menu ul li.light a:before {
+      #menu ul li.light a:before {
         background-color: #d1d1d1; }
-      #menu.menu ul li.active a:before {
+      #menu ul li.active a:before {
         left: 0; }
-      #menu.menu ul li a {
+      #menu ul li a {
         color: #000;
         padding: 0 10px;
         font-size: 0.875em;
         font-family: "museo light";
         transition: 0.4s;
         position: relative; }
-        #menu.menu ul li a:hover:before {
+        #menu ul li a:hover:before {
           left: 0; }
-        #menu.menu ul li a:before {
+        #menu ul li a:before {
           content: '';
           height: 12px;
           bottom: -4px;
@@ -849,12 +851,12 @@ textarea {
 #article {
   position: relative; }
   #article.scroll {
-    margin-top: 73px; }
+    margin-top: 63px; }
   #article.light {
     z-index: 0;
     background-color: #d1d1d1; }
   #article .block {
-    margin: 25px 0 150px; }
+    margin: 25px 0 100px; }
     @media only screen and (max-width: 767px) {
       #article .block {
         margin: 25px 0 50px; } }
@@ -892,7 +894,7 @@ textarea {
           margin-bottom: 15px;
           height: 250px; } }
     #article .block--shop, #article .block--calendar {
-      padding: 100px 50px;
+      padding: 75px 50px 50px;
       position: relative;
       background: #000;
       margin-right: 0;
@@ -1015,11 +1017,6 @@ textarea {
         margin-bottom: 0; }
         #article .block__shop .row:first-of-type, #article .block__calendar .row:first-of-type {
           margin-top: 0; }
-    #article .block__shop {
-      margin: 100px 0; }
-      @media only screen and (max-width: 767px) {
-        #article .block__shop {
-          margin: 100px 0; } }
     #article .block .row:last-of-type {
       margin-bottom: 0; }
     #article .block .btn {
@@ -1097,8 +1094,12 @@ textarea {
           top: 27px;
           padding: 0;
           bottom: initial; }
+          #article .block .info__small--option .name .liner {
+            margin-bottom: 10px; }
           #article .block .info__small--option .name .caption {
             font-size: 1.125em; }
+          #article .block .info__small--option .name > span {
+            margin-top: 15px; }
         #article .block .info__small--shop, #article .block .info__small--calendar {
           top: 0;
           height: 100%;
@@ -1107,7 +1108,8 @@ textarea {
           #article .block .info__small--shop .name, #article .block .info__small--calendar .name {
             height: 100%; }
             #article .block .info__small--shop .name > span, #article .block .info__small--calendar .name > span {
-              bottom: 68px;
+              bottom: 75px;
+              margin-top: 15px;
               position: absolute; }
             #article .block .info__small--shop .name .caption, #article .block .info__small--calendar .name .caption {
               font-family: "playfair black";
@@ -1118,30 +1120,32 @@ textarea {
             margin: 0;
             position: absolute; }
             #article .block .info__small--shop .liner:first-of-type, #article .block .info__small--calendar .liner:first-of-type {
-              bottom: 70px; }
+              margin-bottom: 15px;
+              bottom: 80px; }
             #article .block .info__small--shop .liner:last-of-type, #article .block .info__small--calendar .liner:last-of-type {
               bottom: 0; }
         #article .block .info__small--shop {
-          height: 100%; }
+          height: 100%;
+          text-align: center; }
           #article .block .info__small--shop img {
-            position: absolute;
-            margin: -40% auto;
+            margin-top: -30px;
             max-width: 130px;
-            height: auto;
-            right: 0;
-            left: 0; }
+            height: auto; }
           #article .block .info__small--shop .name {
-            text-align: center;
-            height: 50%; }
+            height: auto;
+            text-align: center; }
             #article .block .info__small--shop .name > span {
               font-family: "playfair bold";
               margin-bottom: 5px;
               font-size: 0.75em;
               position: initial;
+              margin-top: 20px;
               color: #000;
               bottom: 0; }
             #article .block .info__small--shop .name .caption {
-              margin-top: 95px; }
+              margin-top: 20px;
+              max-height: 80px;
+              overflow: hidden; }
             #article .block .info__small--shop .name .like {
               background-color: #d1d1d1;
               font-family: "museo regular";
@@ -1149,7 +1153,7 @@ textarea {
               font-size: 0.875em;
               cursor: pointer;
               margin: 0 auto;
-              bottom: -10px;
+              bottom: -12px;
               width: 65px;
               right: 0;
               left: 0; }
@@ -1370,10 +1374,10 @@ textarea {
             color: #fff; }
           #article .block .narrow__small--shop.inside > div .social, #article .block .narrow__small--calendar.inside > div .social {
             position: absolute;
-            bottom: 15px;
+            bottom: 20px;
             right: 20px; }
             #article .block .narrow__small--shop.inside > div .social a, #article .block .narrow__small--calendar.inside > div .social a {
-              margin-right: 10px;
+              margin-right: 5px;
               display: inline-block;
               vertical-align: middle;
               *vertical-align: auto;
@@ -1409,11 +1413,9 @@ textarea {
     #article .block .narrow__small--shop.inside {
       height: 250px; }
       #article .block .narrow__small--shop.inside > div img {
-        margin: -30% auto;
         max-width: 130px; }
       #article .block .narrow__small--shop.inside > div .name .caption {
         font-family: "museo regular";
-        margin-top: 115px;
         font-size: 1.25em; }
       #article .block .narrow__small--shop.inside > div .name .like {
         background-color: #000; }
@@ -1431,6 +1433,8 @@ textarea {
         width: 54px;
         right: 0;
         left: 0; }
+        #article .block .narrow__small--shop.inside > div .social a {
+          margin-right: 10px; }
       #article .block .narrow__small--shop.inside:focus img, #article .block .narrow__small--shop.inside:hover img {
         transform: scale(1);
         box-shadow: none; }
@@ -1557,7 +1561,9 @@ textarea {
         font-family: "museo bold"; }
       #article .content .text img {
         margin: 25px auto;
-        display: block; }
+        max-width: 100%;
+        display: block;
+        height: 100%; }
       #article .content .text p {
         line-height: 30px;
         font-family: "museo light"; }
@@ -1648,6 +1654,7 @@ textarea {
       float: inherit; }
       #article .black__social .social a {
         margin-right: 75px;
+        transform: scale(1);
         display: inline-block;
         vertical-align: middle;
         *vertical-align: auto;

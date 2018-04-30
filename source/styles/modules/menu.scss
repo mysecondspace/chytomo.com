@@ -2,7 +2,7 @@
 @include add(nav, "nav/*.png", "nav-2x/*.png");
 
 // ----- menu -----
-#menu.menu {
+#menu {
     z-index: 10;
     padding: 20px 0;
     transition: $time;
@@ -12,6 +12,11 @@
     background-color: $white;
     @include media(phone) {
         padding: 10px 0;
+    }
+
+    // ----- shop -----
+    &.shop {
+        border-bottom-color: $light-gray;
     }
     
     // ----- scroll -----

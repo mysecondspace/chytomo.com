@@ -10,7 +10,7 @@
 
 	// ----- scroll -----
     &.scroll {
-    	margin-top: 73px;
+    	margin-top: 63px;
     }
 
     // ----- light -----
@@ -21,7 +21,7 @@
 
 	// ----- block -----
 	.block {
-		margin: 25px 0 150px;
+		margin: 25px 0 100px;
 		@include media(phone) {
 			margin: 25px 0 50px;
 		}
@@ -72,7 +72,7 @@
 		}
 		&--shop,
 		&--calendar {
-			padding: 100px 50px;
+			padding: 75px 50px 50px;
 			position: relative;
 			background: $black;
 			margin-right: 0;
@@ -230,12 +230,6 @@
 				}
 			}
 		}
-		&__shop {
-			margin: 100px 0;
-			@include media(phone) {
-				margin: 100px 0;
-			}
-		}
 		.row {
 			&:last-of-type {
 				margin-bottom: 0;
@@ -356,8 +350,14 @@
 					padding: 0;
 					bottom: initial;
 					.name {
+						.liner {
+							margin-bottom: 10px;
+						}
 						.caption {
 							font-size: em(18);
+						}
+						& > span {
+							margin-top: 15px;
 						}
 					}
 				}
@@ -370,7 +370,8 @@
 					.name {
 						height: 100%;
 						& > span {
-							bottom: 68px;
+							bottom: 75px;
+							margin-top: 15px;
 							position: absolute;
 						}
 						.caption {
@@ -384,7 +385,8 @@
 					    margin: 0;
 					    position: absolute;
 					    &:first-of-type {
-					    	bottom: 70px;
+					    	margin-bottom: 15px;
+					    	bottom: 80px;
 					    }
 					    &:last-of-type {
 					    	bottom: 0;
@@ -393,27 +395,28 @@
 				}
 				&--shop {
 					height: 100%;
+					text-align: center;
 					img {
-						position: absolute;
-						margin: -40% auto;
+						margin-top: -30px;
 						max-width: 130px;
 						height: auto;
-						right: 0;
-						left: 0;
 					}
 					.name {
+						height: auto;
 						text-align: center;
-						height: 50%;
 						& > span {
 							font-family: $playfair-bold;
 							margin-bottom: 5px;
 							font-size: em(12);
 							position: initial;
+							margin-top: 20px;
 							color: $black;
 							bottom: 0;
 						}
 						.caption {
-							margin-top: 95px;
+							margin-top: 20px;
+							max-height: 80px;
+							overflow: hidden;
 						}
 						.like {
 							background-color: $light-gray;
@@ -422,7 +425,7 @@
 							font-size: em(14);
 						    cursor: pointer;
 						    margin: 0 auto;
-						    bottom: -10px;
+						    bottom: -12px;
 						    width: 65px;
 						    right: 0;
 						    left: 0;
@@ -700,10 +703,10 @@
 							}
 							.social {
 								position: absolute;
-								bottom: 15px;
+								bottom: 20px;
 								right: 20px;
 							    a {
-							        margin-right: 10px;
+							        margin-right: 5px;
 							        @include inline-block;
 							        &[href*="facebook"] {
 							        	@include sprite(facebook, social);
@@ -735,13 +738,11 @@
 						height: 250px;
 						& > div {
 							img {
-							    margin: -30% auto;
 	    						max-width: 130px;
 							}
 							.name {
 								.caption {
 									font-family: $museo-regular;
-									margin-top: 115px;
 									font-size: em(20);
 								}
 								.like {
@@ -760,6 +761,9 @@
 								width: 54px;
 								right: 0;
 								left: 0;
+								a {
+									margin-right: 10px;
+								}
 							}
 						}
 						&:focus,
@@ -912,7 +916,9 @@
 			}
 			img {
 				margin: 25px auto;
+				max-width: 100%;
 				display: block;
+				height: 100%;
 			}
 			p {
 				line-height: 30px;
@@ -1032,6 +1038,7 @@
 				float: inherit;
 			    a {
 			        margin-right: 75px;
+        			transform: scale(1);
 			        @include inline-block;
 			        &[href*="facebook"] {
 			        	@include sprite(facebook, media, hover);
