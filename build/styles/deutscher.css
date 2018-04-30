@@ -15,9 +15,11 @@ html {
     overflow-x: hidden;
     background-color: #fff; }
     html body ::-moz-selection {
-      color: #fff; }
+      color: #fff;
+      background-color: #4f81ff; }
     html body ::selection {
-      color: #fff; }
+      color: #fff;
+      background-color: #4f81ff; }
     html body .wrapper {
       height: 100%;
       display: -ms-flexbox;

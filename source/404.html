@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Читомо — 404</title>
+        //= templates/head.html
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
+        <div class="wrapper">
+
+            <!-- preloader -->
+            <div id="preloader"></div>
+            
+            <!-- header -->
+            //= templates/header.html
+            
+            <!-- menu -->
+            <nav id="menu">
+                <div class="container">
+                    
+                    <!-- elements -->
+                    //= templates/elements.html
+                    
+                    <!-- list -->
+                    <ul>
+                        <li class="light">
+                            <a href="https://mysecondspace.github.io/chytomo.com/build/news.html">Новини</a>
+                        </li>
+                        <li class="blue">
+                            <a href="https://mysecondspace.github.io/chytomo.com/build/read.html">Читати</a>
+                        </li>
+                        <li class="orange">
+                            <a href="https://mysecondspace.github.io/chytomo.com/build/watch.html">Дивитися</a>
+                        </li>
+                        <li class="gold">
+                            <a href="https://mysecondspace.github.io/chytomo.com/build/acquainted.html">Знайомитися</a>
+                        </li>
+                        <li class="green">
+                            <a href="https://mysecondspace.github.io/chytomo.com/build/study.html">Вчитися</a>
+                        </li>
+                        <li class="gray">
+                            <a href="https://mysecondspace.github.io/chytomo.com/build/trends.html">Тренди</a>
+                        </li>
+                        <li class="light">
+                            <a href="https://mysecondspace.github.io/chytomo.com/build/special.html">Спецпроекти</a>
+                        </li>
+                        <li class="light">
+                            <a href="https://mysecondspace.github.io/chytomo.com/build/shop.html">Вітрина</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- article -->
+            <article id="article">
+
+                <!-- search -->
+                //= templates/search.html
+                <div class="container">
+                    
+                    <!-- 404 -->
+                    <div id="error">
+                        <p>404</p>
+                        <img src="images/404.png" alt="404">
+                        <p>Сторінка, яку ви шукали, не знайдена. Давайте підберемо Вам іншу.</p>
+                        <a href="https://mysecondspace.github.io/chytomo.com/build/index.html" class="btn btn--black">На головну</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- footer -->
+            //= templates/footer.html
+        </div>
+
+        <!-- script -->
+        <script src="scripts/main.min.js"></script>
+    </body>
+</html>

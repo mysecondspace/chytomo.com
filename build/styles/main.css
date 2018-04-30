@@ -27,9 +27,11 @@ html {
     overflow-x: hidden;
     background-color: #fff; }
     html body ::-moz-selection {
-      color: #fff; }
+      color: #fff;
+      background-color: #4f81ff; }
     html body ::selection {
-      color: #fff; }
+      color: #fff;
+      background-color: #4f81ff; }
     html body .wrapper {
       height: 100%;
       display: -ms-flexbox;
@@ -1782,6 +1784,26 @@ textarea {
           font-size: 0.8125em;
           color: #000; }
 
+#error {
+  text-align: center;
+  margin-bottom: 65px; }
+  #error p:first-of-type {
+    line-height: 1;
+    font-size: 19.6875em;
+    font-family: "playfair black"; }
+  #error p:last-of-type {
+    padding-top: 25px;
+    font-family: "museo bold"; }
+  #error a {
+    margin-top: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline; }
+  #error img {
+    margin-top: -105px; }
+
 #search {
   background-color: rgba(0, 0, 0, 0.95);
   text-align: center;
@@ -1878,10 +1900,7 @@ textarea {
           margin-top: 0; } }
 
 .breadcrumbs, .tags {
-  margin-top: 15px; }
-  @media only screen and (max-width: 767px) {
-    .breadcrumbs, .tags {
-      margin-top: 25px; } }
+  margin-top: 25px; }
   .breadcrumbs.white .icon, .white.tags .icon {
     width: 6px;
     height: 10px;
@@ -1955,10 +1974,7 @@ textarea {
     color: #fff; }
 
 .heading {
-  margin-top: 20px; }
-  @media only screen and (max-width: 767px) {
-    .heading {
-      margin-top: 25px; } }
+  margin-top: 25px; }
   .heading .line {
     left: 0;
     height: 60px;
