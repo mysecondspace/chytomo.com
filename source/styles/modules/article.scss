@@ -14,9 +14,14 @@
     }
 
     // ----- light -----
-    &.light {
-    	z-index: 0;
+    .light {
+    	top: 0;
+    	left: 0;
+    	z-index: -1;
     	background-color: $light-gray;
+    	position: absolute;
+		height: 100%;
+		width: 100%;
     }
 
 	// ----- block -----
@@ -37,36 +42,17 @@
 				@include transition($time);
 			}
 		}
-		&--large,
-		&--typical {
-			.row {
-				height: 350px;
-				margin-bottom: 75px;
-				@include media(phone) {
-					margin-bottom: 15px;
-					height: 250px;
-				}
-			}
-		}
 		&--typical {
 			margin: 25px 0;
 		}
-		&--medium {
+
+		&--normal,
+		&--typical {
 			.row {
-				height: 400px;
-				margin-bottom: 40px;
-				@include media(phone) {
-					margin-bottom: 0;
-				}
-			}
-		}
-		&--small {
-			.row {
+				height: 350px;
 				margin-bottom: 30px;
-				height: 390px;
 				@include media(phone) {
 					margin-bottom: 15px;
-					height: 250px;
 				}
 			}
 		}
@@ -78,6 +64,9 @@
 			margin-right: 0;
 			margin-left: 0;
 			z-index: 1;
+			@include media(phone) {
+				padding: 50px 25px 25px;
+			}
 			&:after {
 			    content: "";
 			    z-index: -2;
@@ -86,6 +75,9 @@
 			    animation: arrow $time * 2 $time * 3;
 			    border-bottom: 25px solid $black;
 			    animation-fill-mode: forwards;
+			    @include media(phone) {
+			    	left: calc(50% - 25px) !important;
+			    }
 			}
 			&[data-name="l"] {
 				&:after {
@@ -355,6 +347,8 @@
 						}
 						.caption {
 							font-size: em(18);
+							max-height: 52px;
+							overflow: hidden;
 						}
 						& > span {
 							margin-top: 15px;
@@ -375,10 +369,10 @@
 							position: absolute;
 						}
 						.caption {
-							font-family: $playfair-black;
-							font-size: em(18);
-							line-height: 27px;
 							margin-top: 65px;
+							line-height: 27px;
+							font-size: em(18);
+							font-family: $playfair-black;
 						}
 					}
 					.liner {
@@ -394,12 +388,21 @@
 					}
 				}
 				&--shop {
-					height: 100%;
 					text-align: center;
-					img {
+					height: calc(100% + 30px);
+					.image {
+						position: relative;
 						margin-top: -30px;
-						max-width: 130px;
-						height: auto;
+						height: 195px;
+						img {
+							max-width: 130px;
+							position: absolute;
+							margin: 0 auto;
+							height: auto;
+							bottom: 0;
+							right: 0;
+							left: 0;
+						}
 					}
 					.name {
 						height: auto;
@@ -641,12 +644,15 @@
 			}
 			&__small {
 				a {
-					height: 50%;
+					&:first-of-type {
+						height: 60%;
+					}
+					&:last-of-type {
+						height: 40%;
+					}
 				}
-				&--acquainted:hover,
 				&--calendar.inside,
 				&--calendar.select,
-				&--calendar:hover,
 				&:hover {
 					.liner {
 						&--blue + .caption {
@@ -666,17 +672,12 @@
 						}
 					}
 				}
-				&--acquainted {
-					a {
-						height: 50%;
-					}
-				}
 				&--shop,
 				&--calendar {
 					position: relative;
 					& > a,
 					& > div {
-						height: 100%;
+						height: 100% !important;
 						border: 1px solid;
 						overflow: initial;
 						transition: $time;
@@ -981,7 +982,7 @@
 		width: 100%;
 		@include media(phone) {
 			margin-bottom: 15px;
-			padding-top: 30px;
+			padding-top: 25px;
 		}
 		img {
 			position: absolute;
@@ -992,6 +993,9 @@
 		.title {
 			line-height: 35px;
 			padding-bottom: 45px;
+			@include media(phone) {
+				padding-bottom: 25px;
+			}
 			span {
 				color: $green;
 			}
@@ -1003,7 +1007,7 @@
 			padding-bottom: 60px;
 			font-family: $museo-thin;
 			@include media(phone) {
-				padding: 30px 0;
+				padding: 0 0 25px;
 			}
 			span {
 				color: $blue;
@@ -1033,9 +1037,12 @@
     			bottom: inherit;
 			}
 			.social {
-				margin: 50px 0 75px;
-				transform: initial;
 				float: inherit;
+				transform: initial;
+				margin: 50px 0 75px;
+				@include media(phone) {
+					margin: 0 0 25px;
+				}
 			    a {
 			        margin-right: 75px;
         			transform: scale(1);
@@ -1087,6 +1094,9 @@
 	// ----- news -----
 	.news {
 		margin: 25px 0 150px;
+		@include media(phone) {
+			margin: 25px 0;
+		}
 		div {
 			&:first-of-type {
 				padding-left: 0;

@@ -16,23 +16,26 @@ $(window).scroll(function() {
 });
 
 // ----- search -----
+var search = false;
+
 $(document).ready(function() {
     searchHide();
 });
 $(document).keyup(function(e) {
-    if (opened && e.keyCode == 27)
+    if (search && e.keyCode == 27)
         $("#search").fadeOut(400);
         $(".search").removeClass("active");
         $("body").css("overflow", "auto");
     
-    opened = !opened;
+    search = !search;
 });
 function searchShow() {
-    if (!opened)
+    if (!search)
         $("#search").fadeIn(400);
         $(".search").addClass("active");
         $("body").css("overflow", "hidden");
-    opened = !opened;
+
+    search = !search;
 }
 
 // ----- anchors -----
@@ -54,13 +57,13 @@ $(document).on('click', 'a[href^="#menu"]', function(event) {
 // ----- calendar and shop -----
 var narrow = $('.narrow__small--calendar, .narrow__small--shop'),
     inside = $('.block--calendar, .block--shop'),
-    opened = false;
+    down = false;
 
 inside.css('display', 'none');
 $('.inside .narrow__small--calendar, .inside .narrow__small--shop, .close').click(function() {
     var name = $(this).data('name');
 
-    (!opened) ? (
+    (!down) ? (
         $(this).addClass('select'),
         narrow.css('z-index', '-1'),
         narrow.removeClass('unfade'),
@@ -80,7 +83,7 @@ $('.inside .narrow__small--calendar, .inside .narrow__small--shop, .close').clic
         }, 1200)
     );
         
-    opened = !opened;
+    down = !down;
 });
 
 // ----- dropdown -----

@@ -854,9 +854,14 @@ textarea {
   position: relative; }
   #article.scroll {
     margin-top: 63px; }
-  #article.light {
-    z-index: 0;
-    background-color: #d1d1d1; }
+  #article .light {
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #d1d1d1;
+    position: absolute;
+    height: 100%;
+    width: 100%; }
   #article .block {
     margin: 25px 0 100px; }
     @media only screen and (max-width: 767px) {
@@ -873,28 +878,14 @@ textarea {
         -o-object-fit: cover;
            object-fit: cover;
         transition: 0.4s; }
-    #article .block--large .row, #article .block--typical .row {
-      height: 350px;
-      margin-bottom: 75px; }
-      @media only screen and (max-width: 767px) {
-        #article .block--large .row, #article .block--typical .row {
-          margin-bottom: 15px;
-          height: 250px; } }
     #article .block--typical {
       margin: 25px 0; }
-    #article .block--medium .row {
-      height: 400px;
-      margin-bottom: 40px; }
+    #article .block--normal .row, #article .block--typical .row {
+      height: 350px;
+      margin-bottom: 30px; }
       @media only screen and (max-width: 767px) {
-        #article .block--medium .row {
-          margin-bottom: 0; } }
-    #article .block--small .row {
-      margin-bottom: 30px;
-      height: 390px; }
-      @media only screen and (max-width: 767px) {
-        #article .block--small .row {
-          margin-bottom: 15px;
-          height: 250px; } }
+        #article .block--normal .row, #article .block--typical .row {
+          margin-bottom: 15px; } }
     #article .block--shop, #article .block--calendar {
       padding: 75px 50px 50px;
       position: relative;
@@ -902,6 +893,9 @@ textarea {
       margin-right: 0;
       margin-left: 0;
       z-index: 1; }
+      @media only screen and (max-width: 767px) {
+        #article .block--shop, #article .block--calendar {
+          padding: 50px 25px 25px; } }
       #article .block--shop:after, #article .block--calendar:after {
         content: "";
         z-index: -2;
@@ -910,6 +904,9 @@ textarea {
         animation: arrow 0.8s 1.2s;
         border-bottom: 25px solid #000;
         animation-fill-mode: forwards; }
+        @media only screen and (max-width: 767px) {
+          #article .block--shop:after, #article .block--calendar:after {
+            left: calc(50% - 25px) !important; } }
       #article .block--shop[data-name="l"]:after, #article .block--calendar[data-name="l"]:after {
         left: calc(12.5% - 25px); }
       #article .block--shop[data-name="l"] .narrow .l,
@@ -1099,7 +1096,9 @@ textarea {
           #article .block .info__small--option .name .liner {
             margin-bottom: 10px; }
           #article .block .info__small--option .name .caption {
-            font-size: 1.125em; }
+            font-size: 1.125em;
+            max-height: 52px;
+            overflow: hidden; }
           #article .block .info__small--option .name > span {
             margin-top: 15px; }
         #article .block .info__small--shop, #article .block .info__small--calendar {
@@ -1114,10 +1113,10 @@ textarea {
               margin-top: 15px;
               position: absolute; }
             #article .block .info__small--shop .name .caption, #article .block .info__small--calendar .name .caption {
-              font-family: "playfair black";
-              font-size: 1.125em;
+              margin-top: 65px;
               line-height: 27px;
-              margin-top: 65px; }
+              font-size: 1.125em;
+              font-family: "playfair black"; }
           #article .block .info__small--shop .liner, #article .block .info__small--calendar .liner {
             margin: 0;
             position: absolute; }
@@ -1127,12 +1126,20 @@ textarea {
             #article .block .info__small--shop .liner:last-of-type, #article .block .info__small--calendar .liner:last-of-type {
               bottom: 0; }
         #article .block .info__small--shop {
-          height: 100%;
-          text-align: center; }
-          #article .block .info__small--shop img {
+          text-align: center;
+          height: calc(100% + 30px); }
+          #article .block .info__small--shop .image {
+            position: relative;
             margin-top: -30px;
-            max-width: 130px;
-            height: auto; }
+            height: 195px; }
+            #article .block .info__small--shop .image img {
+              max-width: 130px;
+              position: absolute;
+              margin: 0 auto;
+              height: auto;
+              bottom: 0;
+              right: 0;
+              left: 0; }
           #article .block .info__small--shop .name {
             height: auto;
             text-align: center; }
@@ -1336,24 +1343,24 @@ textarea {
       #article .block .narrow .grad__valign.grad--clear {
         background: #000;
         opacity: 0; }
-    #article .block .narrow__small a {
-      height: 50%; }
-    #article .block .narrow__small--acquainted:hover .liner--blue + .caption, #article .block .narrow__small--calendar.inside .liner--blue + .caption, #article .block .narrow__small--calendar.select .liner--blue + .caption, #article .block .narrow__small--calendar:hover .liner--blue + .caption, #article .block .narrow__small:hover .liner--blue + .caption {
+    #article .block .narrow__small a:first-of-type {
+      height: 60%; }
+    #article .block .narrow__small a:last-of-type {
+      height: 40%; }
+    #article .block .narrow__small--calendar.inside .liner--blue + .caption, #article .block .narrow__small--calendar.select .liner--blue + .caption, #article .block .narrow__small:hover .liner--blue + .caption {
       color: #4f81ff; }
-    #article .block .narrow__small--acquainted:hover .liner--gray + .caption, #article .block .narrow__small--calendar.inside .liner--gray + .caption, #article .block .narrow__small--calendar.select .liner--gray + .caption, #article .block .narrow__small--calendar:hover .liner--gray + .caption, #article .block .narrow__small:hover .liner--gray + .caption {
+    #article .block .narrow__small--calendar.inside .liner--gray + .caption, #article .block .narrow__small--calendar.select .liner--gray + .caption, #article .block .narrow__small:hover .liner--gray + .caption {
       color: #919191; }
-    #article .block .narrow__small--acquainted:hover .liner--orange + .caption, #article .block .narrow__small--calendar.inside .liner--orange + .caption, #article .block .narrow__small--calendar.select .liner--orange + .caption, #article .block .narrow__small--calendar:hover .liner--orange + .caption, #article .block .narrow__small:hover .liner--orange + .caption {
+    #article .block .narrow__small--calendar.inside .liner--orange + .caption, #article .block .narrow__small--calendar.select .liner--orange + .caption, #article .block .narrow__small:hover .liner--orange + .caption {
       color: #ff6648; }
-    #article .block .narrow__small--acquainted:hover .liner--gold + .caption, #article .block .narrow__small--calendar.inside .liner--gold + .caption, #article .block .narrow__small--calendar.select .liner--gold + .caption, #article .block .narrow__small--calendar:hover .liner--gold + .caption, #article .block .narrow__small:hover .liner--gold + .caption {
+    #article .block .narrow__small--calendar.inside .liner--gold + .caption, #article .block .narrow__small--calendar.select .liner--gold + .caption, #article .block .narrow__small:hover .liner--gold + .caption {
       color: #ffdd00; }
-    #article .block .narrow__small--acquainted:hover .liner--green + .caption, #article .block .narrow__small--calendar.inside .liner--green + .caption, #article .block .narrow__small--calendar.select .liner--green + .caption, #article .block .narrow__small--calendar:hover .liner--green + .caption, #article .block .narrow__small:hover .liner--green + .caption {
+    #article .block .narrow__small--calendar.inside .liner--green + .caption, #article .block .narrow__small--calendar.select .liner--green + .caption, #article .block .narrow__small:hover .liner--green + .caption {
       color: #15d277; }
-    #article .block .narrow__small--acquainted a {
-      height: 50%; }
     #article .block .narrow__small--shop, #article .block .narrow__small--calendar {
       position: relative; }
       #article .block .narrow__small--shop > a, #article .block .narrow__small--shop > div, #article .block .narrow__small--calendar > a, #article .block .narrow__small--calendar > div {
-        height: 100%;
+        height: 100% !important;
         border: 1px solid;
         overflow: initial;
         transition: 0.4s;
@@ -1615,7 +1622,7 @@ textarea {
     @media only screen and (max-width: 767px) {
       #article .black {
         margin-bottom: 15px;
-        padding-top: 30px; } }
+        padding-top: 25px; } }
     #article .black img {
       position: absolute;
       max-width: 100%;
@@ -1624,6 +1631,9 @@ textarea {
     #article .black .title {
       line-height: 35px;
       padding-bottom: 45px; }
+      @media only screen and (max-width: 767px) {
+        #article .black .title {
+          padding-bottom: 25px; } }
       #article .black .title span {
         color: #15d277; }
     #article .black .text {
@@ -1634,7 +1644,7 @@ textarea {
       font-family: "museo thin"; }
       @media only screen and (max-width: 767px) {
         #article .black .text {
-          padding: 30px 0; } }
+          padding: 0 0 25px; } }
       #article .black .text span {
         color: #4f81ff; }
     #article .black__calendar {
@@ -1651,9 +1661,12 @@ textarea {
       top: -85px;
       bottom: inherit; }
     #article .black__social .social {
-      margin: 50px 0 75px;
+      float: inherit;
       transform: initial;
-      float: inherit; }
+      margin: 50px 0 75px; }
+      @media only screen and (max-width: 767px) {
+        #article .black__social .social {
+          margin: 0 0 25px; } }
       #article .black__social .social a {
         margin-right: 75px;
         transform: scale(1);
@@ -1761,6 +1774,9 @@ textarea {
               background-position: 0 0; } }
   #article .news {
     margin: 25px 0 150px; }
+    @media only screen and (max-width: 767px) {
+      #article .news {
+        margin: 25px 0; } }
     #article .news div:first-of-type {
       padding-left: 0; }
     #article .news div:last-of-type {
@@ -1791,6 +1807,9 @@ textarea {
     line-height: 1;
     font-size: 19.6875em;
     font-family: "playfair black"; }
+    @media only screen and (max-width: 767px) {
+      #error p:first-of-type {
+        font-size: 9.375em; } }
   #error p:last-of-type {
     padding-top: 25px;
     font-family: "museo bold"; }
@@ -1802,7 +1821,11 @@ textarea {
     *zoom: 1;
     *display: inline; }
   #error img {
+    max-width: 100%;
     margin-top: -105px; }
+    @media only screen and (max-width: 767px) {
+      #error img {
+        margin-top: -50px; } }
 
 #search {
   background-color: rgba(0, 0, 0, 0.95);
@@ -1828,6 +1851,9 @@ textarea {
     letter-spacing: 10px;
     padding-bottom: 25px;
     text-align: center; }
+    @media only screen and (max-width: 767px) {
+      #search input {
+        font-size: 1.25em; } }
   #search p {
     position: absolute;
     font-size: 0.875em;
@@ -1836,9 +1862,9 @@ textarea {
     right: 5%; }
 
 .ads__normal .banner {
-  height: 200px; }
+  height: 175px; }
 .ads__wide .banner {
-  height: 200px;
+  height: 175px;
   width: 100%;
   margin: 0; }
 
@@ -1956,9 +1982,12 @@ textarea {
 
 .title {
   font-size: 1.5em;
+  letter-spacing: 5px;
   font-family: "museo bold";
-  text-transform: uppercase;
-  letter-spacing: 5px; }
+  text-transform: uppercase; }
+  @media only screen and (max-width: 767px) {
+    .title {
+      letter-spacing: 1px; } }
   .title__padding {
     margin-left: 53px; }
     @media only screen and (min-width: 1440px) {
@@ -2123,9 +2152,12 @@ textarea {
     margin-bottom: 50px;
     color: #15d277; }
   .label--white {
-    position: absolute;
+    top: 50px;
     color: #fff;
-    top: 50px; }
+    position: absolute; }
+    @media only screen and (max-width: 767px) {
+      .label--white {
+        top: 20px; } }
 
 .button {
   float: right;
@@ -2219,6 +2251,9 @@ textarea {
     *vertical-align: auto;
     *zoom: 1;
     *display: inline; }
+    @media only screen and (max-width: 767px) {
+      .social a {
+        transform: scale(1); } }
     .social a[href*="facebook"] {
       background-image: url('../images/social.png');
       background-position: 0 -20px;

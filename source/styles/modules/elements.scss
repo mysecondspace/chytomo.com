@@ -10,6 +10,9 @@
 			line-height: 1;
 			font-size: em(315);
 			font-family: $playfair-black;
+			@include media(phone) {
+				font-size: em(150);
+			}
 		}
 		&:last-of-type {
 			padding-top: 25px;
@@ -21,7 +24,11 @@
 		@include inline-block;
 	}
 	img {
+		max-width: 100%;
 		margin-top: -105px;
+		@include media(phone) {
+			margin-top: -50px;
+		}
 	}
 }
 
@@ -50,6 +57,9 @@
 		letter-spacing: 10px;
 		padding-bottom: 25px;
 		text-align: center;
+		@include media(phone) {
+			font-size: em(20);
+		}
 	}
 	p {
 		position: absolute;
@@ -64,12 +74,12 @@
 .ads {
 	&__normal {
 		.banner {
-			height: 200px;
+			height: 175px;
 		}
 	}
 	&__wide {
 		.banner {
-			height: 200px;
+			height: 175px;
 			width: 100%;
 			margin: 0;
 		}
@@ -193,9 +203,12 @@
 // ----- title -----
 .title {
 	font-size: em(24);
+	letter-spacing: 5px;
 	font-family: $museo-bold;
 	text-transform: uppercase;
-	letter-spacing: 5px;
+	@include media(phone) {
+		letter-spacing: 1px;
+	}
 	&__padding {
 		margin-left: 53px;
 		@include media(large) {
@@ -440,9 +453,12 @@
 		color: $green;
 	}
 	&--white {
-		position: absolute;
-		color: $white;
 		top: 50px;
+		color: $white;
+		position: absolute;
+		@include media(phone) {
+			top: 20px;
+		}
 	}
 }
 
@@ -558,6 +574,9 @@
         margin-right: 30px;
         transform: scale(.8);
         @include inline-block;
+        @include media(phone) {
+	        transform: scale(1);
+        }
         &[href*="facebook"] {
         	@include sprite(facebook, social, hover);
         }
