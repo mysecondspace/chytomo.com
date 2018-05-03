@@ -361,7 +361,7 @@
 						}
 						.caption {
 							font-size: em(18);
-							max-height: 77px;
+							max-height: 105px;
 							overflow: hidden;
 							@include media(phone) {
 								max-height: 66px;
@@ -670,7 +670,8 @@
 					}
 				}
 			}
-			&__small {
+			&__small,
+			&__large {
 				a {
 					height: 50%;
 				}
@@ -817,6 +818,22 @@
 					}
 				}
 			}
+			&__large {
+				a {
+					&:first-of-type {
+						height: 60%;
+					}
+					&:last-of-type {
+						height: 40%;
+					}
+					.info__small--option .name .caption {
+						max-height: 80px;
+						@include media(phone) {
+							max-height: 45px;
+						}
+					}
+				}
+			}
 			&:focus,
 			&:hover {
 				img {
@@ -842,7 +859,7 @@
 
 	// ----- content -----
 	.content {
-		margin-bottom: 100px;
+		margin-bottom: 125px;
 		@include media(phone) {
 			margin-bottom: 50px;
 		}

@@ -1111,7 +1111,7 @@ textarea {
             margin-bottom: 10px; }
           #article .block .info__small--option .name .caption {
             font-size: 1.125em;
-            max-height: 77px;
+            max-height: 105px;
             overflow: hidden; }
             @media only screen and (max-width: 767px) {
               #article .block .info__small--option .name .caption {
@@ -1371,121 +1371,130 @@ textarea {
       #article .block .narrow .grad__valign.grad--clear {
         background: #000;
         opacity: 0; }
-    #article .block .narrow__small a {
+    #article .block .narrow__small a, #article .block .narrow__large a {
       height: 50%; }
-    #article .block .narrow__small--calendar.inside .liner--blue + .caption, #article .block .narrow__small--calendar.select .liner--blue + .caption, #article .block .narrow__small:hover .liner--blue + .caption {
+    #article .block .narrow__small--calendar.inside .liner--blue + .caption, #article .block .narrow__small--calendar.select .liner--blue + .caption, #article .block .narrow__small:hover .liner--blue + .caption, #article .block .narrow__large--calendar.inside .liner--blue + .caption, #article .block .narrow__large--calendar.select .liner--blue + .caption, #article .block .narrow__large:hover .liner--blue + .caption {
       color: #4f81ff; }
-    #article .block .narrow__small--calendar.inside .liner--gray + .caption, #article .block .narrow__small--calendar.select .liner--gray + .caption, #article .block .narrow__small:hover .liner--gray + .caption {
+    #article .block .narrow__small--calendar.inside .liner--gray + .caption, #article .block .narrow__small--calendar.select .liner--gray + .caption, #article .block .narrow__small:hover .liner--gray + .caption, #article .block .narrow__large--calendar.inside .liner--gray + .caption, #article .block .narrow__large--calendar.select .liner--gray + .caption, #article .block .narrow__large:hover .liner--gray + .caption {
       color: #919191; }
-    #article .block .narrow__small--calendar.inside .liner--orange + .caption, #article .block .narrow__small--calendar.select .liner--orange + .caption, #article .block .narrow__small:hover .liner--orange + .caption {
+    #article .block .narrow__small--calendar.inside .liner--orange + .caption, #article .block .narrow__small--calendar.select .liner--orange + .caption, #article .block .narrow__small:hover .liner--orange + .caption, #article .block .narrow__large--calendar.inside .liner--orange + .caption, #article .block .narrow__large--calendar.select .liner--orange + .caption, #article .block .narrow__large:hover .liner--orange + .caption {
       color: #ff6648; }
-    #article .block .narrow__small--calendar.inside .liner--gold + .caption, #article .block .narrow__small--calendar.select .liner--gold + .caption, #article .block .narrow__small:hover .liner--gold + .caption {
+    #article .block .narrow__small--calendar.inside .liner--gold + .caption, #article .block .narrow__small--calendar.select .liner--gold + .caption, #article .block .narrow__small:hover .liner--gold + .caption, #article .block .narrow__large--calendar.inside .liner--gold + .caption, #article .block .narrow__large--calendar.select .liner--gold + .caption, #article .block .narrow__large:hover .liner--gold + .caption {
       color: #ffdd00; }
-    #article .block .narrow__small--calendar.inside .liner--green + .caption, #article .block .narrow__small--calendar.select .liner--green + .caption, #article .block .narrow__small:hover .liner--green + .caption {
+    #article .block .narrow__small--calendar.inside .liner--green + .caption, #article .block .narrow__small--calendar.select .liner--green + .caption, #article .block .narrow__small:hover .liner--green + .caption, #article .block .narrow__large--calendar.inside .liner--green + .caption, #article .block .narrow__large--calendar.select .liner--green + .caption, #article .block .narrow__large:hover .liner--green + .caption {
       color: #15d277; }
-    #article .block .narrow__small--shop, #article .block .narrow__small--calendar {
+    #article .block .narrow__small--shop, #article .block .narrow__small--calendar, #article .block .narrow__large--shop, #article .block .narrow__large--calendar {
       position: relative; }
-      #article .block .narrow__small--shop > a, #article .block .narrow__small--shop > div, #article .block .narrow__small--calendar > a, #article .block .narrow__small--calendar > div {
+      #article .block .narrow__small--shop > a, #article .block .narrow__small--shop > div, #article .block .narrow__small--calendar > a, #article .block .narrow__small--calendar > div, #article .block .narrow__large--shop > a, #article .block .narrow__large--shop > div, #article .block .narrow__large--calendar > a, #article .block .narrow__large--calendar > div {
         height: 100%;
         border: 1px solid;
         overflow: initial;
         transition: 0.4s;
         border-color: #000; }
-        #article .block .narrow__small--shop > a .date, #article .block .narrow__small--shop > div .date, #article .block .narrow__small--calendar > a .date, #article .block .narrow__small--calendar > div .date {
+        #article .block .narrow__small--shop > a .date, #article .block .narrow__small--shop > div .date, #article .block .narrow__small--calendar > a .date, #article .block .narrow__small--calendar > div .date, #article .block .narrow__large--shop > a .date, #article .block .narrow__large--shop > div .date, #article .block .narrow__large--calendar > a .date, #article .block .narrow__large--calendar > div .date {
           font-family: "playfair black";
           position: absolute;
           font-size: 5em;
           color: #000;
           left: 20px;
           top: -80px; }
-          #article .block .narrow__small--shop > a .date sub, #article .block .narrow__small--shop > div .date sub, #article .block .narrow__small--calendar > a .date sub, #article .block .narrow__small--calendar > div .date sub {
+          #article .block .narrow__small--shop > a .date sub, #article .block .narrow__small--shop > div .date sub, #article .block .narrow__small--calendar > a .date sub, #article .block .narrow__small--calendar > div .date sub, #article .block .narrow__large--shop > a .date sub, #article .block .narrow__large--shop > div .date sub, #article .block .narrow__large--calendar > a .date sub, #article .block .narrow__large--calendar > div .date sub {
             font-size: 0.3125em;
             bottom: -12.5px; }
-      #article .block .narrow__small--shop.inside, #article .block .narrow__small--calendar.inside {
+      #article .block .narrow__small--shop.inside, #article .block .narrow__small--calendar.inside, #article .block .narrow__large--shop.inside, #article .block .narrow__large--calendar.inside {
         height: 400px; }
-        #article .block .narrow__small--shop.inside > div, #article .block .narrow__small--calendar.inside > div {
+        #article .block .narrow__small--shop.inside > div, #article .block .narrow__small--calendar.inside > div, #article .block .narrow__large--shop.inside > div, #article .block .narrow__large--calendar.inside > div {
           border-color: #fff; }
-          #article .block .narrow__small--shop.inside > div .date, #article .block .narrow__small--calendar.inside > div .date {
+          #article .block .narrow__small--shop.inside > div .date, #article .block .narrow__small--calendar.inside > div .date, #article .block .narrow__large--shop.inside > div .date, #article .block .narrow__large--calendar.inside > div .date {
             color: #fff; }
-          #article .block .narrow__small--shop.inside > div .social, #article .block .narrow__small--calendar.inside > div .social {
+          #article .block .narrow__small--shop.inside > div .social, #article .block .narrow__small--calendar.inside > div .social, #article .block .narrow__large--shop.inside > div .social, #article .block .narrow__large--calendar.inside > div .social {
             position: absolute;
             bottom: 20px;
             right: 20px; }
-            #article .block .narrow__small--shop.inside > div .social a, #article .block .narrow__small--calendar.inside > div .social a {
+            #article .block .narrow__small--shop.inside > div .social a, #article .block .narrow__small--calendar.inside > div .social a, #article .block .narrow__large--shop.inside > div .social a, #article .block .narrow__large--calendar.inside > div .social a {
               margin-right: 5px;
               display: inline-block;
               vertical-align: middle;
               *vertical-align: auto;
               *zoom: 1;
               *display: inline; }
-              #article .block .narrow__small--shop.inside > div .social a[href*="facebook"], #article .block .narrow__small--calendar.inside > div .social a[href*="facebook"] {
+              #article .block .narrow__small--shop.inside > div .social a[href*="facebook"], #article .block .narrow__small--calendar.inside > div .social a[href*="facebook"], #article .block .narrow__large--shop.inside > div .social a[href*="facebook"], #article .block .narrow__large--calendar.inside > div .social a[href*="facebook"] {
                 background-image: url('../images/social-white.png');
                 background-position: 0 0;
                 height: 20px;
                 width: 20px; }
                 @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-                  #article .block .narrow__small--shop.inside > div .social a[href*="facebook"], #article .block .narrow__small--calendar.inside > div .social a[href*="facebook"] {
+                  #article .block .narrow__small--shop.inside > div .social a[href*="facebook"], #article .block .narrow__small--calendar.inside > div .social a[href*="facebook"], #article .block .narrow__large--shop.inside > div .social a[href*="facebook"], #article .block .narrow__large--calendar.inside > div .social a[href*="facebook"] {
                     background-image: url('../images/social-white-2x.png');
                     background-size: 20px 40px;
                     background-position: 0 0; } }
-              #article .block .narrow__small--shop.inside > div .social a[href*="twitter"], #article .block .narrow__small--calendar.inside > div .social a[href*="twitter"] {
+              #article .block .narrow__small--shop.inside > div .social a[href*="twitter"], #article .block .narrow__small--calendar.inside > div .social a[href*="twitter"], #article .block .narrow__large--shop.inside > div .social a[href*="twitter"], #article .block .narrow__large--calendar.inside > div .social a[href*="twitter"] {
                 background-image: url('../images/social-white.png');
                 background-position: 0 -20px;
                 height: 20px;
                 width: 20px; }
                 @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-                  #article .block .narrow__small--shop.inside > div .social a[href*="twitter"], #article .block .narrow__small--calendar.inside > div .social a[href*="twitter"] {
+                  #article .block .narrow__small--shop.inside > div .social a[href*="twitter"], #article .block .narrow__small--calendar.inside > div .social a[href*="twitter"], #article .block .narrow__large--shop.inside > div .social a[href*="twitter"], #article .block .narrow__large--calendar.inside > div .social a[href*="twitter"] {
                     background-image: url('../images/social-white-2x.png');
                     background-size: 20px 40px;
                     background-position: 0 -20px; } }
-              #article .block .narrow__small--shop.inside > div .social a:last-of-type, #article .block .narrow__small--calendar.inside > div .social a:last-of-type {
+              #article .block .narrow__small--shop.inside > div .social a:last-of-type, #article .block .narrow__small--calendar.inside > div .social a:last-of-type, #article .block .narrow__large--shop.inside > div .social a:last-of-type, #article .block .narrow__large--calendar.inside > div .social a:last-of-type {
                 margin-right: 0; }
-      #article .block .narrow__small--shop.select > a, #article .block .narrow__small--shop.select > div, #article .block .narrow__small--calendar.select > a, #article .block .narrow__small--calendar.select > div {
+      #article .block .narrow__small--shop.select > a, #article .block .narrow__small--shop.select > div, #article .block .narrow__small--calendar.select > a, #article .block .narrow__small--calendar.select > div, #article .block .narrow__large--shop.select > a, #article .block .narrow__large--shop.select > div, #article .block .narrow__large--calendar.select > a, #article .block .narrow__large--calendar.select > div {
         box-shadow: 0 30px 40px rgba(0, 0, 0, 0.15);
         border-color: #fff; }
-    #article .block .narrow__small--shop > a, #article .block .narrow__small--shop > div {
+    #article .block .narrow__small--shop > a, #article .block .narrow__small--shop > div, #article .block .narrow__large--shop > a, #article .block .narrow__large--shop > div {
       border-color: #fff; }
-    #article .block .narrow__small--shop.inside {
+    #article .block .narrow__small--shop.inside, #article .block .narrow__large--shop.inside {
       height: 250px; }
-      #article .block .narrow__small--shop.inside > div img {
+      #article .block .narrow__small--shop.inside > div img, #article .block .narrow__large--shop.inside > div img {
         max-width: 150px; }
-      #article .block .narrow__small--shop.inside > div .name .caption {
+      #article .block .narrow__small--shop.inside > div .name .caption, #article .block .narrow__large--shop.inside > div .name .caption {
         font-family: "museo regular";
         font-size: 1.25em; }
-      #article .block .narrow__small--shop.inside > div .name .like {
+      #article .block .narrow__small--shop.inside > div .name .like, #article .block .narrow__large--shop.inside > div .name .like {
         background-color: #000; }
-        #article .block .narrow__small--shop.inside > div .name .like:focus:before, #article .block .narrow__small--shop.inside > div .name .like:hover:before {
+        #article .block .narrow__small--shop.inside > div .name .like:focus:before, #article .block .narrow__small--shop.inside > div .name .like:hover:before, #article .block .narrow__large--shop.inside > div .name .like:focus:before, #article .block .narrow__large--shop.inside > div .name .like:hover:before {
           width: 20px;
           height: 20px;
           background-image: url(../images/like-red.png); }
           @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-            #article .block .narrow__small--shop.inside > div .name .like:focus:before, #article .block .narrow__small--shop.inside > div .name .like:hover:before {
+            #article .block .narrow__small--shop.inside > div .name .like:focus:before, #article .block .narrow__small--shop.inside > div .name .like:hover:before, #article .block .narrow__large--shop.inside > div .name .like:focus:before, #article .block .narrow__large--shop.inside > div .name .like:hover:before {
               background-size: 20px 20px;
               background-image: url(../images/like-red-2x.png); } }
-      #article .block .narrow__small--shop.inside > div .social {
+      #article .block .narrow__small--shop.inside > div .social, #article .block .narrow__large--shop.inside > div .social {
         margin: 0 auto;
         bottom: -50%;
         width: 54px;
         right: 0;
         left: 0; }
-        #article .block .narrow__small--shop.inside > div .social a {
+        #article .block .narrow__small--shop.inside > div .social a, #article .block .narrow__large--shop.inside > div .social a {
           margin-right: 10px; }
-      #article .block .narrow__small--shop.inside:focus img, #article .block .narrow__small--shop.inside:hover img {
+      #article .block .narrow__small--shop.inside:focus img, #article .block .narrow__small--shop.inside:hover img, #article .block .narrow__large--shop.inside:focus img, #article .block .narrow__large--shop.inside:hover img {
         transform: scale(1);
         box-shadow: none; }
-    #article .block .narrow__small--shop.select > a, #article .block .narrow__small--shop.select > div {
+    #article .block .narrow__small--shop.select > a, #article .block .narrow__small--shop.select > div, #article .block .narrow__large--shop.select > a, #article .block .narrow__large--shop.select > div {
       box-shadow: none;
       border-color: #4f81ff; }
-      #article .block .narrow__small--shop.select > a .name .caption, #article .block .narrow__small--shop.select > div .name .caption {
+      #article .block .narrow__small--shop.select > a .name .caption, #article .block .narrow__small--shop.select > div .name .caption, #article .block .narrow__large--shop.select > a .name .caption, #article .block .narrow__large--shop.select > div .name .caption {
         color: #4f81ff; }
-      #article .block .narrow__small--shop.select > a .name .like:before, #article .block .narrow__small--shop.select > div .name .like:before {
+      #article .block .narrow__small--shop.select > a .name .like:before, #article .block .narrow__small--shop.select > div .name .like:before, #article .block .narrow__large--shop.select > a .name .like:before, #article .block .narrow__large--shop.select > div .name .like:before {
         width: 20px;
         height: 20px;
         background-image: url(../images/like-red.png); }
         @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-          #article .block .narrow__small--shop.select > a .name .like:before, #article .block .narrow__small--shop.select > div .name .like:before {
+          #article .block .narrow__small--shop.select > a .name .like:before, #article .block .narrow__small--shop.select > div .name .like:before, #article .block .narrow__large--shop.select > a .name .like:before, #article .block .narrow__large--shop.select > div .name .like:before {
             background-size: 20px 20px;
             background-image: url(../images/like-red-2x.png); } }
+    #article .block .narrow__large a:first-of-type {
+      height: 60%; }
+    #article .block .narrow__large a:last-of-type {
+      height: 40%; }
+    #article .block .narrow__large a .info__small--option .name .caption {
+      max-height: 80px; }
+      @media only screen and (max-width: 767px) {
+        #article .block .narrow__large a .info__small--option .name .caption {
+          max-height: 45px; } }
     #article .block .narrow:focus img, #article .block .narrow:hover img {
       transform: scale(1.05); }
     #article .block .narrow:focus .viewed, #article .block .narrow:hover .viewed {
@@ -1496,7 +1505,7 @@ textarea {
     #article .block .narrow:focus .grad__valign.grad--clear, #article .block .narrow:hover .grad__valign.grad--clear {
       opacity: .4; }
   #article .content {
-    margin-bottom: 100px; }
+    margin-bottom: 125px; }
     @media only screen and (max-width: 767px) {
       #article .content {
         margin-bottom: 50px; } }
