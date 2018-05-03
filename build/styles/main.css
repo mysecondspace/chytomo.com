@@ -1000,6 +1000,9 @@ textarea {
               background-image: url(../images/close-blue-2x.png); } }
     #article .block--shop {
       padding: 100px 50px 50px; }
+      @media only screen and (max-width: 767px) {
+        #article .block--shop {
+          padding: 50px 25px 25px; } }
       #article .block--shop .narrow .btn {
         left: 0;
         right: 0;
@@ -1012,19 +1015,18 @@ textarea {
         color: #4f81ff; }
     #article .block__main {
       margin-bottom: 0; }
-    #article .block__shop, #article .block__calendar {
-      margin: 100px 0; }
-      @media only screen and (max-width: 767px) {
-        #article .block__shop, #article .block__calendar {
-          margin-bottom: 50px; } }
-      #article .block__shop .row, #article .block__calendar .row {
-        margin-top: 100px;
-        margin-bottom: 0; }
-        #article .block__shop .row:first-of-type, #article .block__calendar .row:first-of-type {
-          margin-top: 0; }
     @media only screen and (max-width: 767px) {
-      #article .block__calendar {
-        margin-top: 50px; } }
+      #article .block__shop, #article .block__calendar {
+        margin-bottom: 50px; } }
+    #article .block__shop .row, #article .block__calendar .row {
+      margin-bottom: 0;
+      margin-top: 100px; }
+      #article .block__shop .row:first-of-type, #article .block__calendar .row:first-of-type {
+        margin-top: 0; }
+    #article .block__shop {
+      margin: 100px 0; }
+    #article .block__calendar {
+      margin: 75px 0; }
     #article .block .row:last-of-type {
       margin-bottom: 0; }
     #article .block .btn {
@@ -1392,10 +1394,10 @@ textarea {
         #article .block .narrow__small--shop > a .date, #article .block .narrow__small--shop > div .date, #article .block .narrow__small--calendar > a .date, #article .block .narrow__small--calendar > div .date {
           font-family: "playfair black";
           position: absolute;
-          font-size: 4.6875em;
+          font-size: 5em;
           color: #000;
           left: 20px;
-          top: -70px; }
+          top: -80px; }
           #article .block .narrow__small--shop > a .date sub, #article .block .narrow__small--shop > div .date sub, #article .block .narrow__small--calendar > a .date sub, #article .block .narrow__small--calendar > div .date sub {
             font-size: 0.3125em;
             bottom: -12.5px; }

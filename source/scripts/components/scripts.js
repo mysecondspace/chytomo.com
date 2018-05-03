@@ -43,7 +43,7 @@ $(document).on('click', 'a[href^="#inside"]', function(event) {
     event.preventDefault();
 
     $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top + 50
+        scrollTop: $($.attr(this, 'href')).offset().top + 75
     }, 1200);
 });
 $(document).on('click', 'a[href^="#menu"]', function(event) {

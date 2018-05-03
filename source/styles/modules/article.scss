@@ -188,6 +188,9 @@
 		}
 		&--shop {
 			padding: 100px 50px 50px;
+			@include media(phone) {
+				padding: 50px 25px 25px;
+			}
 			.narrow {
 				.btn {
 				    left: 0;
@@ -212,21 +215,24 @@
 		}
 		&__shop,
 		&__calendar {
-			margin: 100px 0;
 			@include media(phone) {
 				margin-bottom: 50px;
 			}
 			.row {
-				margin-top: 100px;
 				margin-bottom: 0;
+				margin-top: 100px;
 				&:first-of-type {
 					margin-top: 0;
 				}
 			}
 		}
+		&__shop {
+			margin: 100px 0;
+		}
 		&__calendar {
+			margin: 75px 0;
 			@include media(phone) {
-				margin-top: 50px;
+				
 			}
 		}
 		.row {
@@ -702,10 +708,10 @@
 						.date {
 							font-family: $playfair-black;
 							position: absolute;
-							font-size: em(75);
+							font-size: em(80);
 							color: $black;
 							left: 20px;
-							top: -70px;
+							top: -80px;
 							sub {
 								font-size: em(5);
 								bottom: -12.5px;
