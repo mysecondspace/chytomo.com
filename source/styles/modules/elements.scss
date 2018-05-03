@@ -147,6 +147,9 @@
 // ----- breadcrumbs -----
 .breadcrumbs {
 	margin-top: 25px;
+	@include media(phone) {
+		display: block !important;
+	}
 	&.white {
 		.icon {
 			@include image-retina("/../images/arrow-white.png", "/../images/arrow-white-2x.png");
@@ -160,15 +163,22 @@
 		@include inline-block;
 		@include image-retina("/../images/arrow.png", "/../images/arrow-2x.png");
 		background-repeat: no-repeat;
+		@include media(phone) {
+			margin: -10px 5px 0;
+		}
 	}
 	.main, .current {
 		font-size: em(11);
 		color: $light-gray;
+		@include inline-block;
 		font-family: $museo-regular;
 		text-transform: uppercase;
 		letter-spacing: 1.77px;
 		padding: 5px 14px;
 		border: 1px solid;
+		@include media(phone) {
+			margin-bottom: 10px;
+		}
 	}
 	.main {
 		@include transition($time);
@@ -187,6 +197,7 @@
 	a {
 		font-size: em(11);
 		color: $light-gray;
+		@include inline-block;
 		@include transition($time);
 		font-family: $museo-regular;
 		text-transform: uppercase;
@@ -194,6 +205,9 @@
 		padding: 5px 14px;
 		border: 1px solid;
 		margin-right: 10px;
+		@include media(phone) {
+			margin-bottom: 10px;
+		}
 		&:hover {
 			color: $black;
 		}
@@ -207,7 +221,8 @@
 	font-family: $museo-bold;
 	text-transform: uppercase;
 	@include media(phone) {
-		letter-spacing: 1px;
+		letter-spacing: 2px;
+		font-size: em(18);
 	}
 	&__padding {
 		margin-left: 53px;
@@ -232,6 +247,9 @@
 // ----- heading -----
 .heading {
 	margin-top: 25px;
+	@include media(phone) {
+		margin-top: 15px;
+	}
 
 	// ----- line -----
 	.line {
@@ -239,6 +257,7 @@
 		height: 60px;
 		position: absolute;
 		@include media(phone) {
+			height: 46px;
             width: calc(5% + 95px);
         }
         @include media(tablet) {

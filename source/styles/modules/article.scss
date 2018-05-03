@@ -28,7 +28,7 @@
 	.block {
 		margin: 25px 0 100px;
 		@include media(phone) {
-			margin: 25px 0 50px;
+			margin: 25px 0;
 		}
 		a, .instead {
 			width: 100%;
@@ -49,10 +49,11 @@
 		&--normal,
 		&--typical {
 			.row {
-				height: 350px;
+				height: 400px;
 				margin-bottom: 30px;
 				@include media(phone) {
 					margin-bottom: 15px;
+					height: 300px;
 				}
 			}
 		}
@@ -81,7 +82,7 @@
 			}
 			&[data-name="l"] {
 				&:after {
-			    	left: calc(12.5% - 25px);
+			    	left: calc(12.5% - 35px);
 				}
 				.narrow,
 				.filling {
@@ -92,7 +93,7 @@
 			}
 			&[data-name="lc"] {
 				&:after {
-			    	left: calc(37.5% - 25px);
+			    	left: calc(37.5% - 28px);
 				}
 				.narrow,
 				.filling {
@@ -103,7 +104,7 @@
 			}
 			&[data-name="rc"] {
 				&:after {
-			    	left: calc(62.5% - 25px);
+			    	left: calc(62.5% - 20px);
 				}
 				.narrow,
 				.filling {
@@ -114,7 +115,7 @@
 			}
 			&[data-name="r"] {
 				&:after {
-			    	left: calc(87.5% - 25px);
+			    	left: calc(87.5% - 13px);
 				}
 				.narrow,
 				.filling {
@@ -186,6 +187,7 @@
 			}
 		}
 		&--shop {
+			padding: 100px 50px 50px;
 			.narrow {
 				.btn {
 				    left: 0;
@@ -210,16 +212,21 @@
 		}
 		&__shop,
 		&__calendar {
-			margin: 50px 0 100px;
+			margin: 100px 0;
 			@include media(phone) {
-				margin: 50px 0;
+				margin-bottom: 50px;
 			}
 			.row {
-				margin-top: 75px;
+				margin-top: 100px;
 				margin-bottom: 0;
 				&:first-of-type {
 					margin-top: 0;
 				}
+			}
+		}
+		&__calendar {
+			@include media(phone) {
+				margin-top: 50px;
 			}
 		}
 		.row {
@@ -232,6 +239,9 @@
 		.btn {
 			display: block;
 			margin: 50px auto 0;
+			@include media(phone) {
+				margin: 25px auto 0;
+			}
 		}
 
 		// ----- gradient -----
@@ -253,22 +263,6 @@
 				color: $white;
 				text-align: left;
 				font-family: $playfair-bold;
-				& > span {
-					display: block;
-					font-size: em(10);
-					line-height: 16px;
-					font-family: $museo-medium;
-				}
-				span {
-					letter-spacing: 1.5px;
-					text-transform: uppercase;
-				}
-				.caption {
-					@include transition($time);
-					&--black {
-						color: $black;
-					}
-				}
 				&--light {
 					span {
 						color: $light-gray;
@@ -284,8 +278,6 @@
 						color: $dark-gray;
 					}
 				}
-
-				// ----- liner -----
 				.liner {
 					font-size: em(10);
 					margin-bottom: 30px;
@@ -317,6 +309,22 @@
 						color: $dark-gray;
 					}
 				}
+				.caption {
+					@include transition($time);
+					&--black {
+						color: $black;
+					}
+				}
+				& > span {
+					display: block;
+					font-size: em(10);
+					line-height: 16px;
+					font-family: $museo-medium;
+				}
+				span {
+					letter-spacing: 1.5px;
+					text-transform: uppercase;
+				}
 			}
 			&__small {
 				bottom: 4%;
@@ -347,8 +355,11 @@
 						}
 						.caption {
 							font-size: em(18);
-							max-height: 52px;
+							max-height: 77px;
 							overflow: hidden;
+							@include media(phone) {
+								max-height: 66px;
+							}
 						}
 						& > span {
 							margin-top: 15px;
@@ -363,16 +374,21 @@
 					position: relative;
 					.name {
 						height: 100%;
+						.caption {
+							overflow: hidden;
+							margin-top: 65px;
+							line-height: 27px;
+							max-height: 185px;
+							font-size: em(18);
+							font-family: $playfair-black;
+							@include media(phone) {
+								max-height: 105px;
+							}
+						}
 						& > span {
 							bottom: 75px;
 							margin-top: 15px;
 							position: absolute;
-						}
-						.caption {
-							margin-top: 65px;
-							line-height: 27px;
-							font-size: em(18);
-							font-family: $playfair-black;
 						}
 					}
 					.liner {
@@ -395,7 +411,7 @@
 						margin-top: -30px;
 						height: 195px;
 						img {
-							max-width: 130px;
+							max-width: 150px;
 							position: absolute;
 							margin: 0 auto;
 							height: auto;
@@ -407,19 +423,26 @@
 					.name {
 						height: auto;
 						text-align: center;
+						.liner {
+						    position: initial;
+						    margin-bottom: 0;
+						}
+						.caption {
+							overflow: hidden;
+							margin-top: 25px;
+							max-height: 135px;
+							@include media(phone) {
+								max-height: 25px;
+							}
+						}
 						& > span {
 							font-family: $playfair-bold;
 							margin-bottom: 5px;
 							font-size: em(12);
 							position: initial;
-							margin-top: 20px;
+							margin-top: 25px;
 							color: $black;
 							bottom: 0;
-						}
-						.caption {
-							margin-top: 20px;
-							max-height: 80px;
-							overflow: hidden;
 						}
 						.like {
 							background-color: $light-gray;
@@ -447,10 +470,6 @@
 						    }
 						}
 					}
-					.liner {
-					    position: initial;
-					    margin-bottom: 0;
-					}
 					&:focus img,
 					&:hover img {
 						box-shadow: 0 30px 40px rgba(0, 0, 0, 0.15);
@@ -474,6 +493,9 @@
 				}
 				&--option {
 					padding: 0 46% 0 30px;
+					@include media(phone) {
+						padding-left: 15px;
+					}
 				}
 			}
 		}
@@ -644,12 +666,7 @@
 			}
 			&__small {
 				a {
-					&:first-of-type {
-						height: 60%;
-					}
-					&:last-of-type {
-						height: 40%;
-					}
+					height: 50%;
 				}
 				&--calendar.inside,
 				&--calendar.select,
@@ -677,7 +694,7 @@
 					position: relative;
 					& > a,
 					& > div {
-						height: 100% !important;
+						height: 100%;
 						border: 1px solid;
 						overflow: initial;
 						transition: $time;
@@ -696,7 +713,7 @@
 						}
 					}
 					&.inside {
-						height: 350px;
+						height: 400px;
 						& > div {
 							border-color: $white;
 							.date {
@@ -739,7 +756,7 @@
 						height: 250px;
 						& > div {
 							img {
-	    						max-width: 130px;
+	    						max-width: 150px;
 							}
 							.name {
 								.caption {
@@ -820,6 +837,9 @@
 	// ----- content -----
 	.content {
 		margin-bottom: 100px;
+		@include media(phone) {
+			margin-bottom: 50px;
+		}
 
 		// ----- author -----
 		.author {
@@ -848,6 +868,9 @@
 			margin-top: 50px;
 			border: 1px solid;
 			border-bottom: none;
+			@include media(phone) {
+				margin-top: 25px;
+			}
 			&--black {
 				float: left;
 				color: $black;
@@ -855,23 +878,30 @@
 				border: 1px solid;
 				border-right: none;
 				width: calc(70% - 2px);
+				@include media(phone) {
+					font-size: em(10);
+				}
 			}
 		}
 		.mistake {
 			padding: 10px;
 			text-align: left;
 			font-size: em(11);
+			margin-top: 25px;
 			line-height: 18px;
 			border: 1px solid;
 			color: $light-gray;
+			display: -webkit-inline-box;
 			font-family: $museo-regular;
 		}
 		.social {
 			height: 36px;
 			position: relative;
-			margin-bottom: 25px;
 			width: calc(100% - 2px);
 			border: 1px solid $light-gray;
+			@include media(phone) {
+				margin-bottom: 25px;
+			}
 			&:before {
 				top: 0;
 				right: 50%;
@@ -892,6 +922,11 @@
 				margin-top: 50px;
 				border-color: $black;
 				width: calc(30% - 2px);
+				@include media(phone) {
+					margin-bottom: 0;
+					margin-top: 25px;
+					height: 32px;
+				}
 				&:before {
 					border-color: $black;
 				}
@@ -911,6 +946,9 @@
 		.text {
 			line-height: 32px;
 			margin-bottom: 75px;
+			@include media(phone) {
+				margin-bottom: 25px;
+			}
 			b, .bold {
 				font-size: em(20);
 				font-family: $museo-bold;
@@ -949,9 +987,14 @@
 			    margin-left: -75px;
 			    padding: 50px 75px;
 				position: relative;
+			    width: calc(100% + 75px);
 				font-family: $museo-thin;
 				box-shadow: 10px 0 35px rgba(0,72,255,.08);
-			    width: calc(100% + 75px);
+			    @include media(phone) {
+			    	width: calc(100% - 50px);
+			    	margin-left: 0;
+			    	padding: 25px;
+			    }
 			    &:before,
 			    &:after {
             		font-family: $museo-bold;

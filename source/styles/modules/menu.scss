@@ -67,8 +67,11 @@
 
     // ----- search -----
     .search {
-        margin-left: 30px;
         float: right;
+        margin-left: 30px;
+        @include media(phone) {
+            margin-left: 15px;
+        }
         span {
             cursor: pointer;
         }

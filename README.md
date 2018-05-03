@@ -12,4 +12,5 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- [Календар](https://mysecondspace.github.io/chytomo.com/build/calendar.html)<br>
 |-- [404](https://mysecondspace.github.io/chytomo.com/build/404.html)<br>
 ### Спецпроекти
-[Deutscher Akzent](https://mysecondspace.github.io/chytomo.com/build/deutscher.html)<br>
+|-- [Deutscher Akzent](https://mysecondspace.github.io/chytomo.com/build/deutscher.html)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- [Типова сторінка](https://mysecondspace.github.io/chytomo.com/build/deutscher-page.html)
