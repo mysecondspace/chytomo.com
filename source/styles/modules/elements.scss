@@ -602,6 +602,9 @@
         &[href*="twitter"] {
         	@include sprite(twitter, social, hover);
         }
+        &[href*="telegram"] {
+        	@include sprite(telegram, social, hover);
+        }
         &[href*="feed"] {
         	@include sprite(rss, social, hover);
         }

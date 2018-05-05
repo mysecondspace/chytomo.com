@@ -1505,7 +1505,7 @@ textarea {
     #article .block .narrow:focus .grad__valign.grad--clear, #article .block .narrow:hover .grad__valign.grad--clear {
       opacity: .4; }
   #article .content {
-    margin-bottom: 125px; }
+    margin-bottom: 100px; }
     @media only screen and (max-width: 767px) {
       #article .content {
         margin-bottom: 50px; } }
@@ -1564,13 +1564,16 @@ textarea {
       @media only screen and (max-width: 767px) {
         #article .content .social {
           margin-bottom: 25px; } }
-      #article .content .social:before {
+      #article .content .social:after, #article .content .social:before {
         top: 0;
-        right: 50%;
         height: 100%;
         position: absolute;
         border-right: 1px solid #d1d1d1;
         content: ""; }
+      #article .content .social:after {
+        right: 33.33%; }
+      #article .content .social:before {
+        left: 33.33%; }
       #article .content .social a {
         float: left;
         margin: 0 auto;
@@ -1587,7 +1590,7 @@ textarea {
             margin-bottom: 0;
             margin-top: 25px;
             height: 32px; } }
-        #article .content .social--black:before {
+        #article .content .social--black:after, #article .content .social--black:before {
           border-color: #000; }
         #article .content .social--black a {
           display: inline-block;
@@ -1603,17 +1606,27 @@ textarea {
             @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
               #article .content .social--black a[href*="facebook"] {
                 background-image: url('../images/social-black-2x.png');
-                background-size: 20px 40px;
+                background-size: 20px 60px;
                 background-position: 0 0; } }
           #article .content .social--black a[href*="twitter"] {
             background-image: url('../images/social-black.png');
-            background-position: 0 -20px;
+            background-position: 0 -40px;
             height: 20px;
             width: 20px; }
             @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
               #article .content .social--black a[href*="twitter"] {
                 background-image: url('../images/social-black-2x.png');
-                background-size: 20px 40px;
+                background-size: 20px 60px;
+                background-position: 0 -40px; } }
+          #article .content .social--black a[href*="telegram"] {
+            background-image: url('../images/social-black.png');
+            background-position: 0 -20px;
+            height: 20px;
+            width: 20px; }
+            @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+              #article .content .social--black a[href*="telegram"] {
+                background-image: url('../images/social-black-2x.png');
+                background-size: 20px 60px;
                 background-position: 0 -20px; } }
     #article .content .text {
       line-height: 32px;
@@ -2352,19 +2365,31 @@ textarea {
       @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
         .social a[href*="facebook"] {
           background-image: url('../images/social-2x.png');
-          background-size: 20px 120px;
+          background-size: 20px 160px;
           background-position: 0 -20px; } }
     .social a[href*="twitter"] {
+      background-image: url('../images/social.png');
+      background-position: 0 -140px;
+      height: 20px;
+      width: 20px; }
+      .social a[href*="twitter"]:hover {
+        background-position: 0 -120px; }
+      @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+        .social a[href*="twitter"] {
+          background-image: url('../images/social-2x.png');
+          background-size: 20px 160px;
+          background-position: 0 -140px; } }
+    .social a[href*="telegram"] {
       background-image: url('../images/social.png');
       background-position: 0 -100px;
       height: 20px;
       width: 20px; }
-      .social a[href*="twitter"]:hover {
+      .social a[href*="telegram"]:hover {
         background-position: 0 -80px; }
       @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-        .social a[href*="twitter"] {
+        .social a[href*="telegram"] {
           background-image: url('../images/social-2x.png');
-          background-size: 20px 120px;
+          background-size: 20px 160px;
           background-position: 0 -100px; } }
     .social a[href*="feed"] {
       background-image: url('../images/social.png');
@@ -2376,7 +2401,7 @@ textarea {
       @media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
         .social a[href*="feed"] {
           background-image: url('../images/social-2x.png');
-          background-size: 20px 120px;
+          background-size: 20px 160px;
           background-position: 0 -60px; } }
     .social a:last-of-type {
       margin-right: 0; }

@@ -859,7 +859,7 @@
 
 	// ----- content -----
 	.content {
-		margin-bottom: 125px;
+		margin-bottom: 100px;
 		@include media(phone) {
 			margin-bottom: 50px;
 		}
@@ -925,13 +925,19 @@
 			@include media(phone) {
 				margin-bottom: 25px;
 			}
+			&:after,
 			&:before {
 				top: 0;
-				right: 50%;
 				height: 100%;
 				position: absolute;
 				border-right: 1px solid $light-gray;
 				content: "";
+			}
+			&:after {
+				right: 33.33%;
+			}
+			&:before {
+				left: 33.33%;
 			}
 			a {
 				float: left;
@@ -950,6 +956,7 @@
 					margin-top: 25px;
 					height: 32px;
 				}
+				&:after,
 				&:before {
 					border-color: $black;
 				}
@@ -960,6 +967,9 @@
 			        }
 			        &[href*="twitter"] {
 			        	@include sprite(twitter, share);
+			        }
+			        &[href*="telegram"] {
+			        	@include sprite(telegram, share);
 			        }
 				}
 			}
