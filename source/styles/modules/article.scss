@@ -1016,7 +1016,7 @@
 			    margin: 50px 0;
 			    display: block;
 				font-size: em(22);
-				line-height: 36px;
+				line-height: 35px;
 			    margin-left: -75px;
 			    padding: 50px 75px;
 				position: relative;
@@ -1136,6 +1136,67 @@
 			        	margin-right: 0;
 			        }
 			    }
+			}
+		}
+		&__contacts {
+			margin-top: 25px;
+			padding-top: 110px;
+			@include media(phone) {
+				padding-top: 25px;
+			}
+			.title {
+				font-family: $playfair-black;
+				text-transform: initial;
+				padding-bottom: 75px;
+				font-size: em(48);
+				color: $blue;
+				@include media(phone) {
+					padding-bottom: 25px;
+					font-size: em(20);
+				}
+			}
+			.text {
+				padding-bottom: 100px;
+				line-height: 35px;
+				font-size: em(22);
+				@include media(phone) {
+					padding-bottom: 25px;
+				}
+			}
+		}
+	}
+
+	// ----- contacts -----
+	.contacts {
+		text-align: left;
+		margin: 140px 0 270px;
+		@include media(phone) {
+			margin: 50px 0;
+		}
+		p {
+			font-family: $museo-light;
+			padding-bottom: 25px;
+			font-size: em(22);
+		}
+		a {
+			font-family: $museo-medium;
+			font-size: em(22);
+			color: $blue;
+		}
+		.heading {
+			font-family: $museo-medium;
+			padding-bottom: 75px;
+			letter-spacing: 3px;
+			text-align: center;
+			font-size: em(40);
+			@include media(phone) {
+				padding-bottom: 25px;
+			}
+			& + div {
+				margin-bottom: 75px;
+				@include media(phone) {
+					margin-bottom: 25px;
+				}
 			}
 		}
 	}

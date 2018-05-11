@@ -8,7 +8,7 @@ css_dir = "/build/styles"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
-output_style = :nested
+output_style = :expanded
 
 # Rename sprites on build
 module Compass::SassExtensions::Functions::Sprites

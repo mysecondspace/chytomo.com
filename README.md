@@ -10,6 +10,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- [Спецпроекти](https://mysecondspace.github.io/chytomo.com/build/special.html)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- [Вітрина](https://mysecondspace.github.io/chytomo.com/build/shop.html)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- [Календар](https://mysecondspace.github.io/chytomo.com/build/calendar.html)<br>
+|-- [Контакти](https://mysecondspace.github.io/chytomo.com/build/contacts.html)<br>
+|-- [Про нас](https://mysecondspace.github.io/chytomo.com/build/about-us.html)<br>
 |-- [404](https://mysecondspace.github.io/chytomo.com/build/404.html)<br>
 ### Спецпроекти
 |-- [Deutscher Akzent](https://mysecondspace.github.io/chytomo.com/build/deutscher.html)<br>
