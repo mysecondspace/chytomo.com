@@ -2421,6 +2421,22 @@ textarea {
   font-size: 1.375em;
   color: #4f81ff;
 }
+#article .contacts--r p, #article .contacts--r a {
+  padding-right: 25px;
+}
+@media only screen and (max-width: 767px) {
+  #article .contacts--r p, #article .contacts--r a {
+    padding-right: 0;
+  }
+}
+#article .contacts--l p, #article .contacts--l a {
+  padding-left: 25px;
+}
+@media only screen and (max-width: 767px) {
+  #article .contacts--l p, #article .contacts--l a {
+    padding-left: 0;
+  }
+}
 #article .contacts .heading {
   font-family: "museo medium";
   padding-bottom: 75px;

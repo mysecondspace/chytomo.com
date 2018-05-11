@@ -1183,6 +1183,22 @@
 			font-size: em(22);
 			color: $blue;
 		}
+		&--r {
+			p, a {
+				padding-right: 25px;
+				@include media(phone) {
+					padding-right: 0;
+				}
+			}
+		}
+		&--l {
+			p, a {
+				padding-left: 25px;
+				@include media(phone) {
+					padding-left: 0;
+				}
+			}
+		}
 		.heading {
 			font-family: $museo-medium;
 			padding-bottom: 75px;
