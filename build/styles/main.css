@@ -356,9 +356,7 @@ textarea {
   .grid {
     display: -ms-grid;
     display: grid;
-    margin: 0 10px;
     grid-row-gap: 25px;
-    width: calc(100% - 20px);
   }
 
   .x-1, .x-2, .x-3, .x-4, .x-5, .x-6,
@@ -2391,7 +2389,7 @@ textarea {
 @media only screen and (max-width: 767px) {
   #article .black__contacts .title {
     padding-bottom: 25px;
-    font-size: 1.25em;
+    font-size: 1.875em;
   }
 }
 #article .black__contacts .text {
@@ -2433,6 +2431,7 @@ textarea {
 @media only screen and (max-width: 767px) {
   #article .contacts .heading {
     padding-bottom: 25px;
+    font-size: 2.1875em;
   }
 }
 #article .contacts .heading + div {
@@ -3095,12 +3094,14 @@ textarea {
 .button__donate input[type=number]::-webkit-inner-spin-button,
 .button__donate input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
+          appearance: none;
 }
 .button__donate .btn {
   font-size: 0.9375em;
 }
 .button__donate .btn:nth-child(odd) {
   transition: 0.4s;
+  border-radius: 0;
   border-right: none;
   text-align: center;
   padding: 8px;

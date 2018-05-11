@@ -509,12 +509,13 @@
 		} 
 		input[type=number]::-webkit-inner-spin-button, 
 		input[type=number]::-webkit-outer-spin-button { 
-			-webkit-appearance: none; 
+			appearance: none; 
 		}
 		.btn {
 			font-size: em(15);
 			&:nth-child(odd) {
 				@include transition($time);
+				@include border-radius(0);
 				border-right: none;
 				text-align: center;
 				padding: 8px;

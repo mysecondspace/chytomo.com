@@ -340,9 +340,7 @@ textarea {
   .grid {
     display: -ms-grid;
     display: grid;
-    margin: 0 10px;
     grid-row-gap: 25px;
-    width: calc(100% - 20px);
   }
 
   .x-1, .x-2, .x-3, .x-4, .x-5, .x-6,

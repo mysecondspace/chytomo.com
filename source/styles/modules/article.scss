@@ -1152,7 +1152,7 @@
 				color: $blue;
 				@include media(phone) {
 					padding-bottom: 25px;
-					font-size: em(20);
+					font-size: em(30);
 				}
 			}
 			.text {
@@ -1191,6 +1191,7 @@
 			font-size: em(40);
 			@include media(phone) {
 				padding-bottom: 25px;
+				font-size: em(35);
 			}
 			& + div {
 				margin-bottom: 75px;
