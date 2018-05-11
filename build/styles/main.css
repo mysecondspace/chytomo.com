@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'museo bold';
   src: url(../fonts/museo-bold.otf);
@@ -578,7 +579,7 @@ textarea {
     margin-left: 0%;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
   .m-1, .m-2, .m-3, .m-4, .m-5, .m-6,
   .m-7, .m-8, .m-9, .m-10, .m-11, .m-12 {
     float: left;
@@ -688,7 +689,7 @@ textarea {
     margin-left: 0%;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1440px) {
   .l-1, .l-2, .l-3, .l-4, .l-5, .l-6,
   .l-7, .l-8, .l-9, .l-10, .l-11, .l-12 {
     float: left;
@@ -2205,11 +2206,11 @@ textarea {
   display: block;
   font-size: 1.375em;
   line-height: 35px;
-  margin-left: -75px;
-  padding: 50px 75px;
   position: relative;
-  width: calc(100% + 75px);
+  margin-left: -150px;
+  padding: 50px 100px;
   font-family: "museo thin";
+  width: calc(100% + 100px);
   box-shadow: 10px 0 35px rgba(0, 72, 255, 0.08);
 }
 @media only screen and (max-width: 767px) {
@@ -2296,6 +2297,11 @@ textarea {
 #article .black__calendar .narrow > a .date {
   color: #fff;
 }
+@media only screen and (max-width: 767px) {
+  #article .black__social {
+    display: block;
+  }
+}
 #article .black__social img {
   top: -85px;
   bottom: inherit;
@@ -2370,16 +2376,17 @@ textarea {
 #article .black__social .social a:last-of-type {
   margin-right: 0;
 }
-#article .black__contacts {
-  margin-top: 25px;
+#article .black__contacts, #article .black__about-us {
+  margin-top: 50px;
   padding-top: 110px;
 }
 @media only screen and (max-width: 767px) {
-  #article .black__contacts {
+  #article .black__contacts, #article .black__about-us {
     padding-top: 25px;
+    margin-top: 25px;
   }
 }
-#article .black__contacts .title {
+#article .black__contacts .title, #article .black__about-us .title {
   font-family: "playfair black";
   text-transform: initial;
   padding-bottom: 75px;
@@ -2387,39 +2394,66 @@ textarea {
   color: #4f81ff;
 }
 @media only screen and (max-width: 767px) {
-  #article .black__contacts .title {
+  #article .black__contacts .title, #article .black__about-us .title {
     padding-bottom: 25px;
     font-size: 1.875em;
   }
 }
-#article .black__contacts .text {
+#article .black__contacts .text, #article .black__about-us .text {
   padding-bottom: 100px;
   line-height: 35px;
   font-size: 1.375em;
 }
 @media only screen and (max-width: 767px) {
-  #article .black__contacts .text {
+  #article .black__contacts .text, #article .black__about-us .text {
     padding-bottom: 25px;
   }
 }
-#article .contacts {
+#article .black__about-us img {
+  bottom: 35px;
+}
+#article .contacts, #article .about-us {
   text-align: left;
   margin: 140px 0 270px;
 }
 @media only screen and (max-width: 767px) {
-  #article .contacts {
+  #article .contacts, #article .about-us {
     margin: 50px 0;
   }
 }
-#article .contacts p {
-  font-family: "museo light";
-  padding-bottom: 25px;
+#article .contacts p, #article .about-us p {
   font-size: 1.375em;
+  padding-bottom: 25px;
+  font-family: "museo light";
 }
-#article .contacts a {
+#article .contacts a, #article .about-us a {
   font-family: "museo medium";
   font-size: 1.375em;
   color: #4f81ff;
+}
+#article .contacts .row.grid, #article .about-us .row.grid {
+  margin-bottom: 75px;
+}
+#article .contacts .row.grid:last-of-type, #article .about-us .row.grid:last-of-type {
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 767px) {
+  #article .contacts .row.grid, #article .about-us .row.grid {
+    margin-bottom: 25px;
+  }
+}
+#article .contacts .heading, #article .about-us .heading {
+  font-family: "museo medium";
+  padding-bottom: 75px;
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: 2.5em;
+}
+@media only screen and (max-width: 767px) {
+  #article .contacts .heading, #article .about-us .heading {
+    padding-bottom: 25px;
+    font-size: 1.875em;
+  }
 }
 #article .contacts--r p, #article .contacts--r a {
   padding-right: 25px;
@@ -2437,25 +2471,351 @@ textarea {
     padding-left: 0;
   }
 }
-#article .contacts .heading {
-  font-family: "museo medium";
-  padding-bottom: 75px;
-  letter-spacing: 3px;
-  text-align: center;
-  font-size: 2.5em;
-}
 @media only screen and (max-width: 767px) {
-  #article .contacts .heading {
-    padding-bottom: 25px;
-    font-size: 2.1875em;
+  #article .about-us {
+    margin-bottom: 0;
   }
 }
-#article .contacts .heading + div {
-  margin-bottom: 75px;
+#article .about-us p, #article .about-us li {
+  color: #919191;
+  font-size: 1em;
+  line-height: 27px;
 }
 @media only screen and (max-width: 767px) {
-  #article .contacts .heading + div {
-    margin-bottom: 25px;
+  #article .about-us p, #article .about-us li {
+    text-align: left;
+  }
+}
+#article .about-us ul li:before {
+  content: "—";
+  margin-right: 5px;
+}
+#article .about-us .row {
+  position: relative;
+  margin-bottom: 140px;
+}
+@media only screen and (max-width: 767px) {
+  #article .about-us .row {
+    margin-bottom: 50px;
+  }
+  #article .about-us .row:last-of-type {
+    margin-bottom: 0;
+  }
+}
+#article .about-us .heading {
+  padding-bottom: 0;
+}
+#article .about-us .name {
+  font-family: "museo medium";
+  padding-bottom: 30px;
+  font-size: 1.25em;
+  color: #4f81ff;
+}
+@media only screen and (max-width: 767px) {
+  #article .about-us .name {
+    text-align: center;
+  }
+}
+#article .about-us .icon {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+#article .about-us .icon--freedom {
+  background-image: url('../images/icons.png');
+  background-position: 0 -130px;
+  height: 65px;
+  width: 65px;
+}
+@media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  #article .about-us .icon--freedom {
+    background-image: url('../images/icons-2x.png');
+    background-size: 65px 325px;
+    background-position: 0 -130px;
+  }
+}
+#article .about-us .icon--synergy {
+  background-image: url('../images/icons.png');
+  background-position: 0 -260px;
+  height: 65px;
+  width: 65px;
+}
+@media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  #article .about-us .icon--synergy {
+    background-image: url('../images/icons-2x.png');
+    background-size: 65px 325px;
+    background-position: 0 -260px;
+  }
+}
+#article .about-us .icon--borders {
+  background-image: url('../images/icons.png');
+  background-position: 0 0;
+  height: 65px;
+  width: 65px;
+}
+@media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  #article .about-us .icon--borders {
+    background-image: url('../images/icons-2x.png');
+    background-size: 65px 325px;
+    background-position: 0 0;
+  }
+}
+#article .about-us .icon--brave {
+  background-image: url('../images/icons.png');
+  background-position: 0 -65px;
+  height: 65px;
+  width: 65px;
+}
+@media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  #article .about-us .icon--brave {
+    background-image: url('../images/icons-2x.png');
+    background-size: 65px 325px;
+    background-position: 0 -65px;
+  }
+}
+#article .about-us .icon--quality {
+  background-image: url('../images/icons.png');
+  background-position: 0 -195px;
+  height: 65px;
+  width: 65px;
+}
+@media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  #article .about-us .icon--quality {
+    background-image: url('../images/icons-2x.png');
+    background-size: 65px 325px;
+    background-position: 0 -195px;
+  }
+}
+#article .about-us .photo {
+  height: 450px;
+  margin-top: 100px;
+  position: relative;
+  border: 1px solid #4f81ff;
+}
+@media only screen and (max-width: 767px) {
+  #article .about-us .photo {
+    margin: 100px 15px 0;
+    height: 225px;
+  }
+}
+#article .about-us .photo img {
+  bottom: 0;
+  max-width: 100%;
+  position: absolute;
+}
+#article .about-us .photo img.padding {
+  left: 0;
+}
+@media only screen and (max-width: 767px) {
+  #article .about-us .photo img {
+    max-height: 325px;
+  }
+}
+#article .about-us .photo--r img {
+  right: 60px;
+}
+#article .about-us .photo--l img {
+  left: 60px;
+}
+#article .about-us .quotes {
+  top: 25px;
+  width: 50%;
+  z-index: 1;
+  display: block;
+  margin-top: 100px;
+  position: absolute;
+  padding: 50px 35px;
+  background-color: #fff;
+  box-shadow: 10px 0 70px rgba(0, 72, 255, 0.1);
+}
+@media only screen and (max-width: 767px) {
+  #article .about-us .quotes {
+    width: calc(100% - 150px);
+    margin: 0 50px 50px;
+    position: relative;
+    padding: 25px;
+  }
+}
+#article .about-us .quotes--r {
+  right: 0;
+}
+#article .about-us .quotes--l {
+  left: 0;
+}
+#article .about-us .quotes .name {
+  font-size: 1.375em;
+  padding-bottom: 0;
+}
+@media only screen and (max-width: 767px) {
+  #article .about-us .quotes .name {
+    padding-bottom: 10px;
+  }
+}
+#article .about-us .quotes .position {
+  font-family: "museo regular";
+  line-height: initial;
+  color: #000;
+}
+#article .about-us .quotes .info {
+  font-family: "museo thin";
+  position: relative;
+  padding-bottom: 0;
+  line-height: 27px;
+}
+#article .about-us .quotes .info:before {
+  font-family: "museo bold";
+  position: absolute;
+  font-style: italic;
+  font-size: 5em;
+  content: '"';
+  color: #4f81ff;
+  left: -65px;
+  top: 25px;
+}
+#article .about-us__block {
+  height: 200px;
+  position: relative;
+  text-align: center;
+  border: 1px solid #4f81ff;
+}
+@media only screen and (max-width: 767px) {
+  #article .about-us__block {
+    margin: 0 15px 15px;
+  }
+}
+#article .about-us__block p {
+  text-transform: uppercase;
+  padding: 0;
+}
+#article .about-us__block:nth-of-type(1) {
+  margin-right: 17.5px;
+  background-color: #4f81ff;
+}
+#article .about-us__block:nth-of-type(1) p {
+  color: #fff;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1.375em;
+  font-family: "museo medium";
+}
+@media only screen and (max-width: 767px) {
+  #article .about-us__block:nth-of-type(1) p {
+    font-size: 1.125em;
+  }
+}
+#article .about-us__block:nth-of-type(2) {
+  margin-left: 17.5px;
+}
+#article .about-us__block:nth-of-type(2) p {
+  font-family: "museo thin";
+  line-height: 27px;
+  font-size: 1.125em;
+  padding: 0 120px;
+  text-align: left;
+  color: #4f81ff;
+}
+@media only screen and (max-width: 767px) {
+  #article .about-us__block:nth-of-type(2) p {
+    font-size: 0.8125em;
+    padding: 0 45px;
+  }
+}
+#article .about-us__block:nth-of-type(2) .social {
+  top: -12px;
+  left: 20px;
+  position: absolute;
+}
+#article .about-us__block:nth-of-type(2) .social a {
+  margin-right: 10px;
+  transform: scale(1);
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+#article .about-us__block:nth-of-type(2) .social a[href*="facebook"] {
+  background-image: url('../images/social-blue.png');
+  background-position: 0 0;
+  height: 20px;
+  width: 20px;
+}
+@media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  #article .about-us__block:nth-of-type(2) .social a[href*="facebook"] {
+    background-image: url('../images/social-blue-2x.png');
+    background-size: 20px 40px;
+    background-position: 0 0;
+  }
+}
+#article .about-us__block:nth-of-type(2) .social a[href*="twitter"] {
+  background-image: url('../images/social-blue.png');
+  background-position: 0 -20px;
+  height: 20px;
+  width: 20px;
+}
+@media (min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  #article .about-us__block:nth-of-type(2) .social a[href*="twitter"] {
+    background-image: url('../images/social-blue-2x.png');
+    background-size: 20px 40px;
+    background-position: 0 -20px;
+  }
+}
+#article .about-us__block:nth-of-type(2) .social a:last-of-type {
+  margin-right: 0;
+}
+#article .about-us__block--wide p {
+  padding: 0 200px;
+  line-height: 30px;
+}
+@media only screen and (max-width: 767px) {
+  #article .about-us__block--wide p {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #article .about-us--r {
+    text-align: center;
+  }
+}
+#article .about-us--r p {
+  padding: 0 50px 0 0;
+}
+@media only screen and (max-width: 767px) {
+  #article .about-us--r p {
+    padding: 0;
+  }
+}
+#article .about-us--r span {
+  margin: 0 50px 0 0;
+}
+@media only screen and (max-width: 767px) {
+  #article .about-us--r span {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #article .about-us--l {
+    text-align: center;
+  }
+}
+#article .about-us--l p {
+  padding: 0 0 0 50px;
+}
+@media only screen and (max-width: 767px) {
+  #article .about-us--l p {
+    padding: 0;
+  }
+}
+#article .about-us--l span {
+  margin: 0 0 0 50px;
+}
+@media only screen and (max-width: 767px) {
+  #article .about-us--l span {
+    margin: 0;
   }
 }
 #article .partners {

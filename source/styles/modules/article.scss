@@ -1,8 +1,10 @@
 // sprites
+@include add(icons, "icons/*.png", "icons-2x/*.png");
 @include add(partners, "partners/*.png", "partners-2x/*.png");
+@include add(share, "social-black/*.png", "social-black-2x/*.png");
+@include add(hashtags, "social-blue/*.png", "social-blue-2x/*.png");
 @include add(social, "social-white/*.png", "social-white-2x/*.png");
 @include add(media, "social-orange/*.png", "social-orange-2x/*.png");
-@include add(share, "social-black/*.png", "social-black-2x/*.png");
 
 // ----- article -----
 #article {
@@ -1017,11 +1019,11 @@
 			    display: block;
 				font-size: em(22);
 				line-height: 35px;
-			    margin-left: -75px;
-			    padding: 50px 75px;
 				position: relative;
-			    width: calc(100% + 75px);
+			    margin-left: -150px;
+			    padding: 50px 100px;
 				font-family: $museo-thin;
+			    width: calc(100% + 100px);
 				box-shadow: 10px 0 35px rgba(0,72,255,.08);
 			    @include media(phone) {
 			    	width: calc(100% - 50px);
@@ -1108,6 +1110,9 @@
 			}
 		}
 		&__social {
+			@include media(phone) {
+				display: block;
+			}
 			img {
 			    top: -85px;
     			bottom: inherit;
@@ -1139,10 +1144,11 @@
 			}
 		}
 		&__contacts {
-			margin-top: 25px;
+			margin-top: 50px;
 			padding-top: 110px;
 			@include media(phone) {
 				padding-top: 25px;
+				margin-top: 25px;
 			}
 			.title {
 				font-family: $playfair-black;
@@ -1164,6 +1170,12 @@
 				}
 			}
 		}
+		&__about-us {
+			@extend .black__contacts;
+			img {
+				bottom: 35px;
+			}
+		}
 	}
 
 	// ----- contacts -----
@@ -1174,14 +1186,36 @@
 			margin: 50px 0;
 		}
 		p {
-			font-family: $museo-light;
-			padding-bottom: 25px;
 			font-size: em(22);
+			padding-bottom: 25px;
+			font-family: $museo-light;
 		}
 		a {
 			font-family: $museo-medium;
 			font-size: em(22);
 			color: $blue;
+		}
+		.row {
+			&.grid {
+				margin-bottom: 75px;
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+				@include media(phone) {
+					margin-bottom: 25px;
+				}
+			}
+		}
+		.heading {
+			font-family: $museo-medium;
+			padding-bottom: 75px;
+			letter-spacing: 3px;
+			text-align: center;
+			font-size: em(40);
+			@include media(phone) {
+				padding-bottom: 25px;
+				font-size: em(30);
+			}
 		}
 		&--r {
 			p, a {
@@ -1199,20 +1233,253 @@
 				}
 			}
 		}
-		.heading {
-			font-family: $museo-medium;
-			padding-bottom: 75px;
-			letter-spacing: 3px;
-			text-align: center;
-			font-size: em(40);
+	}
+
+	// ----- about-us -----
+	.about-us {
+		@extend .contacts;
+		@include media(phone) {
+			margin-bottom: 0;
+		}
+		p, li {
+			color: $gray;
+			font-size: em(16);
+			line-height: 27px;
 			@include media(phone) {
-				padding-bottom: 25px;
-				font-size: em(35);
+				text-align: left;
 			}
-			& + div {
-				margin-bottom: 75px;
+		}
+		ul li {
+			&:before {
+				content: "—";
+				margin-right: 5px;
+			}
+		}
+		.row {
+			position: relative;
+			margin-bottom: 140px;
+			@include media(phone) {
+				margin-bottom: 50px;
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
+		.heading {
+			padding-bottom: 0;
+		}
+		.name {
+			font-family: $museo-medium;
+			padding-bottom: 30px;
+			font-size: em(20);
+			color: $blue;
+			@include media(phone) {
+				text-align: center;
+			}
+		}
+		.icon {
+			margin-top: 25px;
+			margin-bottom: 25px;
+			@include inline-block;
+			&--freedom {
+	        	@include sprite(freedom, icons);
+			}
+			&--synergy {
+	        	@include sprite(synergy, icons);
+			}
+			&--borders {
+	        	@include sprite(borders, icons);
+			}
+			&--brave {
+	        	@include sprite(brave, icons);
+			}
+			&--quality {
+	        	@include sprite(quality, icons);
+			}
+		}
+		.photo {
+			height: 450px;
+			margin-top: 100px;
+			position: relative;
+			border: 1px solid $blue;
+			@include media(phone) {
+				margin: 100px 15px 0;
+				height: 225px;
+			}
+			img {
+				bottom: 0;
+				max-width: 100%;
+				position: absolute;
+				&.padding {
+					left: 0;
+				}
 				@include media(phone) {
-					margin-bottom: 25px;
+					max-height: 325px;
+				}
+			}
+			&--r {
+				img {
+					right: 60px;
+				}
+			}
+			&--l {
+				img {
+					left: 60px;
+				}
+			}
+		}
+		.quotes {
+			top: 25px;
+			width: 50%;
+			z-index: 1;
+		    display: block;
+		    margin-top: 100px;
+			position: absolute;
+		    padding: 50px 35px;
+			background-color: $white;
+			box-shadow: 10px 0 70px rgba(0,72,255,.1);
+		    @include media(phone) {
+		    	width: calc(100% - 150px);
+		    	margin: 0 50px 50px;
+		    	position: relative;
+		    	padding: 25px;
+		    }
+		    &--r {
+				right: 0;
+		    }
+		    &--l {
+		    	left: 0;
+		    }
+		    .name {
+		    	font-size: em(22);
+		    	padding-bottom: 0;
+		    	@include media(phone) {
+		    		padding-bottom: 10px;
+		    	}
+		    }
+		    .position {
+		    	font-family: $museo-regular;
+		    	line-height: initial;
+		    	color: $black;
+		    }
+		    .info {
+				font-family: $museo-thin;
+		    	position: relative;
+		    	padding-bottom: 0;
+		    	line-height: 27px;
+		    	&:before {
+	        		font-family: $museo-bold;
+			    	position: absolute;
+			    	font-style: italic;
+					font-size: em(80);
+					content: '"';
+			    	color: $blue;
+			    	left: -65px;
+			    	top: 25px;
+			    }
+		    }
+		}
+		&__block {
+			height: 200px;
+			position: relative;
+			text-align: center;
+			border: 1px solid $blue;
+			@include media(phone) {
+				margin: 0 15px 15px;
+			}
+			p {
+				text-transform: uppercase;
+				padding: 0;
+			}
+			&:nth-of-type(1) {
+				margin-right: 17.5px;
+				background-color: $blue;
+				p {
+					color: $white;
+					margin: 0 auto;
+					text-align: left;
+					font-size: em(22);
+					font-family: $museo-medium;
+					@include media(phone) {
+						font-size: em(18);
+					}
+				}
+			}
+			&:nth-of-type(2) {
+				margin-left: 17.5px;
+				p {
+					font-family: $museo-thin;
+					line-height: 27px;
+					font-size: em(18);
+					padding: 0 120px;
+					text-align: left;
+					color: $blue;
+					@include media(phone) {
+						font-size: em(13);
+						padding: 0 45px;
+					}
+				}
+				.social {
+					top: -12px;
+					left: 20px;
+					position: absolute;
+					a {
+				        margin-right: 10px;
+						transform: scale(1);
+				        @include inline-block;
+				        &[href*="facebook"] {
+				        	@include sprite(facebook, hashtags);
+				        }
+				        &[href*="twitter"] {
+				        	@include sprite(twitter, hashtags);
+				        }
+				        &:last-of-type {
+				        	margin-right: 0;
+				        }
+				    }
+				}
+			}
+			&--wide {
+				p {
+					padding: 0 200px;
+					line-height: 30px;
+					@include media(phone) {
+						padding: 0;
+					}
+				}
+			}
+		}
+		&--r {
+			@include media(phone) {
+				text-align: center;
+			}
+			p {
+				padding: 0 50px 0 0;
+				@include media(phone) {
+					padding: 0;
+				}
+			}
+			span {
+				margin: 0 50px 0 0;
+				@include media(phone) {
+					margin: 0;
+				}
+			}
+		}
+		&--l {
+			@include media(phone) {
+				text-align: center;
+			}
+			p {
+				padding: 0 0 0 50px;
+				@include media(phone) {
+					padding: 0;
+				}
+			}
+			span {
+				margin: 0 0 0 50px;
+				@include media(phone) {
+					margin: 0;
 				}
 			}
 		}

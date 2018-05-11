@@ -562,7 +562,7 @@ textarea {
     margin-left: 0%;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
   .m-1, .m-2, .m-3, .m-4, .m-5, .m-6,
   .m-7, .m-8, .m-9, .m-10, .m-11, .m-12 {
     float: left;
@@ -672,7 +672,7 @@ textarea {
     margin-left: 0%;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1440px) {
   .l-1, .l-2, .l-3, .l-4, .l-5, .l-6,
   .l-7, .l-8, .l-9, .l-10, .l-11, .l-12 {
     float: left;
